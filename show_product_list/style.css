@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid;
-}
+} */
 
 html {
     font-size: 16px;
@@ -13,6 +13,14 @@ header {
 
 header h1, header p {
     color: white;
+}
+
+header h1 {
+    padding-top: 0.75em;
+}
+
+header p {
+    padding-bottom: 0.75em;
 }
 
 main {
@@ -32,12 +40,18 @@ article {
 }
 
 .sort {
-    display: inline-block;
+    width: 100%;
+    display: flex;
     /* align-self: right; */
     /* align-items: right; */
     /* position: relative; */
     /* left: auto;
     right: 0px; */
+    justify-content: flex-end;
+    
+}
+
+.sort label {
     background-color: green;
 }
 
@@ -48,9 +62,9 @@ article {
 }
 
 .show_product {
-    /* width: 30%; */
-    display: inline-grid;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product_name, .product_price {
