@@ -11,7 +11,7 @@
                 <td>'.$count_purchase.'</td>
                 <td class="cell-center">
                     <a href="#" target="_blank">
-                        <img src="detail.svg" alt="customer infomation detail" />
+                        <img src="/assets/images/detail.svg" alt="customer infomation detail" />
                     </a>
                 </td>
             </tr>
