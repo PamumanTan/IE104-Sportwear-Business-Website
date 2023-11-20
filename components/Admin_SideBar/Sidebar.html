@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --primary: #013CC6;
+            --second: #ADA7A7;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.2);
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .right{
+            display: flex;
+            flex-direction: row;
+        }
+        .right div{
+            padding: 10px 20px;
+        }
+        .logo{
+            width: 153px;
+            height: 29px;
+            margin-left: 40px;
+        }
+        .search-box{
+            display: flex;
+            flex-direction: row;
+            border: 0.5px solid var(--second);
+            padding: 8px 12px;
+            align-items: center;
+        }
+        .search-box input{
+            width: 50vw;
+            outline: none;
+            padding: 5px 10px;
+            border: none;
+            margin-left: 5px;
+        }
+        .sidebar{
+            width: 250px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-right: solid 1px black;
+        }
+        .sidebar-item-container{
+            display: flex;
+            flex-direction: row;
+            padding: 8px 12px;
+            align-items: center;
+            color: var(--second);
+        }
+        .sidebar-item{
+            text-decoration: none;
+        }
+        .sidebar-item-container:hover{
+            color: var(--primary);
+        }
+        .sidebar-item:active{
+            color: var(--primary);
+        }
+        i {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.5);
+        }
+        .sidebar-item p{
+            margin-left: 20px;
+        }
+        main{
+            display: flex;
+            flex-direction: row;
+        }
+        .content{
+            background-color: azure;
+            height: 100vh;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous" defer>
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="">
+                    <img src="../../asset/icons/Logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="search-box">
+                <div class="search-icon">
+                    <img src="../../asset/icons/search-normal.svg">
+                </div>
+                <input id="search-box-input" type="text" placeholder="Tìm kiếm">
+            </div>
+            <div class="right">
+                <div class="notify">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="admin-button">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="sidebar">
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="account">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p>Tài khoản</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="orders">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <p>Đơn hàng</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="products">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <p>Sản phẩm</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="customer">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <p>Khách hàng</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="categories">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-shapes"></i>
+                        </div>
+                        <p>Hạng mục</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="discounts">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                        </div>
+                        <p>Giảm giá</p>
+                    </div>
+                </a>
+                <a href="" class="sidebar-item" onclick="return false">
+                    <div class="sidebar-item-container" id="revenue">
+                        <div class="sidebar-item-icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <p>Doanh thu</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="content">
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
