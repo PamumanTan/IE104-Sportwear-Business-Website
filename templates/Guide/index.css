@@ -10,179 +10,6 @@ html {
 body {
     background-color: #ffffff;
 }
-.nav {
-    background-color: #000;
-    width: 100%;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-}
-.navList {
-    justify-content: space-between;
-    list-style-type: none;
-    font-size: 17px;
-    display: flex;      
-    line-height: 3.5;   
-}
-.navList li a,
-.navList li > div > a {
-    text-decoration: none;
-    color: white;
-    /* font-weight: 600; */
-}
-
-.navListFirst, .navListMiddle, .navListEnd
-{
-    display: flex;
- 
-}
-.navListFirst {
-    flex: 1;
-    justify-content: flex-start;
-    padding-left: 50px;
-}
-.navListMiddle {
-    justify-content: space-between;
-    flex: 3;
-}
-.navListEnd {
-    flex: 1.4;
-    float: right;
-    padding-left: 50px;
-    padding-right: 20px;
-    justify-content: flex-end; 
-    gap: 1rem;
-}
-.subnavNewProduct,
-.subnavPromotion {
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    list-style-type: none;
-    padding: 2rem 3rem;
-    line-height: 1.5;
-    top: 62px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    color: #000;
-    gap: 6rem;
-}
-
-
-.subnavNewProduct ul,
-.subnavPromotion ul {
-    list-style-type: none;
-}
-.subnavNewProduct ul li > a,
-.subnavPromotion ul li > a,
-.subnavMen li > a, 
-.subnavWomen li > a,
-.subnavKids li > a {
-    color: black;
-}
-
-.subnavMen, .subnavWomen, .subnavKids {
-    display: none;
-    flex-direction: column;
-    text-align: left;
-    position: absolute;
-    list-style-type: none;
-    padding: 1rem 2rem;
-    line-height: 1.5;
-    top: 62px;
-    background-color: #fff;
-    color: #000;
-    gap: 0.6rem;
-}
-
-.navNewProduct,
-.navPromotion,
-.navMen,
-.navWomen,
-.navKids,
-.navHelp,
-.navIntroduce {
-    border-bottom: 2px solid#000 ;
-}
-/* --------- hover --------------- */
-.navNewProduct:hover ol,
-.navPromotion:hover ol,
-.navMen:hover ul,
-.navWomen:hover ul,
-.navKids:hover ul
-{
-    display: flex;
-}
-
-.navNewProduct:hover,
-.navPromotion:hover,
-.navMen:hover,
-.navWomen:hover,
-.navKids:hover,
-.navHelp:hover,
-.navIntroduce:hover
-{
-     border-bottom-color: rgb(204, 86, 86) ;
-    
-}
-
-/* ------------ Footer ------------------- */
-.footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left:0;
-}
-.footerAbove {
-    margin-top: 4rem;
-    min-height: 16rem;
-    padding: 4rem 0 4rem 8rem;
-    background-color: #B8E0EF;
-    color: #343434;
-    display: flex;
-    flex-direction: row;
-    gap: 8rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-}   
-.footerAbove ul {
-    margin-top: 2rem;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    gap: 1rem;
-    font-weight: 500;
-}
-.footerAbove li a {
-    text-decoration: none;
-    color: #53585F;
-}
-.line {
-    border: 1px rgba(146, 159, 168, 0.35) solid;
-}
-.line2 {
-    height:  1px;
-    background-color:  rgba(146, 159, 168, 0.35) ;
-}
-.footerUnder {
-    height: 6rem;
-    padding: 0 1rem;
-    background-color: #B8E0EF;
-}
-.subFooter {
-    display: flex;
-    flex-direction: row;
-    padding-top: 2.4rem;
-    color: #53585F;
-    font-size: 1rem;
-    font-weight: 700;
-    justify-content: center;
-    /* gap: 20rem; */
-}
 
 /* ------------General------------ */
 .hide {
@@ -204,12 +31,6 @@ body {
 }
 .mt2 {
     margin-top: 3rem;
-}
-
-/* ----------- Click ----------------- */
-.navhelp:focus {
-    border-bottom-color: rgb(204, 86, 86) ;
-    
 }
 
 /* ------------------------------------ */
@@ -289,4 +110,16 @@ body {
 }
 .row div{
     flex:1;
+}
+
+.ti-location-pin {
+    font-size: 68px;
+    font-weight: bolder;
+}
+.textCenter {
+    text-align: center;
+}
+.guideContact a {
+    text-decoration: none;
+    color: inherit;
 }
