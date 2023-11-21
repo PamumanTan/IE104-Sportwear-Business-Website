@@ -2,11 +2,11 @@
     border: 1px solid;
 } */
 
-html {
+/* html {
     font-size: 16px;
-}
+} */
 
-div.filter {
+/* div.filter {
     display: flex;
     flex-direction: row;
     column-gap: 2em;
@@ -29,4 +29,111 @@ tr.title th {
 div.add_category_product {
     display: flex;
     justify-content: right;
+} */
+
+
+/* Set up custom fonts */
+@font-face {
+    font-family: 'my_public_sans';
+    src: url('../../assets/fonts/PublicSans-Regular.ttf');
+}
+
+* {
+    font-family: 'my_public_sans';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.category-management-content {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.category-management-title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.category-management-filter {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.category-management-filter-option {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-management-filter-option label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.category-management-filter-option-range {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+}
+
+.category-management-filter-option input {
+    display: flex;
+}
+
+.category-management-filter-text, .category-management-filter-combobox {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+}
+
+.category-management-table {
+    width: 100%;
+    overflow: auto;
+}
+
+.category-management-table-row {
+    border-bottom: 1px solid;
+}
+
+.category-management-table tr:not(:first-child) th:nth-child(2) {
+    color: blue;
+}
+
+.category-management-table-row th {
+    font-weight: normal;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.category-management-table tr:first-child th {
+    font-weight: bold;
+}
+
+.category-management-add-category {
+    display: flex;
+    justify-content: right;
+    margin-top: 1.5em;
+}
+
+.category-management-add-category button {
+    border: none;
+    background-color: #C0DBFB;
+    font-family: 'my_public_sans';
+    font-weight: bold;
+    font-size: 1.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #1C1B1F;
+    opacity: 60%;
+    cursor: pointer;
 }

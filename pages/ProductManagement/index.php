@@ -72,6 +72,6 @@
             </div>
         </main>
         
-        <script src="./script.js"></script>
+        <script src="../../templates/ProductManagement/script.js"></script>
     </body>
 </html>
