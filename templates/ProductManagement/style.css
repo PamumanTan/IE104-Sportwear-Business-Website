@@ -64,7 +64,8 @@ html {
 }
 
 .product-management-table {
-    width: 100%; 
+    width: 100%;
+    overflow: auto;
 }
 
 .product-management-table-row {
@@ -103,5 +104,6 @@ html {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     color: #1C1B1F;
-    opacity: 60%
+    opacity: 60%;
+    cursor: pointer;
 }

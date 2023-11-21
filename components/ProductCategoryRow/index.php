@@ -1,14 +1,14 @@
 <?php
     function ProductCategoryRow($id, $name, $amount, $date_created, $date_modified) {
         echo '
-            <tr>
-                <th><input type="checkbox" class="product_type_row"></th>
-                <th><label class="product_type_row">'.$id.'</label></th>
-                <th><label class="product_type_row">'.$name.'</label></th>
-                <th><label class="product_type_row">'.$amount.'</label></th>
-                <th><label class="product_type_row">'.$date_created.'</label></th>
-                <th><label class="product_type_row">'.$date_modified.'</label></th>
-                <!--icon-->
+            <tr class="category-management-table-row">
+                <th><input type="checkbox" class="category-row"></th>
+                <th><label class="category-row">'.$id.'</label></th>
+                <th><label class="category-row">'.$name.'</label></th>
+                <th><label class="category-row">'.$amount.'</label></th>
+                <th><label class="category-row">'.$date_created.'</label></th>
+                <th><label class="category-row">'.$date_modified.'</label></th>
+                <th><img src="#" alt="detail"></th>
             </tr>
         ';
     }
