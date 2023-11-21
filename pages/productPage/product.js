@@ -85,3 +85,20 @@ colorButtons.forEach(element => {
     })
 });
 
+//Generate review counter
+const reviewLeftDiv = document.querySelector('.review-left');
+const reviewCounter = document.querySelector('#reviews-counter');
+const reviewCounterArray = [0, 1, 2, 4, 9];
+const total = reviewCounterArray.reduce((ans, number) => {
+    return ans + number;
+}, 0)
+reviewCounter.innerHTML = total + ' đánh giá';
+for (let i = 5; i > 0; i--) {
+    let string = ` <div id="reviews-counter-child"> 
+                        <p>${i} sao </p>
+                        <div id="line"></div> 
+                        <p>(${reviewCounterArray[i - 1]})</p>
+                   </div> `;
+    reviewLeftDiv.innerHTML += string;
+}
+
