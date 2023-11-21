@@ -1,0 +1,39 @@
+.cmt-container{
+    display: flex;
+    flex-direction: column;
+    /* height: 200px; */
+    width: 850px;
+    padding: 0 10px;
+    border: 0.5px solid black;
+}
+.cmt-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cmt-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+#cmt-username{
+    padding-right: 4em;
+    font-size: 18px;
+    font-weight: bold;
+}
+.upvote{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.upvote a{
+    text-decoration: none;
+    color: black;
+    padding: 0 2px;
+}
