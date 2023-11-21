@@ -1,6 +1,4 @@
-html {
-    font-family: 'Roboto', sans-serif;
-}
+/* Sử dụng lại css của quản lí khách hàng */
 
 div,
 main,
@@ -23,7 +21,7 @@ article, body {
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,7 +33,7 @@ article, body {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .search-customer__card {
@@ -119,8 +117,8 @@ article, body {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
-    font-size: 1rem;
-    /* overflow-x: auto; */
+    font-size: 1.25rem;
+    overflow-x: auto;
 }
 
 .list-container input[type='checkbox'] {
@@ -147,6 +145,31 @@ article, body {
     text-overflow: ellipsis;
 }
 
+.search-customer__select {
+    padding: 0.75rem;
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+}
+
+.search-customer__select option {
+    padding: 0.75rem !important;
+    border: 1px solid gray !important;
+    border-radius: 0.25rem !important;
+}
+
+/* .list-container .cell-action {
+    gap: 0.5rem;
+} */
+
+.list-container .cell-action a {
+    text-decoration: none;
+    transition: opacity 0.25s;
+}
+
+.list-container .cell-action a:hover {
+    opacity: 0.5;
+}
+
 .list-container tr {
     height: 5rem;
 }
@@ -166,7 +189,7 @@ article, body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .customers-footer .pagination {
@@ -196,7 +219,7 @@ article, body {
     padding: 0.75rem;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: bold;
     top: 50%;
     right: 0;
