@@ -1,0 +1,43 @@
+/* * {
+    border: 2px solid;
+} */
+
+div.filter {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+    justify-content: space-between;
+}
+
+div.filter-option {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+div.filter-option-range {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+}
+
+div.filter-option input {
+    display: flex;
+}
+
+table.product-management-table {
+    width: 100%;
+}
+
+table.product-management-table tr th {
+    font-weight: normal;
+}
+
+table.product-management-table tr:first-child th {
+    font-weight: bold;
+}
+
+div.add-product {
+    display: flex;
+    justify-content: right;
+}
