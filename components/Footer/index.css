@@ -7,12 +7,6 @@
 html {
     font-family: 'Roboto', sans-serif;
 }
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 .footerAbove {
     margin-top: 4rem;
     min-height: 16rem;
