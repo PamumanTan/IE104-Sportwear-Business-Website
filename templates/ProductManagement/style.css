@@ -2,42 +2,106 @@
     border: 2px solid;
 } */
 
-div.filter {
+/* Set up custom fonts */
+@font-face {
+    font-family: 'my_public_sans';
+    src: url('../../assets/fonts/PublicSans-Regular.ttf');
+}
+
+* {
+    font-family: 'my_public_sans';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.product-management-content {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.product-management-title {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.product-management-filter {
     display: flex;
     flex-direction: row;
     column-gap: 2em;
     justify-content: space-between;
+    margin-bottom: 2em;
 }
 
-div.filter-option {
-    font-weight: bold;
+.product-management-filter-option {
     display: flex;
     flex-direction: column;
 }
 
-div.filter-option-range {
+.product-management-filter-option label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-management-filter-option-range {
     display: flex;
     flex-direction: row;
     column-gap: 2em;
 }
 
-div.filter-option input {
+.product-management-filter-option input {
     display: flex;
 }
 
-table.product-management-table {
-    width: 100%;
+.product-management-filter-text {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
 }
 
-table.product-management-table tr th {
+.product-management-table {
+    width: 100%; 
+}
+
+.product-management-table-row {
+    border-bottom: 1px solid;
+}
+
+.product-management-table tr:not(:first-child) th:nth-child(2) {
+    color: blue;
+}
+
+.product-management-table-row th {
     font-weight: normal;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #F2F2F2;
 }
 
-table.product-management-table tr:first-child th {
+.product-management-table tr:first-child th {
     font-weight: bold;
 }
 
-div.add-product {
+.product-management-add-product {
     display: flex;
     justify-content: right;
+    margin-top: 1.5em;
+}
+
+.product-management-add-product button {
+    border: none;
+    background-color: #C0DBFB;
+    font-family: 'my_public_sans';
+    font-weight: bold;
+    font-size: 1.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #1C1B1F;
+    opacity: 60%
 }

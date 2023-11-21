@@ -1,5 +1,5 @@
 <?php
-include '../../components/ProductRow/index.php';
+    include '../../components/ProductRow/index.php';
 ?>
 
 <!DOCTYPE html>		<!--Define the version of HTML-->
@@ -20,43 +20,45 @@ include '../../components/ProductRow/index.php';
 
         </header>
 
-        <main>
-            <h1>Quản lí sản phẩm</h1>
+        <main class="product-management-content">
+            <div class="product-management-title">
+                <h1>Quản lí sản phẩm</h1>
+            </div>
 
-            <div class="filter">
-                <div class="filter-option">
+            <div class="product-management-filter">
+                <div class="product-management-filter-option">
                     <label>Mã sản phẩm</label>
-                    <input type="text" id="product-id">
+                    <input type="text" id="product-id" class="product-management-filter-text" placeholder="Nhập mã sản phẩm">
                 </div>
-                <div class="filter-option">
+                <div class="product-management-filter-option">
                     <label>Tên sản phẩm</label>
-                    <input type="text" id="product-name">
+                    <input type="text" id="product-name" class="product-management-filter-text" placeholder="Nhập tên sản phẩm">
                 </div>
-                <div class="filter-option">
+                <div class="product-management-filter-option">
                     <label>Giá sản phẩm</label>
-                    <div class="filter-option-range">
-                        <input type="text" id="product-min-price">
-                        <input type="text" id="product-max-price">
+                    <div class="product-management-filter-option-range">
+                        <input type="text" id="product-min-price" class="product-management-filter-text" value="0">
+                        <input type="text" id="product-max-price" class="product-management-filter-text" value="500.000">
                     </div>
                 </div>
-                <div class="filter-option">
+                <div class="product-management-filter-option">
                     <label>Số lượt mua</label>
-                    <div class="filter-option-range">
-                        <input type="text" id="product-min-sale-number">
-                        <input type="text" id="product-max-sale-number">
+                    <div class="product-management-filter-option-range">
+                        <input type="text" id="product-min-sale-number" class="product-management-filter-text" value="0">
+                        <input type="text" id="product-max-sale-number" class="product-management-filter-text" value="200">
                     </div>
                 </div>
             </div>
             
             <div>
                 <table class="product-management-table">
-                    <tr>
+                    <tr class="product-management-table-row">
                         <th><input type="checkbox"></th>
-                        <th><label class="title">Mã sản phẩm</label></th>
-                        <th><label class="title">Tên sản phẩm</label></th>
-                        <th><label class="title">Giá sản phẩm</label></th>
-                        <th><label class="title">Số lượt mua</label></th>
-                        <th><label class="title">Hành động</label></th>
+                        <th><label>Mã sản phẩm</label></th>
+                        <th><label>Tên sản phẩm</label></th>
+                        <th><label>Giá sản phẩm</label></th>
+                        <th><label>Số lượt mua</label></th>
+                        <th><label>Hành động</label></th>
                     </tr>
 
                     <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
@@ -64,7 +66,7 @@ include '../../components/ProductRow/index.php';
                     <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>     
                 </table>
 
-                <div class="add-product">
+                <div class="product-management-add-product">
                     <button>Thêm sản phẩm</button>
                 </div>
             </div>
