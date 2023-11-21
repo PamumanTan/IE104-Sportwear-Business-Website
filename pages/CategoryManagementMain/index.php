@@ -1,10 +1,14 @@
+<?php
+include '../../components/ProductCategoryRow/index.php';
+?>
+
 <!DOCTYPE html>		<!--Define the version of HTML-->
 <html lang="vi">	<!--Set the language-->
 	<head>
 		<title>Quản lí hạng mục</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
 		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="../../templates/CategoryManagementMain/style.css">
 	</head>
 
     <body>
@@ -48,35 +52,9 @@
                         <th><label class="title">Hành động</label></th>
                     </tr>
 
-                    <tr>
-                        <th><input type="checkbox" class="product_type_row"></th>
-                        <th><label class="product_type_row">LSP001</label></th>
-                        <th><label class="product_type_row">Giày</label></th>
-                        <th><label class="product_type_row">100</label></th>
-                        <th><label class="product_type_row">01/09/2022</label></th>
-                        <th><label class="product_type_row">07/09/2022</label></th>
-                        <!--icon-->
-                    </tr>
-
-                    <tr>
-                        <th><input type="checkbox" class="product_type_row"></th>
-                        <th><label class="product_type_row">LSP001</label></th>
-                        <th><label class="product_type_row">Giày</label></th>
-                        <th><label class="product_type_row">100</label></th>
-                        <th><label class="product_type_row">01/09/2022</label></th>
-                        <th><label class="product_type_row">07/09/2022</label></th>
-                        <!--icon-->
-                    </tr>
-
-                    <tr>
-                        <th><input type="checkbox" class="product_type_row"></th>
-                        <th><label class="product_type_row">LSP001</label></th>
-                        <th><label class="product_type_row">Giày</label></th>
-                        <th><label class="product_type_row">100</label></th>
-                        <th><label class="product_type_row">01/09/2022</label></th>
-                        <th><label class="product_type_row">07/09/2022</label></th>
-                        <!--icon-->
-                    </tr>
+                    <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
+                    <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
+                    <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
                 </table>
 
                 <div class="add_category_product">
@@ -89,6 +67,6 @@
 
         </footer>
         
-        <script src="./script.js"></script>
+        <script src="../../templates/CategoryManagementMain/script.js"></script>
     </body>
 </html>

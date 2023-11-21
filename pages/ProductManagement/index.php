@@ -1,10 +1,14 @@
+<?php
+include '../../components/ProductRow/index.php';
+?>
+
 <!DOCTYPE html>		<!--Define the version of HTML-->
 <html lang="vi">	<!--Set the language-->
 	<head>
 		<title>Quản lí sản phẩm</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
 		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="../../templates/ProductManagement/style.css">
 	</head>
 
     <body>
@@ -20,39 +24,33 @@
             <h1>Quản lí sản phẩm</h1>
 
             <div class="filter">
-                <div>
+                <div class="filter-option">
                     <label>Mã sản phẩm</label>
-                    <input type="text" id="product_id">
+                    <input type="text" id="product-id">
                 </div>
-                <div>
+                <div class="filter-option">
                     <label>Tên sản phẩm</label>
-                    <input type="text" id="product_name">
+                    <input type="text" id="product-name">
                 </div>
-                <div>
+                <div class="filter-option">
                     <label>Giá sản phẩm</label>
-                    <input type="range"
-                    min="1"
-                    max="100"
-                    data-value-0="25"
-                    data-value-1="75"
-                    class="slider"
-                    id="myRange">
+                    <div class="filter-option-range">
+                        <input type="text" id="product-min-price">
+                        <input type="text" id="product-max-price">
+                    </div>
                 </div>
-                <div>
+                <div class="filter-option">
                     <label>Số lượt mua</label>
-                    <input type="range"
-                    min="1"
-                    max="100"
-                    data-value-0="25"
-                    data-value-1="75"
-                    class="slider"
-                    id="myRange">
+                    <div class="filter-option-range">
+                        <input type="text" id="product-min-sale-number">
+                        <input type="text" id="product-max-sale-number">
+                    </div>
                 </div>
             </div>
             
             <div>
-                <table>
-                    <tr class="title">
+                <table class="product-management-table">
+                    <tr>
                         <th><input type="checkbox"></th>
                         <th><label class="title">Mã sản phẩm</label></th>
                         <th><label class="title">Tên sản phẩm</label></th>
@@ -61,28 +59,16 @@
                         <th><label class="title">Hành động</label></th>
                     </tr>
 
-                    <tr>
-                        <th><input type="checkbox" class="product_row"></th>
-                        <th><label class="product_row">SP001</label></th>
-                        <th><label class="product_row">Giày Thượng Đình</label></th>
-                        <th><label class="product_row">100.000 VNĐ</label></th>
-                        <th><label class="product_row">200</label></th>
-                        <!--icon-->
-                    </tr>
-
-                    
+                    <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
+                    <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
+                    <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>     
                 </table>
 
-                <div class="add_category_product">
+                <div class="add-product">
                     <button>Thêm sản phẩm</button>
                 </div>
-
             </div>
         </main>
-
-        <footer>
-
-        </footer>
         
         <script src="./script.js"></script>
     </body>
