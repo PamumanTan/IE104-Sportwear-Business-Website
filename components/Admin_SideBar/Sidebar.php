@@ -1,16 +1,16 @@
 <?php
     function SideBar($content) {
         echo '
-            <div class="container">
+            <div class="sidebar-container">
             <header>
                 <div class="logo">
                     <a href="">
-                        <img src="../../../asset/icons/Logo.svg" alt="Logo">
+                        <img class="sidebar-icon" src="../../../asset/icons/Logo.svg" alt="Logo">
                     </a>
                 </div>
                 <div class="search-box">
                     <div class="search-icon">
-                        <img src="../../../asset/icons/search-normal.svg">
+                        <img class="sidebar-icon" src="../../../asset/icons/search-normal.svg">
                     </div>
                     <input id="search-box-input" type="text" placeholder="Tìm kiếm">
                 </div>

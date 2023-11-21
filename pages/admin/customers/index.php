@@ -7,6 +7,9 @@
             <title>Sport</title>
             <link rel="stylesheet" href="./manage-customers.css" />
             <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
         </head>
         <body>
 <?php
@@ -14,8 +17,9 @@
     include("../../../components/Admin_SideBar/Sidebar.php");
     $cutomersList = CustomerItem('#AHGA68', 'Cristiano Ronaldo', '10000000đ', '3').
                     CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
+                    CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
                     CustomerItem('#AHGA68', 'Khánh', '10000000đ', '3');
-    // echo $cutomersList;
+
     function Customers($cutomersList) {
         return '
             <main class="container">
@@ -80,7 +84,7 @@
             ';
         };
         
-        // SideBar(Customers($cutomersList));
+        SideBar(Customers($cutomersList));
         ?>
     <script src="manage-customers.js"></script>
 </body>
