@@ -63,6 +63,14 @@ include '../../../components/CouponItem/index.php';
                 <tbody>
                     <?php /** Đợi BE có API */ ?>
                     <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
                 </tbody>
             </table>
         </div>
