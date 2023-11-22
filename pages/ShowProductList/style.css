@@ -107,7 +107,7 @@ article {
 }
 
 /* Product list container */
-.show-product-list {
+#show-product-list {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -145,7 +145,7 @@ div.product-img {
     padding-bottom: 2em;
 }
 
-.show-product-list-more button {
+#show-product-list-more-button {
     line-height: 2.5em;
     font-weight: bold;
     background-color: inherit;

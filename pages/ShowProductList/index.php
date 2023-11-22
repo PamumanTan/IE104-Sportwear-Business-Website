@@ -10,7 +10,7 @@
 		    content="This webpage shows products list">	<!--Set the content-->
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
 		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="../../templates/ShowProductList/style.css">
+		<link rel="stylesheet" href="./style.css">
 	</head>
 
     <body>
@@ -83,7 +83,7 @@
                 </div>
 				<br>
 
-                <div class="show-product-list">
+                <div id="show-product-list">
                     <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
                     <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
                     <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="show-product-list-more">
-                    <button>Hiển thị thêm sản phẩm</button>
+                    <button id="show-product-list-more-button" onclick="showMoreProducts()">Hiển thị thêm sản phẩm</button>
                 </div>
             </article>
         </main>
@@ -103,6 +103,6 @@
 
         </footer>
         
-        <script src="../../templates/ShowProductList/script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
