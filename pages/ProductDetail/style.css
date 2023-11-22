@@ -1,6 +1,7 @@
 body{
     box-sizing: border-box;
     margin: 0;
+    overflow-x: hidden;
 }
 :root{
     --default-width: 1400px;
@@ -16,21 +17,17 @@ nav{
     width: 100vw;
     height: 90vh;
     flex-direction: row;
+    margin: 10vh 10vw 0 10vw;
+    gap: 5vw;
 }
 .product-imgs{
     width: 40vw;
-    margin-left: 10vw;
-    margin-top: 10vh;
 }
 .product-imgs img{
     width: 250px;
-    
 }
 .product-details{
-    width: 40vw;
-    margin-right: 50px;
-    margin-top: 10vh;
-    padding: 10px 20px;
+    flex: 0.5;
 }
 .product-color-option{
     display: flex;
@@ -123,4 +120,48 @@ label.radio-button-size span.label-text {
     height: 50px;
     color: azure;
     background-color: black;
+}
+
+.review-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10vw;
+    gap: 5vw;
+}
+.review-left{
+    display: flex;
+    flex-direction: column;
+}
+.review-right{
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+.review-right select{
+    margin-left: auto;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+#line{
+    width: 90px;
+    height: 1px;
+    background-color: black;
+}
+#reviews-counter-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #6969699d;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    opacity: 0.7;
+    font-weight: bolder;
+}
+#reviews-counter-child:hover{
+    opacity: 1;
+    color: black;
 }
