@@ -1,33 +1,33 @@
 <div class="nav">
     <ul class="navList">
         <li class="navListFirst">
-            <a href="">Sportswear</a>
+            <a href="/sportswear/pages">Sportswear</a>
         </li>
 
         <li class="navListMiddle">
             <div class="navNewProduct">
-                <a href="">Sản phẩm mới</a>
+                <a href="/sportswear/pages/ProductList">Sản phẩm mới</a>
                 <ol class="subnavNewProduct subnav-blur">
                     <!-- Nam -->
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Nam</a>
+                                <a href="/sportswear/pages/ProductList">Nam</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -35,22 +35,22 @@
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Nữ</a>
+                                <a href="/sportswear/pages/ProductList">Nữ</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -58,22 +58,22 @@
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Trẻ em</a>
+                                <a href="/sportswear/pages/ProductList">Trẻ em</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -81,61 +81,61 @@
             </div>
 
             <div class="navMen subnav-blur">
-                <a href="">Nam</a>
+                <a href="/sportswear/pages/ProductList">Nam</a>
                 <ul class="subnavMen ">
-                    <li><a href="">Tất cả sản phẩm</a></li>
-                    <li><a href="">Giày</a></li>
-                    <li><a href="">Áo</a></li>
-                    <li><a href="">Quần</a></li>
-                    <li><a href="">Tất</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Giày</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Áo</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Quần</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất</a></li>
                 </ul>
             </div>
 
             <div class="navWomen subnav-blur">
-                <a href="">Nữ</a>
+                <a href="/sportswear/pages/ProductList">Nữ</a>
                 <ul class="subnavWomen ">
-                    <li><a href="">Tất cả sản phẩm</a></li>
-                    <li><a href="">Giày</a></li>
-                    <li><a href="">Áo</a></li>
-                    <li><a href="">Quần</a></li>
-                    <li><a href="">Tất</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Giày</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Áo</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Quần</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất</a></li>
                 </ul>
             </div>
 
             <div class="navKids subnav-blur">
-                <a href="">Trẻ em</a>
+                <a href="/sportswear/pages/ProductList">Trẻ em</a>
                 <ul class="subnavKids ">
-                    <li><a href="">Tất cả sản phẩm</a></li>
-                    <li><a href="">Giày</a></li>
-                    <li><a href="">Áo</a></li>
-                    <li><a href="">Quần</a></li>
-                    <li><a href="">Tất</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Giày</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Áo</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Quần</a></li>
+                    <li><a href="/sportswear/pages/ProductList">Tất</a></li>
                 </ul>
             </div>
 
             <div class="navPromotion subnav-blur">
-                <a href="">Khuyến mãi</a>
+                <a href="/sportswear/pages/ProductList">Khuyến mãi</a>
                 <ol class="subnavPromotion">
                     <!-- Nam -->
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Nam</a>
+                                <a href="/sportswear/pages/ProductList">Nam</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -144,22 +144,22 @@
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Nữ</a>
+                                <a href="/sportswear/pages/ProductList">Nữ</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -168,22 +168,22 @@
                     <li>
                         <ul>
                             <li class="bold mb1">
-                                <a href="">Trẻ em</a>
+                                <a href="/sportswear/pages/ProductList">Trẻ em</a>
                             </li>
                             <li>
-                                <a href="">Tất cả sản phẩm</a>
+                                <a href="/sportswear/pages/ProductList">Tất cả sản phẩm</a>
                             </li>
                             <li>
-                                <a href="">Giày</a>
+                                <a href="/sportswear/pages/ProductList">Giày</a>
                             </li>
                             <li>
-                                <a href="">Áo</a>
+                                <a href="/sportswear/pages/ProductList">Áo</a>
                             </li>
                             <li>
-                                <a href="">Quần</a>
+                                <a href="/sportswear/pages/ProductList">Quần</a>
                             </li>
                             <li>
-                                <a href="">Tất</a>
+                                <a href="/sportswear/pages/ProductList">Tất</a>
                             </li>
                         </ul>
                     </li>
@@ -191,21 +191,21 @@
             </div>
 
             <div class="navHelp subnav-blur">
-                <a href="">Hướng dẫn</a>
+                <a href="/sportswear/pages/Guide">Hướng dẫn</a>
             </div>
 
             <div class="navIntroduce">
-                <a href="">Giới thiệu</a>
+                <a href="/sportswear/pages/Guide">Giới thiệu</a>
             </div>
 
         </li>
 
         <li class="navListEnd">
-            <a href="">
+            <a href="/sportswear/pages/ProductList">
                 <i class="ti-search"></i>
             </a>
-            <a href="">Đăng nhập</a>
-            <a href="">Đăng ký</a>
+            <a href="../../pages/Login/">Đăng nhập</a>
+            <a href="../../pages/Register/">Đăng ký</a>
 
         </li>
     </ul>

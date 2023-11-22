@@ -1,16 +1,17 @@
 <?php
-    function SideBar_Start() {
-        echo '
+function SideBar_Start()
+{
+    echo '
             <div class="sidebar-container">
             <header>
                 <div class="logo">
                     <a href="">
-                        <img class="sidebar-icon" src="../../../asset/icons/Logo.svg" alt="Logo">
+                        <img class="sidebar-icon" src="../components/assets/icons/Logo.svg" alt="Logo">
                     </a>
                 </div>
                 <div class="search-box">
                     <div class="search-icon">
-                        <img class="sidebar-icon" src="../../../asset/icons/search-normal.svg">
+                        <img class="sidebar-icon" src="../components/assets/icons/search-normal.svg">
                     </div>
                     <input id="search-box-input" type="text" placeholder="Tìm kiếm">
                 </div>
@@ -84,16 +85,14 @@
                 </div>
 
                 <div class="content">
-                    '
-                ;
-    
-    };
+                    ';
+};
 
-    function SideBar_End() {
-        echo '
+function SideBar_End()
+{
+    echo '
                 </div>
             </main>
         </div>
         <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous" defer></script>';
-    }
-?>
+}

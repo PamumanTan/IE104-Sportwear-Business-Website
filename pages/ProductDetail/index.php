@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../components/NavBar/index.css">
+    <link rel="stylesheet" href="../../components/Comment/index.css">
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -134,5 +135,7 @@
       </div>
     </main>
     <footer></footer>
+
+    <script src="../../components/Comment/script.js"></script>
   </body>
 </html>
