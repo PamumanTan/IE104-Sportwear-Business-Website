@@ -1,5 +1,6 @@
 <?php
 include '../../../components/CouponItem/index.php';
+include '../../../components/Navbar/index.php';
 ?>
 
 <!DOCTYPE html>
