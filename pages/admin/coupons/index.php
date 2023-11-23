@@ -95,7 +95,8 @@
     </main>
     <?php SideBar_End(); ?>
     <?php include "./detail.php"; ?>
-    <script src="manage-customers.js"></script>
+    <?php include "./create.php"; ?>
+    <script src="coupons/manage-coupon.js"></script>
 </body>
 
 </html>

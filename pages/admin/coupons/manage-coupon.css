@@ -164,6 +164,7 @@ article, body {
 .list-container .cell-action a {
     text-decoration: none;
     transition: opacity 0.25s;
+    cursor: pointer;
 }
 
 .list-container .cell-action a:hover {
@@ -233,7 +234,9 @@ article, body {
     opacity: 0.85;
 }
 
+/*  */
 /* Detail coupon modal */
+/*  */
 .detail-coupon-area {
     box-sizing: border-box;
     background-color: rgb(0, 0, 0, 0.5);
@@ -245,6 +248,10 @@ article, body {
     display: flex;
 }
 
+.detail-coupon-area.disable {
+    display: none;
+}
+
 .detail-coupon-modal {
     width: 50rem;
     background-color: white;
@@ -253,7 +260,33 @@ article, body {
     flex-direction: column;
 }
 
+/*  */
+/* Create coupon modal */
+/*  */
+.create-coupon-area {
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
 
+.create-coupon-area.disable {
+    display: none;
+}
+
+.create-coupon-modal {
+    width: 50rem;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General modal */
 
 .coupon-modal__heading {
     font-size: 1.5rem;
