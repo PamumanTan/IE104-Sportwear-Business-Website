@@ -1,5 +1,5 @@
 <?php
-include '../../components/ProductItem/index.php';
+include './productItem.php';
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
@@ -10,16 +10,40 @@ include '../../components/ProductItem/index.php';
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../../components/ProductItem/style.css">
     <!-- css for navbar -->
-    <link rel="stylesheet" href="../../components/NavBar/index.css">
+    <link rel="stylesheet" href="../components/NavBar/index.css">
     <!-- css for footer -->
-    <link rel="stylesheet" href="../../components/Footer/index.css">
+    <link rel="stylesheet" href="../components/Footer/index.css">
+    <style>
+        .search-box {
+            display: flex;
+            flex-direction: row;
+            border: 0.5px solid var(--second);
+            padding: 8px 12px;
+            align-items: center;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        .search-box input {
+            width: 50vw;
+            outline: none;
+            padding: 5px 10px;
+            border: none;
+            margin-left: 5px;
+        }
+
+        .search-box-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <?php
-    include '../../components/navbar/index.php';
+    include '../components/navbar/index.php';
     ?>
 
     <header class="show-product-list-header">
@@ -30,7 +54,19 @@ include '../../components/ProductItem/index.php';
 
         </div>
     </header>
+    <form action="index.php" method="GET">
+        <div class="search-box-container">
+            <div class="search-box">
+                <div class="search-icon">
+                    <img class="sidebar-icon" src="../components/assets/icons/search-normal.svg">
+                </div>
+                <input id="search-box-input" type="text" placeholder="Tìm kiếm" name="keyword">
+            </div>
+        </div>
+    </form>
     <div class="main-container">
+
+
         <main class="show-product-list-content">
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
@@ -88,13 +124,23 @@ include '../../components/ProductItem/index.php';
                 <br>
 
                 <div class="show-product-list">
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
+                    <?php
+                    $con = require('../db/dbConfig.php');
+                    if (isset($_GET['keyword'])) {
+                        $keyword = $_GET['keyword'];
+                        $sql = "SELECT * FROM products WHERE product_name LIKE '%$keyword%'";
+                        $result = mysqli_query($con, $sql);
+                        while ($row = mysqli_fetch_array($result)) {
+                            ProductItem($row['product_image'], $row['product_name'], $row['product_price']);
+                        }
+                    } else {
+                        $sql = "SELECT * FROM products";
+                        $result = mysqli_query($con, $sql);
+                        while ($row = mysqli_fetch_array($result)) {
+                            ProductItem($row['product_image'], $row['product_name'], $row['product_price']);
+                        }
+                    }
+                    ?>
                 </div>
 
                 <div class="show-product-list-more">
@@ -106,10 +152,10 @@ include '../../components/ProductItem/index.php';
 
     <!-- footer -->
     <?php
-    include '../../components/Footer/index.php';
+    include '../components/footer/index.php';
     ?>
 
-    <script src="./script.js"></script>
+    <script src="../../templates/ShowProductList/script.js"></script>
 </body>
 
 </html>

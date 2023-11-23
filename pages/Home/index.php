@@ -153,6 +153,25 @@
 
     <?php include_once "../../components/Footer/index.php" ?>
 
+    <script>
+        document.querySelectorAll('.homeBannerBtn').forEach(element => element.onclick = () => {
+                window.location.href = '../pages/ProductDetail';
+        });
+
+        document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+        document.querySelectorAll('.homeWomenBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+        document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+    </script>
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../components/NavBar/index.css">
-    <link rel="stylesheet" href="../../components/Comment/index.css">
+    <!-- <link rel="stylesheet" href="../../components/Comments/Comments.css"> -->
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -43,11 +43,11 @@
             </p>
           </div>
 
-          <p>Màu:</p>
+          <p class="label">Màu:</p>
           <div class="product-color-option">
           </div>
 
-          <p>Kích thước:</p>
+          <p class="label">Kích thước:</p>
           <div class="product-size-option">
             <label class="radio-button-size">
               <input type="radio" id="size-s" name="size" value="S" />
@@ -70,7 +70,7 @@
             </label>
           </div>
 
-          <p>Số lượng: </p>
+          <p class="label">Số lượng: </p>
           <div class="product-quantity-option">
             <button onclick="handleQuantityButtonClick('-')">-</button>
             <input type="text" id="product-quantity" name="product-quantity" value="1" onchange="handleQuantity()">
@@ -136,6 +136,6 @@
     </main>
     <footer></footer>
 
-    <script src="../../components/Comment/script.js"></script>
+    <script src="../../components/Comments/Comment.js" defer></script>
   </body>
 </html>

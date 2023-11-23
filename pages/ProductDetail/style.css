@@ -125,15 +125,20 @@ label.radio-button-size span.label-text {
 .review-container{
     display: flex;
     flex-direction: row;
-    margin: 0 10vw;
+    margin: 0 10vw 10vw 10vw;
     gap: 5vw;
 }
 .review-left{
+    min-width: 11rem;
     display: flex;
     flex-direction: column;
 }
+.review-left h2,
+.review-left h3 {
+    padding: 0.75rem 0;
+}
 .review-right{
-    margin-top: 12vh;
+    margin-top: 2vh;
     display: flex;
     flex-direction: column;
 }
@@ -164,4 +169,78 @@ label.radio-button-size span.label-text {
 #reviews-counter-child:hover{
     opacity: 1;
     color: black;
+}
+
+/* Comment  */
+.cmt-container{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    padding: 0 10px;
+}
+.cmt-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    padding: 10px 5px 10px 0;
+}
+.cmt-heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+}
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+#cmt-username{
+    padding-right: 3em;
+    font-size: 18px;
+    font-weight: bold;
+}
+.upvote{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 18px;
+    padding-bottom: 10px;
+}
+.upvote a{
+    text-decoration: none;
+    color: black;
+    padding: 0 2px;
+}
+
+#cmt-title {
+    margin-top: 1rem;
+}
+
+.cmt-content {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+    padding-right: 10rem;
+    text-align: justify;
+}
+
+.upvote {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+#product-price {
+    margin: 0.75rem 0;
+}
+
+#product-decription {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }

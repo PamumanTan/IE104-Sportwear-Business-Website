@@ -204,8 +204,8 @@
             <a href="/sportswear/pages/ProductList">
                 <i class="ti-search"></i>
             </a>
-            <a href="../../pages/Login/">Đăng nhập</a>
-            <a href="../../pages/Register/">Đăng ký</a>
+            <a href="/sportswear/pages/Login">Đăng nhập</a>
+            <a href="/sportswear/pages/Register/">Đăng ký</a>
 
         </li>
     </ul>

@@ -1,19 +1,15 @@
-/* nav bar */
 * {
     max-width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* html {
+html {
     font-family: 'Roboto', sans-serif;
-} */
-
+}
 body {
     background-color: #ffffff;
 }
-
 .nav {
     background-color: #000;
     width: 100%;
@@ -21,55 +17,43 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid #ebebeb;
 }
-
 .navList {
     justify-content: space-between;
     list-style-type: none;
     font-size: 17px;
-    display: flex;
-    line-height: 3.5;
-    width: 1200px;
-    max-width: 1250px;
-    margin: auto;
+    display: flex;      
+    line-height: 3.5;   
 }
-
 .navList li a,
-.navList li>div>a {
+.navList li > div > a {
     text-decoration: none;
     color: white;
     /* font-weight: 600; */
 }
 
-.navListFirst,
-.navListMiddle,
-.navListEnd {
+.navListFirst, .navListMiddle, .navListEnd
+{
     display: flex;
-
+ 
 }
-
 .navListFirst {
     flex: 1;
     justify-content: flex-start;
-    font-size: 20px;
-    font-weight: 900;
+    padding-left: 50px;
 }
-
 .navListMiddle {
     justify-content: space-between;
     flex: 3;
 }
-
 .navListEnd {
     flex: 1.4;
     float: right;
     padding-left: 50px;
     padding-right: 20px;
-    justify-content: flex-end;
+    justify-content: flex-end; 
     gap: 1rem;
 }
-
 .subnavNewProduct,
 .subnavPromotion {
     display: none;
@@ -88,31 +72,19 @@ body {
 }
 
 
-/* .subnavMen,
-.subnavWomen,
-.subnavKids,
-.subnavPromotion {
-    background-color: #fff;
-} */
-
-
 .subnavNewProduct ul,
 .subnavPromotion ul {
     list-style-type: none;
-
 }
-
-.subnavNewProduct ul li>a,
-.subnavPromotion ul li>a,
-.subnavMen li>a,
-.subnavWomen li>a,
-.subnavKids li>a {
+.subnavNewProduct ul li > a,
+.subnavPromotion ul li > a,
+.subnavMen li > a, 
+.subnavWomen li > a,
+.subnavKids li > a {
     color: black;
 }
 
-.subnavMen,
-.subnavWomen,
-.subnavKids {
+.subnavMen, .subnavWomen, .subnavKids {
     display: none;
     flex-direction: column;
     text-align: left;
@@ -124,11 +96,6 @@ body {
     background-color: #fff;
     color: #000;
     gap: 0.6rem;
-    top: 62px;
-    left: 0;
-    right: 0;
-    align-items: center;
-    flex-direction: column;
 }
 
 .navNewProduct,
@@ -138,15 +105,15 @@ body {
 .navKids,
 .navHelp,
 .navIntroduce {
-    border-bottom: 2px solid#000;
+    border-bottom: 2px solid#000 ;
 }
-
 /* --------- hover --------------- */
 .navNewProduct:hover ol,
 .navPromotion:hover ol,
 .navMen:hover ul,
 .navWomen:hover ul,
-.navKids:hover ul {
+.navKids:hover ul
+{
     display: flex;
 }
 
@@ -156,7 +123,8 @@ body {
 .navWomen:hover,
 .navKids:hover,
 .navHelp:hover,
-.navIntroduce:hover {
-    border-bottom-color: rgb(204, 86, 86);
-
+.navIntroduce:hover
+{
+     border-bottom-color: rgb(204, 86, 86) ;
+    
 }

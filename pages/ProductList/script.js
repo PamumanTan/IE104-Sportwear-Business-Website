@@ -2,7 +2,7 @@ const arr = [
     {
         productName: "ADIDAS COPA PURE 2.1 FG MARINERUSH - LUCID BLUE/FOOTWEAR WHITE/SOLAR RED",
         productPrice: "4,800,000₫",
-        imageURL: "https://product.hstatic.net/1000061481/product/anh_sp_add_web_ballak02-01-01-01-01-02-02-02-02-02-02-02-02-02-02-01_2c8ccecee8254a958d49abb3cb4bef26_medium.jpg",
+        imageURL: "../img_test/img2.png"
     },
     {
         productName: "ADIDAS X CRAZYFAST MESSI .1 FG INFINITO - SILVER METALLIC/BLISS BLUE/CORE BLACK",
