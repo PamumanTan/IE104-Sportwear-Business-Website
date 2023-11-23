@@ -15,9 +15,7 @@
 	</head>
 
     <body>
-        <nav>
-
-        </nav>
+        <?php include_once "../../components/NavBar/index.php" ?>
 
         <header class="show-product-list-header">
             <div>
@@ -86,9 +84,7 @@
             </article>
         </main>
 
-        <footer>
-
-        </footer>
+        <?php include_once "../../components/Footer/index.php" ?>
         
         <script src="./script.js"></script>
     </body>
