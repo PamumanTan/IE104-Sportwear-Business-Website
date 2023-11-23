@@ -11,10 +11,10 @@
                 <td class="cell-center">'.$start_date.'</td>
                 <td class="cell-center">'.$end_date.'</td>
                 <td class="cell-center cell-action">
-                    <a href="#" target="_blank">
+                    <a onclick="openUpdateModal('.$id.')" href="">
                         <img src="/assets/images/detail.svg" alt="customer infomation detail" />
                     </a>
-                    <a href="#" target="_blank">
+                    <a onclick="deleteCoupon('.$id.')" href="">
                         <img src="/assets/images/delete.svg" alt="customer infomation detail" />
                     </a>
                 </td>

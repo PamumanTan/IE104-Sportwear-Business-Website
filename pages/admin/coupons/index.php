@@ -1,5 +1,11 @@
 <?php
-include '../../../components/CouponItem/index.php';
+    include '../../../components/CouponItem/index.php';
+    include "../../../components/Admin_SideBar/Sidebar.php";
+    
+
+    // Pagination
+    $page = $_GET['page'] ?? 1;
+    
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +17,11 @@ include '../../../components/CouponItem/index.php';
     <title>Sport</title>
     <link rel="stylesheet" href="manage-coupon.css" />
     <link rel="stylesheet" href="coupons/manage-coupon.css" />
+    <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
 </head>
 
 <body>
+    <?php SideBar_Start(); ?>
     <main class="container">
         <h1>Quản lý khuyến mãi</h1>
 
@@ -82,9 +90,11 @@ include '../../../components/CouponItem/index.php';
                 <a href="#">2</a>
                 <a href="#">3</a>
             </div>
-            <button>Xuất báo cáo</button>
+            <button id="add-coupon-button">Thêm khuyến mãi</button>
         </div>
     </main>
+    <?php SideBar_End(); ?>
+    <?php include "./detail.php"; ?>
     <script src="manage-customers.js"></script>
 </body>
 
