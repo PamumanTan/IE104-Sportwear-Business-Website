@@ -1,0 +1,193 @@
+/*  */
+/* Detail coupon modal */
+/*  */
+.detail-coupon-area {
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.detail-coupon-area.disable {
+    display: none;
+}
+
+.detail-coupon-modal {
+    width: 50rem;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  */
+/* Create coupon modal */
+/*  */
+.create-coupon-area {
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.create-coupon-area.disable {
+    display: none;
+}
+
+.create-coupon-modal {
+    width: 50rem;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* General modal */
+
+.coupon-modal__heading {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #F0F0F0;
+    color: var(--blue);
+}
+
+
+
+.coupon-modal__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.coupon-modal__main {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.coupon-modal__main input[type="text"] {
+    height: 2.5rem;
+    width: 10rem;
+}
+
+.coupon-modal__percent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coupon-modal__percent input[type="range"] {
+    width: 15rem;
+}
+
+.coupon-modal__percent input[type="text"] {
+    width: 6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coupon-modal__date {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coupon-modal__date input[type="text"] {
+    padding-left: 1rem;
+}
+
+.coupon-modal__date-input {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.coupon-modal__date-input .hyphen {
+    width: 15px;
+    height: 3px;
+    background-color: #D9D9D9;
+    margin: auto 0;
+}
+
+.coupon-modal__types {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.coupon-modal__types > p {
+    font-size: 1.25rem;
+}
+
+.coupon-modal__checkbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.coupon-modal__checkbox-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coupon-modal__checkbox-cell {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* .coupon-modal__checkbox-cell label {
+
+} */
+
+.coupon-modal__checkbox-cell input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.coupon-modal__foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
+}
+
+.coupon-modal__foot button {
+    width: 5.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+
+.coupon-modal__foot button:hover {
+    opacity: 0.7;
+}
+
+.coupon-modal__accept-btn {
+    background-color: #A5A58D;
+    color: white;
+    border: none;
+}
+
+.coupon-modal__cancel-btn {
+    background-color: white;
+    color: #A5A58D;
+    border: 1px solid #A5A58D;
+}

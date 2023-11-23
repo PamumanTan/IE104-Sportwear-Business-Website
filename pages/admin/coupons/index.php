@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="manage-coupon.css" />
     <link rel="stylesheet" href="coupons/manage-coupon.css" />
     <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
+    <link rel="stylesheet" href="coupons/coupon-modal.css">
 </head>
 
 <body>
