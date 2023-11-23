@@ -1,5 +1,6 @@
 <?php
     include '../../components/ProductItem/index.php';
+    include '../../components/ShowProductListFilterOption/index.php';
 ?>
 
 <!DOCTYPE html>		<!--Define the version of HTML-->
@@ -31,41 +32,29 @@
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
 
-                <div class="show-product-list-filter-option">
-                    <label>Hạng mục</label>
-                    <br>
+                <?php 
+                    $option = "Loại sản phẩm";
+                    $choiceList = array("Giày", "Áo", "Quần", "Tất", "Mũ");
+                    ShowProductListFilterOption($option, $choiceList);
 
-                    <div>
-                        <input type="checkbox">
-                        <label>Giày</label>
-                        <br>
-                    </div>
+                    $option = "Đối tượng";
+                    $choiceList = array("Nam", "Nữ", "Trẻ em");
+                    ShowProductListFilterOption($option, $choiceList);
 
-                    <div>
-                        <input type="checkbox">
-                        <label>Áo</label>
-                        <br>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label>Quần</label>
-                        <br>
-                    </div>
+                    $option = "Khuyến mãi";
+                    $choiceList = array("Đang khuyến mãi");
+                    ShowProductListFilterOption($option, $choiceList);
 
-                    <div>
-                        <input type="checkbox">
-                        <label>Tất</label>
-                        <br>
-                    </div>
-
-                    <div>
-                        <input type="checkbox">
-                        <label>Mũ</label>
-                        <br>
-                    </div>
-                </div>
+                    $option = "Giá";
+                    $choiceList = array(
+                        "Dưới 200 nghìn VNĐ",
+                        "200 nghìn - 500 nghìn VNĐ",
+                        "500 nghìn - 1 triệu VNĐ",
+                        "1 triệu - 2 triệu VNĐ",
+                        "Hơn 2 triệu VNĐ");
+                    ShowProductListFilterOption($option, $choiceList);
+                ?>
                 
-
                 <br>
 
             </aside>
@@ -84,13 +73,11 @@
 				<br>
 
                 <div id="show-product-list">
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000') ?>
+                    <?php
+                        for($i = 0; $i < 6; $i++) {
+                            ProductItem('../../assets/images/logo-removebg-preview_50.png', "Men's Winter Jacket", '100.000');
+                        }
+                    ?>
                 </div>
 
                 <div class="show-product-list-more">
