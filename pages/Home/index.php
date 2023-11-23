@@ -171,6 +171,7 @@
         });
 
     </script>
+    <script src="../../components/NavBar/script.js"></script>
 
 </body>
 

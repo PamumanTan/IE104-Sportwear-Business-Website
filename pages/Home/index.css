@@ -4,12 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     background-color: #ffffff;
 }
+
 .nav {
     background-color: #000;
     width: 100%;
@@ -18,42 +21,49 @@ body {
     left: 0;
     right: 0;
 }
+
 .navList {
     justify-content: space-between;
     list-style-type: none;
     font-size: 17px;
-    display: flex;      
-    line-height: 3.5;   
+    display: flex;
+    line-height: 3.5;
 }
+
 .navList li a,
-.navList li > div > a {
+.navList li>div>a {
     text-decoration: none;
     color: white;
     /* font-weight: 600; */
 }
 
-.navListFirst, .navListMiddle, .navListEnd
-{
+.navListFirst,
+.navListMiddle,
+.navListEnd {
     display: flex;
- 
+
 }
+
 .navListFirst {
     flex: 1;
     justify-content: flex-start;
     padding-left: 50px;
 }
+
 .navListMiddle {
     justify-content: space-between;
     flex: 3;
 }
+
 .navListEnd {
     flex: 1.4;
     float: right;
     padding-left: 50px;
     padding-right: 20px;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 1rem;
 }
+
 .subnavNewProduct,
 .subnavPromotion {
     display: none;
@@ -76,15 +86,18 @@ body {
 .subnavPromotion ul {
     list-style-type: none;
 }
-.subnavNewProduct ul li > a,
-.subnavPromotion ul li > a,
-.subnavMen li > a, 
-.subnavWomen li > a,
-.subnavKids li > a {
+
+.subnavNewProduct ul li>a,
+.subnavPromotion ul li>a,
+.subnavMen li>a,
+.subnavWomen li>a,
+.subnavKids li>a {
     color: black;
 }
 
-.subnavMen, .subnavWomen, .subnavKids {
+.subnavMen,
+.subnavWomen,
+.subnavKids {
     display: none;
     flex-direction: column;
     text-align: left;
@@ -105,15 +118,15 @@ body {
 .navKids,
 .navHelp,
 .navIntroduce {
-    border-bottom: 2px solid#000 ;
+    border-bottom: 2px solid#000;
 }
+
 /* --------- hover --------------- */
 .navNewProduct:hover ol,
 .navPromotion:hover ol,
 .navMen:hover ul,
 .navWomen:hover ul,
-.navKids:hover ul
-{
+.navKids:hover ul {
     display: flex;
 }
 
@@ -123,33 +136,39 @@ body {
 .navWomen:hover,
 .navKids:hover,
 .navHelp:hover,
-.navIntroduce:hover
-{
-     border-bottom-color: rgb(204, 86, 86) ;
-    
+.navIntroduce:hover {
+    border-bottom-color: rgb(204, 86, 86);
+
 }
 
 
 /* ----------- Click ----------------- */
 .navhelp:focus {
-    border-bottom-color: rgb(204, 86, 86) ;
-    
+    border-bottom-color: rgb(204, 86, 86);
+
 }
+
 /* ----------- homePage -------------- */
-    /* .poster img {
+/* .poster img {
         filter:blur(2px)
     } */
+
+.homePoster {
+    width: 100%;
+}
 .homePage {
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
 }
+
 .homeCategory {
     padding: 5rem 3rem;
     font-size: 2.2rem;
     font-weight: 900;
 }
-.homeListCategory{
+
+.homeListCategory {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -159,6 +178,7 @@ body {
     font-weight: 900;
     font-size: 1.2rem;
 }
+
 .homeListCategory h4 {
     margin-top: 0.5rem;
     display: flex;
@@ -167,46 +187,52 @@ body {
 
 .homeBanner {
     display: flex;
-    flex-direction: row ;
+    flex-direction: row;
     /* gap: 0; */
 }
 
-.homeBannerDescribe{
+.homeBannerDescribe {
     color: white;
     background-color: #000;
     min-height: 100%;
     padding: 8rem 6rem;
-    flex: 40%;  
-    
+    flex: 40%;
+
     /* : center; */
 }
+
 .homeBannerDescribe p:first-child {
     font-size: 3.4rem;
     font-weight: 900;
 }
+
 .homeBannerDescribe p:nth-child(2) {
     font-size: 1.5rem;
     /* font-weight: 900; */
 }
+
 .homeBanner img {
     display: flex;
     flex: 60%;
 }
-.homeBannerBtn{
+
+.homeBannerBtn {
     width: 170px;
     height: 42px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0px;
     font-weight: 700;
     font-size: 1rem;
 }
+
 .homeNewestProduct,
-.homeRate{
+.homeRate {
     padding: 3rem 3rem;
     font-weight: 900;
     font-size: 2.2rem;
 }
+
 .homeNewestProductImg,
 .homeRateImg {
     display: flex;
@@ -215,12 +241,17 @@ body {
     /* margin-bottom: 2rem; */
 }
 
-.homeMen, .homeWomen, .homeKids {
+.homeMen,
+.homeWomen,
+.homeKids {
     padding: 3rem 3rem;
     font-size: 2.2rem;
     font-weight: 900;
 }
-.homeMenList, .homeWomenList, .homeKidsList{
+
+.homeMenList,
+.homeWomenList,
+.homeKidsList {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -229,20 +260,24 @@ body {
     margin-bottom: 4rem;
     font-size: 1.5rem;
 }
+
 .homeMenList h4,
-.homeWomenList h4, 
+.homeWomenList h4,
 .homeKidsList h4 {
     margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     font-weight: 600;
 }
-.homeMenBtn, .homeWomenBtn, .homeKidsBtn {
+
+.homeMenBtn,
+.homeWomenBtn,
+.homeKidsBtn {
     background-color: #000;
     color: #fff;
-    border-radius: 6px ;
+    border-radius: 6px;
     border: 0px;
-    line-height:3.5;
+    line-height: 3.5;
     justify-items: center;
     padding: 0 2rem;
     font-size: 1rem;
@@ -251,7 +286,7 @@ body {
     /* display: flex; */
     /* justify-items: center; */
     display: block;
-    
+
 }
 
 /* ------------ Footer ------------------- */
@@ -266,7 +301,8 @@ body {
     gap: 8rem;
     font-size: 1.2rem;
     font-weight: 700;
-}   
+}
+
 .footerAbove ul {
     margin-top: 2rem;
     list-style-type: none;
@@ -276,18 +312,22 @@ body {
     gap: 1rem;
     font-weight: 500;
 }
+
 .footerAbove li a {
     text-decoration: none;
     color: #53585F;
 }
+
 .line {
     border: 1px rgba(146, 159, 168, 0.35) solid;
 }
+
 .footerUnder {
     height: 6rem;
     padding: 0 1rem;
     background-color: #B8E0EF;
 }
+
 .subFooter {
     display: flex;
     flex-direction: row;
@@ -298,15 +338,6 @@ body {
     justify-content: center;
     /* gap: 20rem; */
 }
-/* .contact {
-    font-size: 2rem;
-    display: flex;
-    gap: 1.4rem;
-    justify-content: flex-end;
-} */
-
-
-
 
 
 
@@ -323,9 +354,11 @@ body {
 .mb2 {
     margin-bottom: 2rem;
 }
+
 .bold {
     font-weight: 600;
 }
+
 .mt2 {
     margin-top: 3rem;
 }

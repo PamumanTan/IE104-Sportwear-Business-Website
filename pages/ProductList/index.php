@@ -88,13 +88,46 @@ include '../../components/ProductItem/index.php';
                 <br>
 
                 <div class="show-product-list">
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
-                    <?php ProductItem('../img_test/img2.png', "Men's Winter Jacket", '100.000') ?>
+                    <?php
+                    function execQuery($query)
+                    {
+                        require("../../db/dbConfig.php");
+
+                        $conn = new mysqli($host, $username, $password, $dbname);
+                        // Check connection
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
+
+                        $result = $conn->query($query);
+                        $conn->close();
+
+                        return $result;
+                    }
+
+
+                    $query = "SELECT id, product_image, product_name, product_price FROM products ";
+                    if (isset($_GET['object']) && isset($_GET['type'])) {
+                        $query .= " where product_object_id = " . $_GET['object'] . " and product_type_id = " . $_GET['type'];
+                    }
+                    else if (isset($_GET['type'])) {
+                        $query .= " where product_type_id = " . $_GET['type'];
+                    } else if (isset($_GET['object'])) {
+                        $query .= " where product_object_id = " . $_GET['object'];
+                    } else {
+                        $query .= " where 1";
+                    }
+                    
+                    $result = execQuery($query);
+                    if ($result) {
+                        $rows = $result->fetch_all();
+                        foreach ($rows as $row) {
+                            ProductItem($row[1], $row[2], $row[3]);
+                        }
+                    } else {
+                        echo "<h3>Không tìm thấy sản phẩm</h3>";
+                    }
+                    ?>
                 </div>
 
                 <div class="show-product-list-more">

@@ -12,3 +12,4 @@ if ($con->connect_error) {
 // echo "Connected successfully";
 
 return $con;
+

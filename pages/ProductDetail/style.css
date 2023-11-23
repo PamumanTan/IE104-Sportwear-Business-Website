@@ -24,7 +24,7 @@ nav{
     width: 40vw;
 }
 .product-imgs img{
-    width: 250px;
+    /* width: 250px; */
 }
 .product-details{
     flex: 0.5;

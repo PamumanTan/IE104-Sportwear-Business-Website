@@ -51,12 +51,12 @@ const arr = [
     },
 ]
 
-const productItems = document.querySelectorAll('.show-product');
-productItems.forEach((productItem, index) => {
-    productItem.querySelector('.product-img img').src = arr[index].imageURL;
-    productItem.querySelector('.product-name').innerHTML = arr[index].productName;
-    productItem.querySelector('.product-price').innerHTML = arr[index].productPrice;
-    productItem.addEventListener('click', () => {
-        window.location.href = '/sportswear/pages/ProductDetail/';
-    });
-});
+// const productItems = document.querySelectorAll('.show-product');
+// productItems.forEach((productItem, index) => {
+//     productItem.querySelector('.product-img img').src = arr[index].imageURL;
+//     productItem.querySelector('.product-name').innerHTML = arr[index].productName;
+//     productItem.querySelector('.product-price').innerHTML = arr[index].productPrice;
+//     productItem.addEventListener('click', () => {
+//         window.location.href = '/sportswear/pages/ProductDetail/';
+//     });
+// });

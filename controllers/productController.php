@@ -1,10 +1,17 @@
 <?php
+
+
 if (isset($_POST['action']) && $_POST['action'] == 'create') {
     createProduct();
 }
 
 if (isset($_POST['action']) && $_POST['action'] == 'update') {
     updateProduct();
+}
+
+if (isset($_GET['action']) && $_POST['action'] == 'search') {
+    $keyword = $_POST['keyword'];
+    echo search($keyword);
 }
 
 function createProduct()
@@ -41,4 +48,19 @@ function createProduct()
 
 function updateProduct()
 {
+}
+
+function search($keyword)
+{
+    $con = include('./db/dbConfig.php');
+
+    $query = "SELECT * FROM product WHERE product_name LIKE '%$keyword%'";
+
+    $result = $con->query($query);
+    $result = $result->fetch_all(MYSQLI_ASSOC);
+    $resultJSON = json_encode($result);
+
+    $con->close();
+
+    return $resultJSON;
 }
