@@ -1,41 +1,7 @@
-/* * {
-    border: 1px solid;
-} */
-
-/* html {
-    font-size: 16px;
-} */
-
-/* div.filter {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2em;
-}
-
-div.filter div {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-}
-
-th {
-    font-weight: normal;
-}
-
-tr.title th {
-    font-weight: bold;
-}
-
-div.add_category_product {
-    display: flex;
-    justify-content: right;
-} */
-
-
 /* Set up custom fonts */
 @font-face {
     font-family: 'my_public_sans';
-    src: url('../../assets/fonts/PublicSans-Regular.ttf');
+    src: url('../../../assets/fonts/PublicSans-Regular.ttf');
 }
 
 * {
@@ -98,19 +64,8 @@ html {
     overflow: auto;
 }
 
-.category-management-table-row {
-    border-bottom: 1px solid;
-}
-
 .category-management-table tr:not(:first-child) th:nth-child(2) {
     color: blue;
-}
-
-.category-management-table-row th {
-    font-weight: normal;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    border-bottom: 1px solid #F2F2F2;
 }
 
 .category-management-table tr:first-child th {
