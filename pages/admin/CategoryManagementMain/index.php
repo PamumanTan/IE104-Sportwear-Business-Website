@@ -1,5 +1,6 @@
 <?php
-    include '../../components/ProductCategoryRow/index.php';
+    include '../../../components/ProductCategoryRow/index.php';
+    include '../../../components/Admin_SideBar/Sidebar.php';
 ?>
 
 <!DOCTYPE html>		<!--Define the version of HTML-->
@@ -8,17 +9,13 @@
 		<title>Quản lí hạng mục</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
 		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="../../templates/CategoryManagementMain/style.css">
+		<link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
+        <link rel="stylesheet" href="../../../components/ProductCategoryRow/style.css">
 	</head>
 
     <body>
-        <nav>
-
-        </nav>
-
-        <header>
-            
-        </header>
+        <?php SideBar_Start(); ?>
 
         <main class="category-management-content">
             <div class="category-management-title">
@@ -67,10 +64,8 @@
             </div>
         </main>
 
-        <footer>
-
-        </footer>
+        <?php SideBar_End(); ?>
         
-        <script src="../../templates/CategoryManagementMain/script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
