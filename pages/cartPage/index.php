@@ -29,7 +29,7 @@
         }
         .cart-container{
             flex: 0.65;
-            padding: 5px 10px;
+            padding: 5px 10px 5px 0;
         }
         .total-container{
             flex: 0.35;
@@ -59,13 +59,28 @@
         .pay-button:hover{
             opacity: 0.8;
         }
+
+        .total-container .total-div,
+        
+        .total-container .shipping-fee-div {
+            margin: 0.5rem 0;
+        }
+        .total-container .total-pay {
+            margin: 0.5rem 0 1rem 0;
+        }
+        .total-container h2 {
+            margin: 0.75rem 0;
+        }
+
+        .pay-button {
+            padding: 0.5rem 0.75rem;
+        }
     </style>
+    <link rel="stylesheet" href="../../components/NavBar/index.css">
     <script src="./cartPage.js" defer></script>
 </head>
 <body>
-    <div class="navbar" style="width: 100vw; height: 60px; background-color: black;">
-        <!-- Chèn navbar vào đây thay cho cái tạm này  -->
-    </div>
+    <?php include_once "../../components/NavBar/index.php" ?>
     <h1 id="heading">Giỏ hàng của bạn</h1>
     <div class="container">
         <div class="cart-container">
@@ -85,7 +100,7 @@
                 <p>Tổng tiền sản phẩm</p>
                 <p id="total"></p>
             </div>
-            <div class="shipping=fee-div">
+            <div class="shipping-fee-div">
                 <p>Phí ship</p>
                 <p id="shipping-fee"></p>
             </div>

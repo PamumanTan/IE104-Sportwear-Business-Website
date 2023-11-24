@@ -1,6 +1,6 @@
 <?php
     function CustomerItem($id, $name, $total_payment, $count_purchase) {
-        return '
+        echo '
             <tr>
                 <td class="cell-center" >
                     <input type="checkbox" name="check-one" />
@@ -11,7 +11,7 @@
                 <td>'.$count_purchase.'</td>
                 <td class="cell-center">
                     <a href="#" target="_blank">
-                        <img class="item-img" src="../../assets/images/detail.svg" alt="customer infomation detail" />
+                        <img src="detail.svg" alt="customer infomation detail" />
                     </a>
                 </td>
             </tr>

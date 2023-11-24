@@ -1,5 +1,6 @@
 <?php
-    include '../../components/ProductRow/index.php';
+    include '../../../components/ProductRow/index.php';
+    include '../../../components/Admin_SideBar/Sidebar.php';
 ?>
 
 <!DOCTYPE html>		<!--Define the version of HTML-->
@@ -7,18 +8,13 @@
 	<head>
 		<title>Quản lí sản phẩm</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
-		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="../../templates/ProductManagement/style.css">
+		<link rel="icon" type="image/png" href="../../../assets/images/logo-removebg-preview.png">
+		<link rel="stylesheet" href="../../../templates/ProductManagement/style.css">
+        <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
 	</head>
 
     <body>
-        <nav>
-
-        </nav>
-
-        <header>
-
-        </header>
+        <?php SideBar_Start(); ?>
 
         <main class="product-management-content">
             <div class="product-management-title">
@@ -71,7 +67,9 @@
                 </div>
             </div>
         </main>
+
+        <?php SideBar_End(); ?>
         
-        <script src="../../templates/ProductManagement/script.js"></script>
+        <script src="../../../templates/ProductManagement/script.js"></script>
     </body>
 </html>

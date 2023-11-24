@@ -14,8 +14,7 @@
         </head>
         <body>
 <?php
-    include('../../../components/CustomerItem/index.php');
-    include("../../../components/Admin_SideBar/Sidebar.php");
+    
     $cutomersList = CustomerItem('#AHGA68', 'Cristiano Ronaldo', '10000000đ', '3').
                     CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
                     CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
