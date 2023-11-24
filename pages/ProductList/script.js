@@ -60,3 +60,20 @@ const arr = [
 //         window.location.href = '/sportswear/pages/ProductDetail/';
 //     });
 // });
+
+const productItems = document.querySelectorAll('.show-product');
+console.log(productItems);
+productItems.forEach((productItem) => {
+    productItem.onclick = (event) => {
+        var target = event.target;
+        if (event.target.classList.contains('show-product') == false) {
+            if (event.target.classList.contains('product-img-inner') == true) {
+                target = target.parentElement;
+            }
+            target = target.parentElement;
+        }
+        console.log(target);
+        const id = target.id.substring(11);
+        window.location.href = '/sportswear/pages/ProductDetail/?id=' + id;
+    }
+});

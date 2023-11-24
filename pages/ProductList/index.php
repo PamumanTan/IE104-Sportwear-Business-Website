@@ -1,12 +1,27 @@
 <?php
 include '../../components/ProductItem/index.php';
+function execQuery($query)
+{
+    require("../../db/dbConfig.php");
+
+    $conn = new mysqli($host, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $result = $conn->query($query);
+    $conn->close();
+
+    return $result;
+}
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
 <html lang="vi"> <!--Set the language-->
 
 <head>
-    <title>home page</title>
+    <title>Products</title>
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./index.css">
@@ -23,12 +38,40 @@ include '../../components/ProductItem/index.php';
     ?>
 
     <header class="show-product-list-header">
+        <?php if (isset($_GET['object']) || isset($_GET['type'])) { ?>
+        <div>
+            <h1>
+                <?php
+                    if (isset($_GET['type'])) {
+                        $query = "SELECT type_name FROM product_types where id = " . $_GET['type'];
+                        $result = execQuery($query);
+                        if ($result) {
+                            $row = $result->fetch_row();
+                            echo $row[0] . " ";
+                        }
+                    }
+                    if (isset($_GET['object'])) {
+                        $query = "SELECT object_name FROM product_objects where id = " . $_GET['object'];
+                        $result = execQuery($query);
+                        if ($result) {
+                            $row = $result->fetch_row();
+                            echo $row[0];
+                        }
+                    } 
+                    ?>
+            </h1>
+            <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
+                Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+
+        </div>
+        <?php } else { ?>
         <div>
             <h1>Sản phẩm mới</h1>
             <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
                 Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
 
         </div>
+        <?php } ?>
     </header>
     <div class="main-container">
         <main class="show-product-list-content">
@@ -87,30 +130,12 @@ include '../../components/ProductItem/index.php';
                 </div>
                 <br>
 
-                <div class="show-product-list">
+                <div id="show-product-list">
                     <?php
-                    function execQuery($query)
-                    {
-                        require("../../db/dbConfig.php");
-
-                        $conn = new mysqli($host, $username, $password, $dbname);
-                        // Check connection
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                        }
-
-                        $result = $conn->query($query);
-                        $conn->close();
-
-                        return $result;
-                    }
-
-
                     $query = "SELECT id, product_image, product_name, product_price FROM products ";
                     if (isset($_GET['object']) && isset($_GET['type'])) {
                         $query .= " where product_object_id = " . $_GET['object'] . " and product_type_id = " . $_GET['type'];
-                    }
-                    else if (isset($_GET['type'])) {
+                    } else if (isset($_GET['type'])) {
                         $query .= " where product_type_id = " . $_GET['type'];
                     } else if (isset($_GET['object'])) {
                         $query .= " where product_object_id = " . $_GET['object'];
@@ -119,20 +144,25 @@ include '../../components/ProductItem/index.php';
                     }
                     
                     $result = execQuery($query);
-                    if ($result) {
+                    if ($result && $result->num_rows > 0) {
                         $rows = $result->fetch_all();
                         foreach ($rows as $row) {
-                            ProductItem($row[1], $row[2], $row[3]);
-                        }
+                            ProductItem($row[0], $row[1], $row[2], $row[3]);
+                        } 
+                    ?>
+                    </div>
+                    <div class="show-product-list-more">
+                        <button>Hiển thị thêm sản phẩm</button>
+                    </div>
+
+                    <?php
                     } else {
-                        echo "<h3>Không tìm thấy sản phẩm</h3>";
+                        echo "<h3>Không tìm thấy sản phẩm</h3></div>";
                     }
                     ?>
-                </div>
+                    
+                
 
-                <div class="show-product-list-more">
-                    <button>Hiển thị thêm sản phẩm</button>
-                </div>
             </article>
         </main>
     </div>

@@ -1,11 +1,11 @@
 <?php
-function ProductItem($img, $name, $price)
+function ProductItem($id, $img, $name, $price)
 {
     echo '
-            <div class="show-product">
-                <div class="product-img"><img src="' . $img . '" alt="product-img"></div>
+            <div id="product-id-' . $id . '" class="show-product">
+                <div class="product-img"><img class="product-img-inner" src="' . $img . '" alt="product-img"></div>
                 <div class="product-name">' . $name . '</div>
-                <div class="product-price">' . $price . ' VNĐ</div>
+                <div class="product-price">' . number_format($price) . ' VNĐ</div>
             </div>
         ';
 }

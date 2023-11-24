@@ -1,3 +1,22 @@
+<?php
+include '../../components/ProductItem/index.php';
+function execQuery($query)
+{
+  require("../../db/dbConfig.php");
+
+  $conn = new mysqli($host, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $result = $conn->query($query);
+  $conn->close();
+
+  return $result;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,22 +33,31 @@
   <?php include('../../components/NavBar/index.php') ?>
   <main>
 
+
+    <?php
+    if (isset($_GET['id']) && $_GET['id']) {
+      $id = $_GET['id'];
+      $query = "SELECT * FROM products WHERE id = $id";
+      $result = execQuery($query);
+      if ($result) {
+        $row = $result->fetch_assoc();
+      ?>
+
     <div class="product-container">
       <div class="product-imgs">
-        <img src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-101806.jpg" alt="img1" />
+        <img src="<?php echo $row['product_image'] ?>" alt="img1" />
         <!-- <img src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-101806.jpg" alt="img2" />
         <img src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-101806.jpg" alt="img3" />
         <img src="https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-products_1258-101806.jpg" alt="img4" /> -->
       </div>
 
+
       <div class="product-details">
-        <h1 id="product-name">Men's winter jacket</h1>
-        <p id="product-price">200.000 VND</p>
+        <h1 id="product-name"><?php echo $row['product_name'] ?></h1>
+        <p id="product-price"><?php echo number_format($row['product_price']) ?> VND</p>
         <div id="p-decription">
           <p id="product-decription">
-            Revamp your style with the latest designer trends in men’s
-            clothing or achieve a perfectly curated wardrobe thanks to our
-            line-up of timeless pieces.
+            <?php echo $row['product_description'] ?>
           </p>
         </div>
 
@@ -123,6 +151,13 @@
         </div>
       </div>
     </div>
+
+    <?php
+  }
+    }
+    ?>
+
+    <!-- End of product detail page -->
   </main>
   <footer></footer>
 
