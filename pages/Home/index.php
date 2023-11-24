@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="../../components/NavBar/index.css">
     <link rel="stylesheet" href="../../components/Footer/index.css">
-    <link rel="stylesheet" href="../../asset/icons/themify-icons/themify-icons.css"
+    <link rel="stylesheet" href="../../asset/icons/themify-icons/themify-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -152,6 +152,26 @@
     </div>
 
     <?php include_once "../../components/Footer/index.php" ?>
+
+    <script>
+        document.querySelectorAll('.homeBannerBtn').forEach(element => element.onclick = () => {
+                window.location.href = '../pages/ProductDetail';
+        });
+
+        document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+        document.querySelectorAll('.homeWomenBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+        document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
+            window.location.href = '../pages/ProductList';
+        });
+
+    </script>
+    <script src="../../components/NavBar/script.js"></script>
 
 </body>
 
