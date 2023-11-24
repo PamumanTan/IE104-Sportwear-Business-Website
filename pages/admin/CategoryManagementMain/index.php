@@ -8,7 +8,7 @@
 	<head>
 		<title>Quản lí hạng mục</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
-		<link rel="icon" type="image/png" href="../../assets/images/logo-removebg-preview.png">
+		<link rel="icon" type="image/png" href="../../../assets/images/logo-removebg-preview_50.png">
 		<link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
         <link rel="stylesheet" href="../../../components/ProductCategoryRow/style.css">
