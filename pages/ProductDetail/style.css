@@ -22,9 +22,13 @@ nav{
 }
 .product-imgs{
     width: 40vw;
+    height: 40vw;
+    overflow: hidden;
 }
 .product-imgs img{
     /* width: 250px; */
+    /* width: 40vw;
+    height: 40vw; */
 }
 .product-details{
     flex: 0.5;
