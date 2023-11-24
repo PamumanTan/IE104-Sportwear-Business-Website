@@ -5,7 +5,7 @@
 /* Set up custom fonts */
 @font-face {
     font-family: 'my_public_sans';
-    src: url('../../assets/fonts/PublicSans-Regular.ttf');
+    src: url('../../../assets/fonts/PublicSans-Regular.ttf');
 }
 
 * {
@@ -68,19 +68,8 @@ html {
     overflow: auto;
 }
 
-.product-management-table-row {
-    border-bottom: 1px solid;
-}
-
 .product-management-table tr:not(:first-child) th:nth-child(2) {
     color: blue;
-}
-
-.product-management-table-row th {
-    font-weight: normal;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    border-bottom: 1px solid #F2F2F2;
 }
 
 .product-management-table tr:first-child th {

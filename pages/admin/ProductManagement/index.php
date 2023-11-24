@@ -9,8 +9,9 @@
 		<title>Quản lí sản phẩm</title>
 		<meta charset="utf-8" >		<!--Set the charset to Unicode-->
 		<link rel="icon" type="image/png" href="../../../assets/images/logo-removebg-preview.png">
-		<link rel="stylesheet" href="../../../templates/ProductManagement/style.css">
+		<link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css">
+        <link rel="stylesheet" href="../../../components/ProductRow/style.css">
 	</head>
 
     <body>
@@ -70,6 +71,6 @@
 
         <?php SideBar_End(); ?>
         
-        <script src="../../../templates/ProductManagement/script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

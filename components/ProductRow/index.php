@@ -15,3 +15,4 @@ function ProductRow($id, $name, $price, $sale_number)
             </tr>
         ';
 }
+?>
