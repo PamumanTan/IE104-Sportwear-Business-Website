@@ -91,7 +91,7 @@
                 <a href="#">2</a>
                 <a href="#">3</a>
             </div>
-            <button id="add-coupon-button">Thêm khuyến mãi</button>
+            <button id="add-coupon-button"> Thêm khuyến mãi </button>
         </div>
     </main>
     <?php SideBar_End(); ?>

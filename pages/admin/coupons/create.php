@@ -32,7 +32,7 @@
             </div>
 
             <div class="coupon-modal__types">
-                <p>Loại sản phẩm áp dụng</p>
+                <p> Loại sản phẩm áp dụng </p>
                 <!-- Checkbox container -->
                 <div class="coupon-modal__checkbox-container">
                     <!-- Checkbox column -->
