@@ -13,7 +13,7 @@
         <div class="form">
             <div class="headForm">
                 <h2>Đăng nhập</h2>
-                <p>Chưa có tài khoản? <span class="registerText">Đăng ký</span></p>
+                <p>Chưa có tài khoản? <a href="../Register/" class="registerText">Đăng ký</a></p>
             </div>
             <div class="bodyForm">
                 <div class="firstRow">
@@ -30,7 +30,7 @@
                 <div class="thirdRow">
                     <div>
                         <input type="checkbox" id="check">
-                        <label for="check">Ghi nhớ đăng nhập</label>    
+                        <label for="check">Ghi nhớ đăng nhập</label>
                     </div>
                     <div>
                         <a class="forgetPass" href="">Quên mật khẩu</a>
@@ -39,8 +39,10 @@
             </div>
             <button class="loginButton">Đăng nhập</button>
         </div>
-        <div class="logo">
-            <img src="../../asset/images/logo-removebg-preview.png" alt="Store's logo">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="../../assets/images/logo-removebg-preview.png" alt="Store's logo">
+            </div>
         </div>
     </div>
 </body>

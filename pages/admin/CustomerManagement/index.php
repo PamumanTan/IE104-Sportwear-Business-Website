@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-        <html lang="en">
-        
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Sport</title>
-            <link rel="stylesheet" href="./manage-customers.css" />
-            <link rel="stylesheet" href="./customers/manage-customers.css" />
-            <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css"/>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-        </head>
-        <body>
-<?php
-    
-    $cutomersList = CustomerItem('#AHGA68', 'Cristiano Ronaldo', '10000000đ', '3').
-                    CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
-                    CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3').
-                    CustomerItem('#AHGA68', 'Khánh', '10000000đ', '3');
+<html lang="en">
 
-    function Customers($cutomersList) {
+<?php
+include "../../../components/ProductItem/index.php"
+?>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport</title>
+    <link rel="stylesheet" href="./manage-customers.css" />
+    <link rel="stylesheet" href="./customers/manage-customers.css" />
+    <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <?php
+    $cutomersList = CustomerItem('#AHGA68', 'Cristiano Ronaldo', '10000000đ', '3') .
+        CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3') .
+        CustomerItem('#AHGA68', 'Cristiano Ronaldo Ronaldo Ronaldo Ronaldo', '10000000đ', '3') .
+        CustomerItem('#AHGA68', 'Khánh', '10000000đ', '3');
+
+    function Customers($cutomersList)
+    {
         echo '
             <main class="container">
                 <h1>Quản lý khách hàng</h1>
@@ -65,9 +70,9 @@
                                 <th>Hành động</th>
                             </tr>
                         </thead>
-                        <tbody>'.
-                        $cutomersList.
-                        '</tbody>
+                        <tbody>' .
+            $cutomersList .
+            '</tbody>
                     </table>
                 </div>
         
@@ -82,12 +87,12 @@
             </main>
             
             ';
-        };
-        ?>
+    };
+    ?>
 
-        <?php SideBar_Start() ?>
-        <?php Customers($cutomersList) ?>
-        <?php SideBar_End() ?>
+    <?php SideBar_Start() ?>
+    <?php Customers($cutomersList) ?>
+    <?php SideBar_End() ?>
     <script src="manage-customers.js"></script>
 </body>
 

@@ -13,7 +13,7 @@
         <div class="form">
             <div class="headForm">
                 <h2>Đăng ký</h2>
-                <p>Đã có tài khoản? <span class="loginText">Đăng nhập</span></p>
+                <p>Đã có tài khoản? <a href="../Login/" class="loginText">Đăng nhập</a></p>
             </div>
             <div class="bodyForm">
                 <div class="firstRow">
@@ -55,7 +55,7 @@
             <button class="registerButton">Tạo tài khoản</button>
         </div>
         <div class="logo">
-            <img src="../../asset/images/logo-removebg-preview.png" alt="Store's logo">
+            <img src="../../assets/images/logo-removebg-preview.png" alt="Store's logo">
         </div>
     </div>
 </body>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Home/index.css">
     <link rel="stylesheet" href="../components/NavBar/index.css">
     <link rel="stylesheet" href="../components/Footer/index.css">
-    <link rel="stylesheet" href="../asset/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/icons/themify-icons/themify-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 
     <div class="homePage">
         <div class="homePoster">
-            <img src="../asset/images/Image.png" alt="">
+            <img src="../assets/images/Image.png" alt="">
         </div>
         <div class="homeCategory">
             <div>
@@ -27,23 +27,23 @@
             </div>
             <div class="homeListCategory">
                 <div>
-                    <img src="../asset/images/Module 2/Item 2.png" alt="">
+                    <img src="../assets/images/Module 2/Item 2.png" alt="">
                     <h4>SẢN PHẨM MỚI</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 2/Item 3.png" alt="">
+                    <img src="../assets/images/Module 2/Item 3.png" alt="">
                     <h4>NAM</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 2/Item 4.png" alt="">
+                    <img src="../assets/images/Module 2/Item 4.png" alt="">
                     <h4>NỮ</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 2/Item 5.png" alt="">
+                    <img src="../assets/images/Module 2/Item 5.png" alt="">
                     <h4>TRẺ EM</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 2/Item 2.png" alt="">
+                    <img src="../assets/images/Module 2/Item 2.png" alt="">
                     <h4>KHUYẾN MÃI</h4>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <button class="homeBannerBtn">XEM CHI TIẾT</button>
             </div>
             <div>
-                <img src="../asset/images/Module 3/Image.png" alt="">
+                <img src="../assets/images/Module 3/Image.png" alt="">
             </div>
         </div>
         <div class="homeNewestProduct">
@@ -64,9 +64,9 @@
                 <p>SẢN PHẨM MỚI NHẤT</p>
             </div>
             <div class="homeNewestProductImg">
-                <img src="../asset/images/Module 4/Item 1.png" alt="">
-                <img src="../asset/images/Module 4/Item 2.png" alt="">
-                <img src="../asset/images/Module 4/Item 3.png" alt="">
+                <img src="../assets/images/Module 4/Item 1.png" alt="">
+                <img src="../assets/images/Module 4/Item 2.png" alt="">
+                <img src="../assets/images/Module 4/Item 3.png" alt="">
 
             </div>
         </div>
@@ -76,9 +76,9 @@
                 <p>ĐÁNH GIÁ CỦA KHÁCH HÀNG</p>
             </div>
             <div class="homeRateImg">
-                <img src="../asset/images/Module 5/Customer Review-1.png" alt="">
-                <img src="../asset/images/Module 5/Customer Review.png" alt="">
-                <img src="../asset/images/Module 5/Customer Review-1.png" alt="">
+                <img src="../assets/images/Module 5/Customer Review-1.png" alt="">
+                <img src="../assets/images/Module 5/Customer Review.png" alt="">
+                <img src="../assets/images/Module 5/Customer Review-1.png" alt="">
             </div>
         </div>
 
@@ -88,15 +88,15 @@
             </div>
             <div class="homeMenList">
                 <div>
-                    <img src="../asset/images/Module 6/Item 1.png" alt="">
+                    <img src="../assets/images/Module 6/Item 1.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 2.png" alt="">
+                    <img src="../assets/images/Module 6/Item 2.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 3.png" alt="">
+                    <img src="../assets/images/Module 6/Item 3.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
             </div>
@@ -110,15 +110,15 @@
             </div>
             <div class="homeWomenList">
                 <div>
-                    <img src="../asset/images/Module 6/Item 1.png" alt="">
+                    <img src="../assets/images/Module 6/Item 1.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 2.png" alt="">
+                    <img src="../assets/images/Module 6/Item 2.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 3.png" alt="">
+                    <img src="../assets/images/Module 6/Item 3.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
             </div>
@@ -132,15 +132,15 @@
             </div>
             <div class="homeKidsList">
                 <div>
-                    <img src="../asset/images/Module 6/Item 1.png" alt="">
+                    <img src="../assets/images/Module 6/Item 1.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 2.png" alt="">
+                    <img src="../assets/images/Module 6/Item 2.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
                 <div>
-                    <img src="../asset/images/Module 6/Item 3.png" alt="">
+                    <img src="../assets/images/Module 6/Item 3.png" alt="">
                     <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
                 </div>
             </div>
@@ -155,7 +155,7 @@
 
     <script>
         document.querySelectorAll('.homeBannerBtn').forEach(element => element.onclick = () => {
-                window.location.href = '../pages/ProductDetail';
+            window.location.href = '../pages/ProductDetail';
         });
 
         document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
@@ -169,7 +169,6 @@
         document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
             window.location.href = '../pages/ProductList';
         });
-
     </script>
 
 </body>
