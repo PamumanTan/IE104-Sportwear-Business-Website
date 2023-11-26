@@ -1,6 +1,6 @@
 <?php
-include '../../../components/coupon-item/index.php';
-include "../../../components/admin-sidebar/sidebar.php";
+include '../../components/coupon-item/index.php';
+include "../../components/admin-sidebar/index.php";
 
 
 // Pagination
@@ -15,10 +15,9 @@ $page = $_GET['page'] ?? 1;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sport</title>
-    <link rel="stylesheet" href="manage-coupon.css" />
-    <link rel="stylesheet" hre f="coupons/manage-coupon.css" />
-    <link rel="stylesheet" href="../../../components/admin-sidebar/sidebar.css">
-    <link rel="stylesheet" href="coupons/coupon-modal.css">
+    <link rel="stylesheet" href="./manage-coupon.css" />
+    <link rel="stylesheet" href="../../components/admin-sidebar/style.css">
+    <link rel="stylesheet" href="./coupon-modal.css">
 </head>
 
 <body>
@@ -97,7 +96,7 @@ $page = $_GET['page'] ?? 1;
     <?php SideBar_End(); ?>
     <?php include "./detail.php"; ?>
     <?php include "./create.php"; ?>
-    <script src="coupons/manage-coupon.js"></script>
+    <script src="./manage-coupon.js"></script>
 </body>
 
 </html>
