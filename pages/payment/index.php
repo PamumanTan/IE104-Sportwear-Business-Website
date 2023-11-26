@@ -31,11 +31,6 @@ include '../../components/payment-product-item/index.php';
             padding: 40px 0 20px 0;
         }
 
-        .direct-text a {
-            text-decoration: none;
-            color: black;
-        }
-
         .payment-page-container {
             width: 100vw;
             display: flex;
@@ -101,6 +96,7 @@ include '../../components/payment-product-item/index.php';
             cursor: pointer;
             transition: all 0.2s ease;
             padding: 14px 0;
+
         }
 
         .order-button:hover {
@@ -162,6 +158,55 @@ include '../../components/payment-product-item/index.php';
         #style-3::-webkit-scrollbar-thumb {
             background-color: #000000;
         }
+
+        /* Modal CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 465px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .modal-content button {
+            background-color: white;
+            width: 385px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-background.active {
+            display: block;
+        }
+
+        .modal-background {
+            display: none;
+            position: fixed;
+            z-index: 9998;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+        }
     </style>
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/footer/style.css">
@@ -187,19 +232,13 @@ include '../../components/payment-product-item/index.php';
                     <input type="checkbox" name="save-info" id="save-info">
                     <label for="save-info">Lưu thông tin</label>
                 </div>
-                <div class="order-button">
+                <div class="order-button" role="button">
                     <p>Đặt hàng</p>
                 </div>
             </div>
             <div class="container">
                 <div class="cart-container">
                     <h2>Giỏ hàng của bạn</h2>
-                    <!-- Chèn link direct đến page danh sách sản phẩm  -->
-                    <!-- <div class="direct-text">
-                        <p>Sẵn sàng thanh toán ?
-                            <a href="#">Tiếp tục mua sắm</a>
-                        </p>
-                    </div> -->
                     <div class="cart-product-list" id="style-3">
                         <!-- Generate cart-product-item từ cartProductItem components -->
                         <?php
@@ -233,8 +272,39 @@ include '../../components/payment-product-item/index.php';
             </div>
         </div>
     </div>
+    <div class="modal-background"></div>
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Đặt hàng thành công</h2>
+            <p>Buy successfully.</p>
+            <button id="closeModalBtn">Thoát</button>
+        </div>
+    </div>
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
+    <?php
+    echo
+        '<script>
+            //Modal OrderButton
+            const openModalButton = document.querySelector(".order-button");
+            const closeModalButton = document.getElementById("closeModalBtn");
+            const modal = document.querySelector(".modal");
+            const modalBackground = document.querySelector(".modal-background");
+            openModalButton.addEventListener("click", function () {
+                modal.classList.add("active");
+                modalBackground.classList.add("active");
+            });
+            
+            closeModalButton.addEventListener("click", function () {
+                modal.classList.remove("active");
+                modalBackground.classList.remove("active");
+            });
+            modalBackground.addEventListener("click", function () {
+                modal.classList.remove("active");
+                modalBackground.classList.remove("active");
+            });
+        </script>'
+        ?>
 </body>
 
 </html>
