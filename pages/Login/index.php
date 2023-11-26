@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login </title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <div class="form">
             <div class="headForm">
                 <h2>Đăng nhập</h2>
-                <p>Chưa có tài khoản? <a href="../Register/" class="registerText">Đăng ký</a></p>
+                <p>Chưa có tài khoản? <a href="../register/" class="registerText">Đăng ký</a></p>
             </div>
             <div class="bodyForm">
                 <div class="firstRow">

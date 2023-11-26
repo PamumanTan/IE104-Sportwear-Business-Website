@@ -245,7 +245,7 @@ body {
 .homeNewestProductImg,
 .homeRateImg {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly ;
     margin-top: 2rem;
     /* margin-bottom: 2rem; */
 }

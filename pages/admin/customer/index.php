@@ -2,14 +2,14 @@
 <html lang="en">
 
 <?php
-include "../../../components/ProductItem/index.php"
+include "../../product-list/product-item/index.php";
 ?>
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sport</title>
-    <link rel="stylesheet" href="./manage-customers.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./customers/manage-customers.css" />
     <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,7 +93,7 @@ include "../../../components/ProductItem/index.php"
     <?php SideBar_Start() ?>
     <?php Customers($cutomersList) ?>
     <?php SideBar_End() ?>
-    <script src="manage-customers.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

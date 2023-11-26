@@ -1,5 +1,5 @@
 <?php
-include '../../components/ProductItem/index.php';
+include '../../components/product-item/index.php';
 function execQuery($query)
 {
   require("../../db/dbConfig.php");
@@ -24,16 +24,14 @@ function execQuery($query)
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../../components/NavBar/index.css">
-  <!-- <link rel="stylesheet" href="../../components/Comments/Comments.css"> -->
+  <link rel="stylesheet" href="../../components/navbar/style.css">
+  <link rel="stylesheet" href="../../components/comment/style.css">
   <script src="./script.js" defer></script>
 </head>
 
 <body>
-  <?php include('../../components/NavBar/index.php') ?>
+  <?php include('../../components/navbar/index.php') ?>
   <main>
-
-
     <?php
     if (isset($_GET['id']) && $_GET['id']) {
       $id = $_GET['id'];
@@ -161,7 +159,7 @@ function execQuery($query)
   </main>
   <footer></footer>
 
-  <script src="../../components/Comments/Comment.js" defer></script>
+  <script src="../../components/comment/script.js" defer></script>
 </body>
 
 </html>

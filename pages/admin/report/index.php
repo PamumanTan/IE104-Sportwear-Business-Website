@@ -1,8 +1,8 @@
 <?php
-    include "../../../components/TimeNavBar/TimeNavBar.php";
-    // $time is the variable contain t query
-    $time = $_GET['t'] ?? 'week';
-    $GLOBALS['$time'] = $time;
+include "../../../components/time-navbar/index.php";
+// $time is the variable contain t query
+$time = $_GET['t'] ?? 'week';
+$GLOBALS['$time'] = $time;
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sport</title>
-    <link rel="stylesheet" href="./report-sale.css" />
-    <link rel="stylesheet" href="./report/report-sale.css" />
-    <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./report/style.css" />
+    <link rel="stylesheet" href="../../../components/admin-sidebar/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -22,8 +22,8 @@
 
 <body>
     <?php
-    include('../../../components/SaleReportItem/index.php');
-    include("../../../components/Admin_SideBar/Sidebar.php");
+    include('../../../components/sale-report-item/index.php');
+    include("../../../components/admin-sidebar/Sidebar.php");
     $saleReportList = SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
         SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
         SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
@@ -70,7 +70,7 @@
     </main>
 
     <?php SideBar_End() ?>
-    <script src="manage-customers.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

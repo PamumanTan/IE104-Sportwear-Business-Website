@@ -1,5 +1,5 @@
 <?php
-include '../../components/ProductItem/index.php';
+include '../../components/product-item/index.php';
 function execQuery($query)
 {
     require("../../db/dbConfig.php");
@@ -25,11 +25,11 @@ function execQuery($query)
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../../components/ProductItem/style.css">
+    <link rel="stylesheet" href="../../components/product-item/style.css">
     <!-- css for navbar -->
-    <link rel="stylesheet" href="../../components/NavBar/index.css">
+    <link rel="stylesheet" href="../../components/navbar/style.css">
     <!-- css for footer -->
-    <link rel="stylesheet" href="../../components/Footer/index.css">
+    <link rel="stylesheet" href="../../components/footer/style.css">
 </head>
 
 <body>
@@ -169,7 +169,7 @@ function execQuery($query)
 
     <!-- footer -->
     <?php
-    include '../../components/Footer/index.php';
+    include '../../components/footer/index.php';
     ?>
 
     <script src="./script.js"></script>

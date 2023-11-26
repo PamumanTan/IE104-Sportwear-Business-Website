@@ -35,7 +35,7 @@
 
         .cart-container {
             flex: 0.65;
-            padding: 5px 10px;
+            padding: 5px 10px 5px 0;
         }
 
         .total-container {
@@ -71,60 +71,31 @@
             opacity: 0.8;
         }
 
-        /* CartProductItem CSS */
-        .cart-product-container p,
-        h3 {
-            margin: 0;
+        .total-container .total-div,
+
+        .total-container .shipping-fee-div {
+            margin: 0.5rem 0;
         }
 
-        .cart-product-container {
-            width: 560px;
-            height: 130px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            padding-right: 5px;
+        .total-container .total-pay {
+            margin: 0.5rem 0 1rem 0;
         }
 
-        .cart-product-img img {
-            width: 100%;
-            height: 100%;
+        .total-container h2 {
+            margin: 0.75rem 0;
         }
 
-        .cart-product-img {
-            height: 130px;
-            object-fit: contain;
-        }
-
-        .cart-product-detail {
-            height: 130px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-
-        .cart-product-delete {
-            display: flex;
-            flex-direction: column;
-            margin-top: auto;
-            cursor: pointer;
-            padding-bottom: 10px;
-        }
-
-        .under-line {
-            height: 1px;
-            background-color: black;
-            width: 50px;
+        .pay-button {
+            padding: 0.5rem 0.75rem;
         }
     </style>
-    <script src="./cartPage.js" defer></script>
+    <link rel="stylesheet" href="../../components/navbar/style.css">
+    <link rel="stylesheet" href="../../components/footer/style.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <!-- Chèn navbar vào đây thay cho cái tạm này  -->
-    <?php include_once "../../components/NavBar/index.php" ?>
+    <?php include_once "../../components/navbar/index.php" ?>
     <h1 id="heading">Giỏ hàng của bạn</h1>
     <div class="container">
         <div class="cart-container">
@@ -144,7 +115,7 @@
                 <p>Tổng tiền sản phẩm</p>
                 <p id="total"></p>
             </div>
-            <div class="shipping=fee-div">
+            <div class="shipping-fee-div">
                 <p>Phí ship</p>
                 <p id="shipping-fee"></p>
             </div>
@@ -159,7 +130,7 @@
         </div>
     </div>
     <!-- Chèn footer vào đây -->
-    <?php include_once "../../components/Footer/index.php" ?>
+    <?php include_once "../../components/footer/index.php" ?>
 </body>
 
 </html>

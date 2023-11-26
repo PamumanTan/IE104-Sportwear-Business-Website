@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hướng dẫn</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../../components/Footer/index.css">
-    <link rel="stylesheet" href="../../components/NavBar/index.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <?php require('../../components/NavBar/index.php'); ?>
+    <?php require('../../components/navbar/index.php'); ?>
     <div class="guide">
         <div class="guide1">
             <p class="guideTitle bold">HƯỚNG DẪN</p>
@@ -110,7 +110,7 @@
         </div>
     </div>
 
-    <?php require('../../components/Footer/index.php'); ?>
+    <?php require('../../components/footer/index.php'); ?>
 
     <script>
         const subNavBlurs = document.querySelectorAll('.subnav-blur');
