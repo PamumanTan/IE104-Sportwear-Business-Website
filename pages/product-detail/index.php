@@ -1,8 +1,8 @@
 <?php
-include '../../components/product-item/index.php';
+// include './product-item/index.php';
 function execQuery($query)
 {
-  require("../../db/dbConfig.php");
+  require("../../db/db-config.php");
 
   $conn = new mysqli($host, $username, $password, $dbname);
   // Check connection
