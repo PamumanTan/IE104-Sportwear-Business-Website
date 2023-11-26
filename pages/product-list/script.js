@@ -10,7 +10,7 @@ productItems.forEach((productItem) => {
         }
         console.log(target);
         const id = target.id.substring(11);
-        window.location.href = '/sportswear/pages/ProductDetail/?id=' + id;
+        window.location.href = '/sportswear/pages/product-detail/?id=' + id;
     }
 });
 

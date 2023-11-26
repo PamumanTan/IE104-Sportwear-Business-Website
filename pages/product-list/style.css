@@ -12,7 +12,8 @@
 
 /* Body */
 body {
-    font-family: 'my_public_sans';
+    /* font-family: 'my_public_sans'; */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Header */

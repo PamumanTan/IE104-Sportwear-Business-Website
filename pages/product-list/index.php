@@ -1,8 +1,8 @@
 <?php
-include '../../components/product-item/index.php';
+include './product-item/index.php';
 function execQuery($query)
 {
-    require("../../db/dbConfig.php");
+    require("../../db/db-config.php");
 
     $conn = new mysqli($host, $username, $password, $dbname);
     // Check connection
@@ -24,8 +24,8 @@ function execQuery($query)
     <title>Products</title>
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../../components/product-item/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../product-item/style.css">
     <!-- css for navbar -->
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <!-- css for footer -->
