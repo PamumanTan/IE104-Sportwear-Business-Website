@@ -1,3 +1,6 @@
+<?php
+include "../../components/cart-product-item/index.php"
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +17,7 @@
         #heading {
             font-weight: bold;
             margin-left: 100px;
-            padding-top: 30px;
+            padding: 30px 0;
         }
 
         .direct-text a {
@@ -28,17 +31,17 @@
             padding: 0 100px;
         }
 
-        .container div {
+        .cart-container {
             display: flex;
             flex-direction: column;
-        }
-
-        .cart-container {
             flex: 0.65;
             padding: 5px 10px 5px 0;
+            gap: 20px;
         }
 
         .total-container {
+            display: flex;
+            flex-direction: column;
             flex: 0.35;
             padding: 5px 10px;
         }
@@ -86,11 +89,42 @@
         }
 
         .pay-button {
-            padding: 0.5rem 0.75rem;
+            /* padding: 0.5rem 0.75rem; */
+            margin-top: 10px;
+            padding: 12px 0;
+        }
+
+        .cart-product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow-y: scroll;
+            max-height: 460px;
+        }
+
+        .cart-product-list #line {
+            width: 90%;
+            margin-left: 10px;
+        }
+
+        /* Scrollbar CSS */
+        #style-3::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #f5f5f5;
+        }
+
+        #style-3::-webkit-scrollbar {
+            width: 6px;
+            background-color: #f5f5f5;
+        }
+
+        #style-3::-webkit-scrollbar-thumb {
+            background-color: #000000;
         }
     </style>
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="../../components/cart-product-item/style.css">
     <script src="./script.js" defer></script>
 </head>
 
@@ -105,8 +139,17 @@
                     <a href="#">Tiếp tục mua sắm</a>
                 </p>
             </div>
-            <div class="cart-product-list">
+            <div class="cart-product-list" id="style-3">
                 <!-- Generate cart-product-item từ cartProductItem components -->
+                <?php
+                CartProductItem('https://thejerseyhubshop.com/cdn/shop/products/ScreenShot2023-06-07at2.35.25PM.png?v=1687310379', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Real', 2500000, 'XL', 1);
+                echo '<div id="line"></div>';
+                CartProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
+                echo '<div id="line"></div>';
+                CartProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
+                echo '<div id="line"></div>';
+                CartProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
+                ?>
             </div>
         </div>
         <div class="total-container">
