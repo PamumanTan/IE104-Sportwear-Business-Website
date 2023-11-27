@@ -4,6 +4,7 @@
 <?php
 include "../../../components/customer-item/index.php";
 include "../../../components/admin-sidebar/index.php";
+
 // Used for pagination
 $page = $_GET["p"];
 ?>
