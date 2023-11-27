@@ -9,8 +9,8 @@ function ProductRow($id, $name, $price, $sale_number)
                 <th><label class="product-row">' . $price . '</label></th>
                 <th><label class="product-row">' . $sale_number . '</label></th>
                 <th>
-                    <a href="../edit/index.php"><img src="../components/assets/icons/detail.svg" alt="detail"></a>
-                    <a href="../productController.php?product_id=' . $id . ' &action=delete"><img src="../components/assets/icons/delete-btn.svg" alt="detail"></a>
+                    <a href="./edit/index.php"><img src="../../../assets/images/detail.svg" alt="detail"></a>
+                    <a href="../../../controllers/product-controller.php?product_id=' . $id . ' &action=delete"><img src="../../../assets/images/delete.svg" alt="detail"></a>
                 </th>
             </tr>
         ';

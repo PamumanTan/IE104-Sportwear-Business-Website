@@ -1,4 +1,11 @@
+/* Set up custom fonts */
+@font-face {
+    font-family: 'my_public_sans';
+    src: url('../../../../assets/fonts/public-sans-regular.ttf');
+}
+
 * {
+    font-family: 'my_public_sans';
     margin: 0;
     padding: 0;
     box-sizing: border-box;

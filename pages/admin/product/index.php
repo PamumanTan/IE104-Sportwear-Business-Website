@@ -1,6 +1,6 @@
 <?php
-include '../../../components/ProductRow/index.php';
-include '../../../components/admin-sidebar/Sidebar.php';
+include './product-row/index.php';
+include '../../../components/admin-sidebar/index.php';
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
@@ -11,8 +11,8 @@ include '../../../components/admin-sidebar/Sidebar.php';
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="icon" type="image/png" href="../../../assets/images/logo-removebg-preview.png">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../../../components/admin-sidebar/Sidebar.css">
-    <link rel="stylesheet" href="../../../components/ProductRow/style.css">
+    <link rel="stylesheet" href="../../../components/admin-sidebar/style.css">
+    <link rel="stylesheet" href="./product-row/style.css">
 </head>
 
 <body>
