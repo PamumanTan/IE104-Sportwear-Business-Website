@@ -45,7 +45,7 @@ body {
 }
 
 .navListFirst {
-    flex: 1;
+    flex: 0.7;
     justify-content: flex-start;
     padding-left: 50px;
 }
@@ -56,9 +56,9 @@ body {
 }
 
 .navListEnd {
-    flex: 1.4;
+    flex: 2;
     float: right;
-    padding-left: 50px;
+    /* padding-left: 50px;   */
     padding-right: 20px;
     justify-content: flex-end;
     gap: 1rem;
@@ -139,4 +139,49 @@ body {
 .navIntroduce:hover {
     border-bottom-color: rgb(204, 86, 86);
 
+}
+
+
+.navSearch {
+    display: flex;
+    align-items: center;
+}
+
+.navSearchContent input:focus {
+    outline: none;
+}
+.navSearchContent input {
+    border-style: hidden;
+    font-size: 14px;
+    line-height: 1.9;
+    width: 0;
+    transition: width 0.75s ease;   
+}   
+
+.navSearchContent div:hover {
+    background-color: rgba(146, 159, 168, 0.15);
+    border-radius: 50%; 
+    cursor: pointer
+}
+
+
+.navSearchContent {
+    background-color: white;
+    display: flex;
+    /* height: 0px; */
+    border-radius: 0px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+.navSearchContent:hover input {
+    width: 176px;
+    cursor: text;
+    padding-left: 6px;
+}
+
+.navSearchIcon {
+    width: 30px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
