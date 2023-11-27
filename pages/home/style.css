@@ -1,0 +1,377 @@
+* {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.nav {
+    background-color: #000;
+    width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navList {
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 17px;
+    display: flex;
+    line-height: 3.5;
+}
+
+.navList li a,
+.navList li>div>a {
+    text-decoration: none;
+    color: white;
+    /* font-weight: 600; */
+}
+
+.navListFirst,
+.navListMiddle,
+.navListEnd {
+    display: flex;
+
+}
+
+.navListFirst {
+    flex: 1;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.navListMiddle {
+    justify-content: space-between;
+    flex: 3;
+}
+
+.navListEnd {
+    flex: 1.4;
+    float: right;
+    padding-left: 50px;
+    padding-right: 20px;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.subnavNewProduct,
+.subnavPromotion {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    list-style-type: none;
+    padding: 2rem 3rem;
+    line-height: 1.5;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    gap: 6rem;
+}
+
+
+.subnavNewProduct ul,
+.subnavPromotion ul {
+    list-style-type: none;
+}
+
+.subnavNewProduct ul li>a,
+.subnavPromotion ul li>a,
+.subnavMen li>a,
+.subnavWomen li>a,
+.subnavKids li>a {
+    color: black;
+}
+
+.subnavMen,
+.subnavWomen,
+.subnavKids {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    position: absolute;
+    list-style-type: none;
+    padding: 1rem 2rem;
+    line-height: 1.5;
+    top: 62px;
+    background-color: #fff;
+    color: #000;
+    gap: 0.6rem;
+}
+
+.navNewProduct,
+.navPromotion,
+.navMen,
+.navWomen,
+.navKids,
+.navHelp,
+.navIntroduce {
+    border-bottom: 2px solid#000;
+}
+
+/* --------- hover --------------- */
+.navNewProduct:hover ol,
+.navPromotion:hover ol,
+.navMen:hover ul,
+.navWomen:hover ul,
+.navKids:hover ul {
+    display: flex;
+}
+
+.navNewProduct:hover,
+.navPromotion:hover,
+.navMen:hover,
+.navWomen:hover,
+.navKids:hover,
+.navHelp:hover,
+.navIntroduce:hover {
+    border-bottom-color: rgb(204, 86, 86);
+
+}
+
+
+/* ----------- Click ----------------- */
+.navhelp:focus {
+    border-bottom-color: rgb(204, 86, 86);
+
+}
+
+/* ----------- homePage -------------- */
+/* .poster img {
+        filter:blur(2px)
+    } */
+
+.homePoster {
+    width: 100%;
+}
+
+.homePoster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: blur(2px); */
+}
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+.homeCategory {
+    padding: 5rem 3rem;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.homeListCategory {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.homeListCategory h4 {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.homeBanner {
+    display: flex;
+    flex-direction: row;
+    /* gap: 0; */
+}
+
+.homeBannerDescribe {
+    color: white;
+    background-color: #000;
+    min-height: 100%;
+    padding: 8rem 6rem;
+    flex: 40%;
+
+    /* : center; */
+}
+
+.homeBannerDescribe p:first-child {
+    font-size: 3.4rem;
+    font-weight: 900;
+}
+
+.homeBannerDescribe p:nth-child(2) {
+    font-size: 1.5rem;
+    /* font-weight: 900; */
+}
+
+.homeBanner img {
+    display: flex;
+    flex: 60%;
+}
+
+.homeBannerBtn {
+    width: 170px;
+    height: 42px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.homeNewestProduct,
+.homeRate {
+    padding: 3rem 3rem;
+    font-weight: 900;
+    font-size: 2.2rem;
+}
+
+.homeNewestProductImg,
+.homeRateImg {
+    display: flex;
+    justify-content: space-evenly ;
+    margin-top: 2rem;
+    /* margin-bottom: 2rem; */
+}
+
+.homeMen,
+.homeWomen,
+.homeKids {
+    padding: 3rem 3rem;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.homeMenList,
+.homeWomenList,
+.homeKidsList {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+.homeMenList h4,
+.homeWomenList h4,
+.homeKidsList h4 {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.homeMenBtn,
+.homeWomenBtn,
+.homeKidsBtn {
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    border: 0px;
+    line-height: 3.5;
+    justify-items: center;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 auto;
+    /* display: flex; */
+    /* justify-items: center; */
+    display: block;
+
+}
+
+/* ------------ Footer ------------------- */
+.footerAbove {
+    margin-top: 4rem;
+    min-height: 16rem;
+    padding: 4rem 0 4rem 8rem;
+    background-color: #B8E0EF;
+    color: #343434;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.footerAbove ul {
+    margin-top: 2rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.footerAbove li a {
+    text-decoration: none;
+    color: #53585F;
+}
+
+.line {
+    border: 1px rgba(146, 159, 168, 0.35) solid;
+}
+
+.footerUnder {
+    height: 6rem;
+    padding: 0 1rem;
+    background-color: #B8E0EF;
+}
+
+.subFooter {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.4rem;
+    color: #53585F;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    /* gap: 20rem; */
+}
+
+
+
+
+/* ------------General------------ */
+.hide {
+    display: none;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.mt2 {
+    margin-top: 3rem;
+}
+
+button {
+    cursor: pointer;
+}
