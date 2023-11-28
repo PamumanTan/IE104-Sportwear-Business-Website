@@ -191,11 +191,11 @@
                 </div>
 
                 <div class="navHelp subnav-blur">
-                    <a href="/sportswear/pages/Guide">Hướng dẫn</a>
+                    <a href="/sportswear/pages/guide">Hướng dẫn</a>
                 </div>
 
                 <div class="navIntroduce">
-                    <a href="/sportswear/pages/Guide">Giới thiệu</a>
+                    <a href="/sportswear/pages/guide">Giới thiệu</a>
                 </div>
 
             </li>
@@ -210,8 +210,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="/sportswear/pages/Login">Đăng nhập</a>
-                <a href="/sportswear/pages/Register/">Đăng ký</a>
+                <a href="/sportswear/pages/login">Đăng nhập</a>
+                <a href="/sportswear/pages/register/">Đăng ký</a>
 
             </li>
         </ul>

@@ -1,0 +1,11 @@
+.bold {
+    font-weight: bold;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.blur {
+    opacity: 0.3;
+}

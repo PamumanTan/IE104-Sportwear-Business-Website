@@ -23,13 +23,11 @@ document.querySelector('.loginButton').addEventListener('click', function(event)
         .then(response => response.json())
         .then(data => {
             if (!data['error']) {
-                showMessage(data['message']);
-                console.log(data['access_token']);
                 window.location.href = "http://localhost/sportswear/pages";
             } else {
                 showMessage(data['message']);
             }
         })
-        .catch(error => console.log('error', error));
+        .catch(error => showMessage(error));
 
 });

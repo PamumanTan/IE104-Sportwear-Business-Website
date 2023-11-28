@@ -155,12 +155,13 @@ body {
 
 .homePoster {
     width: 100%;
+    height: 1000px;
 }
 
 .homePoster img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     /* filter: blur(2px); */
 }
 
@@ -376,192 +377,15 @@ button {
     cursor: pointer;
 }
 
-
-/* Duong  */
-* {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.homeNewestProductImg img{
+    height: 400px;
 }
 
-html {
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    background-color: #ffffff;
-}
-
-.nav {
-    background-color: #000;
+.homeBannerDescribe-img-container{
+    margin: 20px 0;
+    display: flex;
     width: 100%;
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.navList {
-    justify-content: space-between;
-    list-style-type: none;
-    font-size: 17px;
-    display: flex;
-    line-height: 3.5;
-}
-
-.navList li a,
-.navList li>div>a {
-    text-decoration: none;
-    color: white;
-    /* font-weight: 600; */
-}
-
-.navListFirst,
-.navListMiddle,
-.navListEnd {
-    display: flex;
-
-}
-
-.navListFirst {
-    flex: 0.7;
-    justify-content: flex-start;
-    padding-left: 50px;
-}
-
-.navListMiddle {
-    justify-content: space-between;
-    flex: 3;
-}
-
-.navListEnd {
-    flex: 2;
-    float: right;
-    /* padding-left: 50px;   */
-    padding-right: 20px;
-    justify-content: flex-end;
-    gap: 1rem;
-}
-
-.subnavNewProduct,
-.subnavPromotion {
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    list-style-type: none;
-    padding: 2rem 3rem;
-    line-height: 1.5;
-    top: 62px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    color: #000;
-    gap: 6rem;
-}
-
-
-.subnavNewProduct ul,
-.subnavPromotion ul {
-    list-style-type: none;
-}
-
-.subnavNewProduct ul li>a,
-.subnavPromotion ul li>a,
-.subnavMen li>a,
-.subnavWomen li>a,
-.subnavKids li>a {
-    color: black;
-}
-
-.subnavMen,
-.subnavWomen,
-.subnavKids {
-    display: none;
-    flex-direction: column;
-    text-align: left;
-    position: absolute;
-    list-style-type: none;
-    padding: 1rem 2rem;
-    line-height: 1.5;
-    top: 62px;
-    background-color: #fff;
-    color: #000;
-    gap: 0.6rem;
-}
-
-.navNewProduct,
-.navPromotion,
-.navMen,
-.navWomen,
-.navKids,
-.navHelp,
-.navIntroduce {
-    border-bottom: 2px solid#000;
-}
-
-/* --------- hover --------------- */
-.navNewProduct:hover ol,
-.navPromotion:hover ol,
-.navMen:hover ul,
-.navWomen:hover ul,
-.navKids:hover ul {
-    display: flex;
-}
-
-.navNewProduct:hover,
-.navPromotion:hover,
-.navMen:hover,
-.navWomen:hover,
-.navKids:hover,
-.navHelp:hover,
-.navIntroduce:hover {
-    border-bottom-color: rgb(204, 86, 86);
-
-}
-
-
-.navSearch {
-    display: flex;
+    height: auto;
     align-items: center;
-}
-
-.navSearchContent input:focus {
-    outline: none;
-}
-.navSearchContent input {
-    border-style: hidden;
-    font-size: 14px;
-    line-height: 1.9;
-    width: 0;
-    transition: width 0.75s ease;   
-}   
-
-.navSearchContent div:hover {
-    background-color: rgba(146, 159, 168, 0.15);
-    border-radius: 50%; 
-    cursor: pointer
-}
-
-
-.navSearchContent {
-    background-color: white;
-    display: flex;
-    /* height: 0px; */
-    border-radius: 0px;
-    padding: 3px 10px;
-    border-radius: 20px;
-}
-.navSearchContent:hover input {
-    width: 176px;
-    cursor: text;
-    padding-left: 6px;
-}
-
-.navSearchIcon {
-    width: 30px;
-    display: flex; 
     justify-content: center;
-    align-items: center;
 }

@@ -191,11 +191,11 @@
             </div>
 
             <div class="navHelp subnav-blur">
-                <a href="/sportswear/pages/Guide">Hướng dẫn</a>
+                <a href="/sportswear/pages/guide">Hướng dẫn</a>
             </div>
 
             <div class="navIntroduce">
-                <a href="/sportswear/pages/Guide">Giới thiệu</a>
+                <a href="/sportswear/pages/guide">Giới thiệu</a>
             </div>
 
         </li>
@@ -204,7 +204,7 @@
             <!-- <a class="navSearch" href="/sportswear/pages/product-list"> -->
             <div class="navSearch">
                 <div class="navSearchContent">
-                    <input type="text" placeholder='Bạn muốn lựa gì :3'>
+                    <input id="search-input" type="text" placeholder='Bạn muốn lựa gì :3'>
                     <div class="navSearchIcon">
                         <i class="ti-search"></i>
                     </div>
@@ -214,8 +214,37 @@
                 <img src="/sportswear/assets/images/navbar_logined/cart.svg" alt="">
                 <p>10</p>
             </a>
-            <a class="accountImg" href="#"><img src="/sportswear/assets/images/navbar_logined/account_circle.svg" alt=""></a>
+            <div id="account" class="accountImg" href="#"><img src="/sportswear/assets/images/navbar_logined/account_circle.svg" alt=""></div>
 
         </li>
     </ul>
+</div>
+<div class="modalAccount">
+    <div class="modalInfo">
+        <img src="../../assets/images/navbar_logined/avatar.svg" class="modalImg" alt="">
+        <h2> Jacob Jones</h2>
+        <a href="#">Chỉnh sửa thông tin</a>
+    </div>
+    <div class="modalDetail">
+        <div class="modalDetailProfile">
+            <img src="../../assets/images/navbar_logined/profile2.svg" alt="">
+            <p>Hồ sơ</p>
+            <i class="ti-angle-right"></i>
+        </div>
+        <div class="modalDetailCart">
+            <img src="../../assets/images/navbar_logined/cart2.svg" alt="">
+            <p>Giỏ hàng</p>
+            <i class="ti-angle-right"></i>
+        </div>
+        <div class="modalDetailPurchase">
+            <img src="../../assets/images/navbar_logined/purchaseHistory.svg" alt="">
+            <p>Lịch sử mua hàng</p>
+            <i class="ti-angle-right"></i>
+        </div>
+        <div class="modalDetailLogout">
+            <img src="../../assets/images/navbar_logined/logout2.svg" alt="">
+            <p>Đăng xuất</p>
+            <i class="ti-angle-right"></i>
+        </div>
+    </div>
 </div>

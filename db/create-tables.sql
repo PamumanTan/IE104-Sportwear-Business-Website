@@ -96,6 +96,7 @@ CREATE TABLE shopping_carts
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     product_id INT,
+    product_quantity INT,
     FOREIGN KEY(user_id) REFERENCES USERS(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );

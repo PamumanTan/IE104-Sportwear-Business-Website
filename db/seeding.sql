@@ -218,7 +218,7 @@ INSERT INTO discount_products (discount_id, product_id) VALUES
 
 
 -- Insert data into users table
-INSERT INTO users (user_name, password, email, phonenumber, address, is_admin) VALUES
+INSERT INTO users (username, password, email, phonenumber, address, is_admin) VALUES
     ('JohnDoe', 'password123', 'john@example.com', '1234567890', '123 Main St', true),
     ('JaneDoe', 'pass456', 'jane@example.com', '9876543210', '456 Oak St', false),
     ('BobSmith', 'bobpass', 'bob@example.com', '5551234567', '789 Pine St', false),
@@ -279,14 +279,14 @@ INSERT INTO order_products (order_id, product_id, amount) VALUES
     (10, 10, 1);
 
 -- Insert data into shopping_carts table
-INSERT INTO shopping_carts (user_id, product_id) VALUES
-    (1, 1),
-    (2, 2),
-    (3, 3),
-    (4, 4),
-    (5, 5),
-    (6, 6),
-    (7, 7),
-    (8, 8),
-    (9, 9),
-    (10, 10);
+INSERT INTO shopping_carts (user_id, product_id, product_quantity) VALUES
+    (1, 1, 2),
+    (2, 2, 3),
+    (3, 3, 4),
+    (4, 4, 5),
+    (5, 5, 6),
+    (6, 6, 3),
+    (7, 7, 8),
+    (8, 8, 4),
+    (9, 9, 2),
+    (10, 10, 1);

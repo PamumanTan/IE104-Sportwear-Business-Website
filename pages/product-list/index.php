@@ -1,5 +1,6 @@
 <?php
 include './product-item/index.php';
+include './show-product-list-filter-option/index.php'
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
@@ -22,15 +23,15 @@ include './product-item/index.php';
 <body>
     <!-- Check if user logined or not -->
     <?php
-        include_once "../../controllers/verify_token.php";
-        include "../../db/connection.php";
-        require("../../helpers/jwt.php");
-        $user = checkAuthorization('execQuery', 'Token::Verify');
-        if ($user) {
-            include_once "../../components/navbar_logined/index.php";
-        } else {
-            include_once "../../components/navbar/index.php";
-        }
+    include_once "../../controllers/verify_token.php";
+    include "../../db/connection.php";
+    require("../../helpers/jwt.php");
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../../components/navbar_logined/index.php";
+    } else {
+        include_once "../../components/navbar/index.php";
+    }
     ?>
 
     <header class="show-product-list-header">
@@ -74,7 +75,7 @@ include './product-item/index.php';
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
 
-                <div class="show-product-list-filter-option">
+                <!-- <div class="show-product-list-filter-option">
                     <label>Hạng mục</label>
                     <br>
 
@@ -106,7 +107,11 @@ include './product-item/index.php';
                         <label>Mũ</label>
                         <br>
                     </div>
-                </div>
+                </div> -->
+                <?php 
+                    ShowProductListFilterOption('Hạng mục', ['Giày', 'Áo', 'Quần', 'Tất', 'Mũ']);
+                    ShowProductListFilterOption('Giới tính', ['Nam', 'Nữ', 'Unisex']);
+                ?>
 
 
                 <br>

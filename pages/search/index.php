@@ -39,7 +39,7 @@ include './product-item/index.php';
                 <h1>
                     Tìm kiếm
                 </h1>
-                <p>Kết quả tìm kiếm cho: <?php echo $_GET['keyword'] ?></p>
+                <p>Kết quả tìm kiếm cho: "<?php echo $_GET['keyword'] ?>"</p>
 
             </div>
         <?php } else { ?>
