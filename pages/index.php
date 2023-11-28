@@ -19,7 +19,8 @@
 
     <div class="homePage">
         <div class="homePoster">
-            <img src="../assets/images/Image.png" alt="">
+            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
         </div>
         <div class="homeCategory">
             <div>
@@ -27,23 +28,28 @@
             </div>
             <div class="homeListCategory">
                 <div>
-                    <img src="../assets/images/module-2/item-2.png" alt="">
+                    <img src="https://images.pexels.com/photos/13450843/pexels-photo-13450843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
                     <h4>SẢN PHẨM MỚI</h4>
                 </div>
                 <div>
-                    <img src="../assets/images/module-2/item-3.png" alt="">
+                    <img src="https://images.pexels.com/photos/8556754/pexels-photo-8556754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
                     <h4>NAM</h4>
                 </div>
                 <div>
-                    <img src="../assets/images/module-2/item-4.png" alt="">
+                    <img src="https://images.pexels.com/photos/5300913/pexels-photo-5300913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
                     <h4>NỮ</h4>
                 </div>
                 <div>
-                    <img src="../assets/images/module-2/item-5.png" alt="">
+                    <img src="https://images.pexels.com/photos/5896837/pexels-photo-5896837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
                     <h4>TRẺ EM</h4>
                 </div>
                 <div>
-                    <img src="../assets/images/module-2/item-2.png" alt="">
+                    <img src="https://images.pexels.com/photos/9400764/pexels-photo-9400764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="">
                     <h4>KHUYẾN MÃI</h4>
                 </div>
             </div>
@@ -53,6 +59,8 @@
                 <p class="mb1 mt2">GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</p>
                 <p class="mb2">Bước vào sân cỏ với đẳng cấp cùng giày bóng đá nam Thượng Đình - sự kết hợp hoàn hảo giữa
                     phong cách và hiệu suất. </p>
+                <img src="https://images.pexels.com/photos/7271269/pexels-photo-7271269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="">
                 <button class="homeBannerBtn">XEM CHI TIẾT</button>
             </div>
             <div>
@@ -64,9 +72,9 @@
                 <p>SẢN PHẨM MỚI NHẤT</p>
             </div>
             <div class="homeNewestProductImg">
-                <img src="../assets/images/module-4/item-1.png" alt="">
-                <img src="../assets/images/module-4/item-2.png" alt="">
-                <img src="../assets/images/module-4/item-3.png" alt="">
+                <img src="https://i.pinimg.com/564x/3c/a8/e5/3ca8e5a7e8509b84dd31620e22544065.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/ad/47/9d/ad479d5aaa731d35d8c2e09ee06a073d.jpg" alt="">
+                <img src="https://i.pinimg.com/564x/0f/d2/95/0fd295ce58a29c04931dffee43867a29.jpg" alt="">
 
             </div>
         </div>

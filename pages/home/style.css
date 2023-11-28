@@ -375,3 +375,7 @@ body {
 button {
     cursor: pointer;
 }
+
+.homeNewestProductImg img {
+    height: 400px;
+}
