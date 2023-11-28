@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="../components/carousel/style.css">
+    <link rel="stylesheet" href="../components/carousel-pro/style.css">
     <link rel="stylesheet" href="../components/marquee/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="../components/carousel/script.js" defer></script>
+    <script src="../components/carousel-pro/script.js" defer></script>
     <script src="../components/scroll-to-top-button/script.js" defer></script>
     <script src="../components/marquee/script.js" defer></script>
     <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
     <?php include_once "../components/scroll-to-top-button/index.php" ?>
     <div class="homePage">
         <div class="homePoster">
-            <?php include "../components/carousel/index.php" ?>
+            <?php include "../components/carousel-pro/index.php" ?>
         </div>
         <?php include "../components/marquee/index.php" ?>
         <div class="homeCategory">
