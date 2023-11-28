@@ -16,7 +16,21 @@
 </head>
 
 <body>
-    <?php include_once "../components/navbar_logined/index.php" ?>
+
+    <!-- Check if user logined or not -->
+    <?php
+        include_once "../controllers/verify_token.php";
+        include "../db/connection.php";
+        require("../helpers/jwt.php");
+        $user = checkAuthorization('execQuery', 'Token::Verify');
+        if ($user) {
+            include_once "../components/navbar_logined/index.php";
+        } else {
+            include_once "../components/navbar/index.php";
+        }
+    ?>
+
+
     <div class="homePage">
         <div class="homePoster">
             <img src="../assets/images/Image.png" alt="">
@@ -170,6 +184,8 @@
             window.location.href = '../pages/product-detail';
         });
     </script>
+
+    <script src="../components/navbar/script.js"></script>
 
 </body>
 

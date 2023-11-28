@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 850px;
     padding: 0 10px;
+    margin-bottom: 2rem;
 }
 .cmt-top{
     display: flex;

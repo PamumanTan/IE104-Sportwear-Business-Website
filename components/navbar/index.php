@@ -204,7 +204,7 @@
                 <!-- <a class="navSearch" href="/sportswear/pages/product-list"> -->
                 <div class="navSearch">
                     <div class="navSearchContent">
-                        <input type="text" placeholder='Bạn muốn lựa gì :3'>
+                        <input type="text" id="search-input" placeholder='Bạn muốn lựa gì :3'>
                         <div class="navSearchIcon">
                             <i class="ti-search"></i>
                         </div>

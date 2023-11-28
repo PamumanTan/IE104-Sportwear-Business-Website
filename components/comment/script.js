@@ -1,12 +1,16 @@
-const rating = document.querySelector('.rating');
-const addReviewStar = (num) => {
+const ratings = document.querySelectorAll('.rating');
+const addReviewStar = (element, num) => {
     for (let i = 0; i < num; i++) {
         let star = document.createElement('img');
         star.src = "../../assets/images/star.svg";
-        rating.appendChild(star);
+        element.appendChild(star);
     }
 }
-addReviewStar(5);
+// addReviewStar(5);
+ratings.forEach(rating => {
+    addReviewStar(rating, 5);
+})
+
 
 const voteYes = document.getElementById('vote-yes');
 const voteNo = document.getElementById('vote-no');

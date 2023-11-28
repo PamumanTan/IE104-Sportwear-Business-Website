@@ -1,11 +1,11 @@
-const navItems = document.querySelectorAll('.nav-subnav-item');
-navItems.forEach(navItem => {
-    navItem.addEventListener('click', (event) => {
-        console.log("OK")
-        const subnav = event.target.children[1];
-        alert(subnav);
-    });
-    }
-);
+const searchInput = document.querySelector('#search-input');
+const searchBtn = document.querySelector('.navSearchIcon');
 
-console.log(navItems);
+searchInput.addEventListener('keydown', (e) => {
+    if (e.keyCode == 13) {
+        window.location.href = `http://localhost/sportswear/pages/search/?keyword=${e.target.value}`;
+    }
+});
+searchBtn.onclick = (e) => {
+    window.location.href = `http://localhost/sportswear/pages/search/?keyword=${searchInput.value}`;
+};

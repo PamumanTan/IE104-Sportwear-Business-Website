@@ -24,11 +24,16 @@ nav{
     width: 40vw;
     height: 40vw;
     overflow: hidden;
+    position: relative;
 }
 .product-imgs img{
     /* width: 250px; */
     /* width: 40vw;
     height: 40vw; */
+    margin: auto;
+    bottom: 0;
+    position: relative;
+
 }
 .product-details{
     flex: 0.5;
@@ -202,7 +207,7 @@ label.radio-button-size span.label-text {
     flex-direction: row;
 }
 #cmt-username{
-    padding-right: 3em;
+    /* padding-right: 3em; */
     font-size: 18px;
     font-weight: bold;
 }
@@ -247,4 +252,56 @@ label.radio-button-size span.label-text {
 .label {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+
+
+
+/* Modal CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background-color: white;
+    width: 465px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.modal-content button {
+    background-color: white;
+    width: 385px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-background.active {
+    display: block;
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
 }

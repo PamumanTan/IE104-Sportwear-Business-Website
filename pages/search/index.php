@@ -34,38 +34,18 @@ include './product-item/index.php';
     ?>
 
     <header class="show-product-list-header">
-        <?php if (isset($_GET['object']) || isset($_GET['type'])) { ?>
+        <?php if (isset($_GET['keyword'])) { ?>
             <div>
                 <h1>
-                    <?php
-                    if (isset($_GET['type'])) {
-                        $query = "SELECT type_name FROM product_types where id = " . $_GET['type'];
-                        $result = execQuery($query);
-                        if ($result) {
-                            $row = $result->fetch_row();
-                            echo $row[0] . " ";
-                        }
-                    }
-                    if (isset($_GET['object'])) {
-                        $query = "SELECT object_name FROM product_objects where id = " . $_GET['object'];
-                        $result = execQuery($query);
-                        if ($result) {
-                            $row = $result->fetch_row();
-                            echo $row[0];
-                        }
-                    }
-                    ?>
+                    Tìm kiếm
                 </h1>
-                <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+                <p>Kết quả tìm kiếm cho: <?php echo $_GET['keyword'] ?></p>
 
             </div>
         <?php } else { ?>
             <div>
-                <h1>Sản phẩm mới</h1>
-                <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
-
+                <h1>Tìm kiếm</h1>
+                <p>Không có từ khóa</p>
             </div>
         <?php } ?>
     </header>
@@ -128,17 +108,7 @@ include './product-item/index.php';
 
                 <div id="show-product-list">
                     <?php
-                    $query = "SELECT id, product_image, product_name, product_price FROM products ";
-                    if (isset($_GET['object']) && isset($_GET['type'])) {
-                        $query .= " where product_object_id = " . $_GET['object'] . " and product_type_id = " . $_GET['type'];
-                    } else if (isset($_GET['type'])) {
-                        $query .= " where product_type_id = " . $_GET['type'];
-                    } else if (isset($_GET['object'])) {
-                        $query .= " where product_object_id = " . $_GET['object'];
-                    } else {
-                        $query .= " where 1";
-                    }
-
+                    $query = "select id, product_image, product_name, product_price from products where product_name like '%" . $_GET['keyword'] . "%'";
                     $result = execQuery($query);
                     if ($result && $result->num_rows > 0) {
                         $rows = $result->fetch_all();
@@ -156,8 +126,6 @@ include './product-item/index.php';
                         echo "<h3>Không tìm thấy sản phẩm</h3></div>";
                     }
             ?>
-
-
 
             </article>
         </main>
