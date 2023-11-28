@@ -76,6 +76,7 @@ html {
 .product-management-table {
     width: 100%;
     overflow: auto;
+    background-color: white;
 }
 
 .product-management-table tr:not(:first-child) th:nth-child(2) {

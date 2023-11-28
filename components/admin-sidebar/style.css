@@ -22,7 +22,8 @@ header {
     padding: 20px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid 1px #ededed;
+    /* border-bottom: solid 1px #ededed; */
+    background-color: #F8F8F8;
 }
 
 .sidebar-container {
@@ -32,7 +33,7 @@ header {
     flex-direction: column;
 }
 
-.right{
+.right {
     display: flex;
     flex-direction: row;
 }
@@ -53,6 +54,7 @@ header {
     border: 0.5px solid var(--second);
     padding: 8px 12px;
     align-items: center;
+    background-color: white;
 }
 
 .search-box input {
@@ -71,7 +73,8 @@ header {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    border-right: solid 1px black;
+    /* border-right: solid 1px black; */
+    background-color: #F8F8F8;
 }
 
 .sidebar-item-container {
@@ -109,11 +112,12 @@ i {
     display: flex;
     flex-direction: row;
     /* flex: 1; */
-    height: calc(100vh - 87px);
+    height: calc(100vh - 100px);
     /* height: 100%; */
 }
-.content{
-    background-color: azure;
+
+.content {
+    background-color: #F8F8F8;
     height: 100%;
     flex: 1;
 }

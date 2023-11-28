@@ -65,7 +65,9 @@ include '../../../components/admin-sidebar/index.php';
             </table>
 
             <div class="product-management-add-product">
-                <button>Thêm sản phẩm</button>
+                <a href="./create/index.php">
+                    <button>Thêm sản phẩm</button>
+                </a>
             </div>
         </div>
     </main>
