@@ -155,12 +155,13 @@ body {
 
 .homePoster {
     width: 100%;
+    height: 1000px;
 }
 
 .homePoster img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     /* filter: blur(2px); */
 }
 
@@ -374,4 +375,17 @@ body {
 
 button {
     cursor: pointer;
+}
+
+.homeNewestProductImg img{
+    height: 400px;
+}
+
+.homeBannerDescribe-img-container{
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
 }
