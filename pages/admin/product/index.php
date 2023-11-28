@@ -26,11 +26,11 @@ include '../../../components/admin-sidebar/index.php';
         <div class="product-management-filter">
             <div class="product-management-filter-option">
                 <label>Mã sản phẩm</label>
-                <input type="text" id="product-id" class="product-management-filter-text" placeholder="Nhập mã sản phẩm">
+                <input type="text" id="product-id" class="product-management-filter-text" placeholder="Mã sản phẩm">
             </div>
             <div class="product-management-filter-option">
                 <label>Tên sản phẩm</label>
-                <input type="text" id="product-name" class="product-management-filter-text" placeholder="Nhập tên sản phẩm">
+                <input type="text" id="product-name" class="product-management-filter-text" placeholder="Tên sản phẩm">
             </div>
             <div class="product-management-filter-option">
                 <label>Giá sản phẩm</label>
