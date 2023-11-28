@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
+    <link rel="stylesheet" href="../components/carousel/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
     <link rel="stylesheet" href="./home/style.css">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="../components/carousel/script.js" defer></script>
 </head>
 
 <body>
@@ -19,8 +21,7 @@
 
     <div class="homePage">
         <div class="homePoster">
-            <img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="">
+            <?php include "../components/carousel/index.php" ?>
         </div>
         <div class="homeCategory">
             <div>
@@ -59,8 +60,11 @@
                 <p class="mb1 mt2">GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</p>
                 <p class="mb2">Bước vào sân cỏ với đẳng cấp cùng giày bóng đá nam Thượng Đình - sự kết hợp hoàn hảo giữa
                     phong cách và hiệu suất. </p>
-                <img src="https://images.pexels.com/photos/7271269/pexels-photo-7271269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="">
+                <div class="homeBannerDescribe-img-container">
+                    <img src="https://file.hstatic.net/200000278317/file/kham-pha-nike-blast-pack-loi-chao-nam-moi-den-tu-nha-swoosh-2_4246078fe7014d5ebffd2e25d2dba022.jpg"
+                        alt="">
+
+                </div>
                 <button class="homeBannerBtn">XEM CHI TIẾT</button>
             </div>
             <div>
