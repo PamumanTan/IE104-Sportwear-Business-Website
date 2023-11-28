@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <link rel="stylesheet" href="../components/carousel/style.css">
+    <link rel="stylesheet" href="../components/marquee/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
     <link rel="stylesheet" href="../components/scroll-to-top-button/style.css">
@@ -16,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="../components/carousel/script.js" defer></script>
     <script src="../components/scroll-to-top-button/script.js" defer></script>
+    <script src="../components/marquee/script.js" defer></script>
     <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,6 +28,7 @@
         <div class="homePoster">
             <?php include "../components/carousel/index.php" ?>
         </div>
+        <?php include "../components/marquee/index.php" ?>
         <div class="homeCategory">
             <div>
                 <p>HẠNG MỤC</p>
