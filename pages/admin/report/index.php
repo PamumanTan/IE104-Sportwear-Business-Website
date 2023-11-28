@@ -23,7 +23,7 @@ $GLOBALS['$time'] = $time;
 <body>
     <?php
     include('../../../components/sale-report-item/index.php');
-    include("../../../components/admin-sidebar/Sidebar.php");
+    include("../../../components/admin-sidebar/index.php");
     $saleReportList = SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
         SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
         SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
@@ -70,6 +70,7 @@ $GLOBALS['$time'] = $time;
     </main>
 
     <?php SideBar_End() ?>
+    <?php include "./detail.php" ?>
     <script src="./script.js"></script>
 </body>
 
