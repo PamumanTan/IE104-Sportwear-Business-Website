@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="./home/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
+    <link rel="stylesheet" href="./home/style.css">
     <link rel="stylesheet" href="../assets/icons/themify-icons/themify-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,9 +84,9 @@
                 <p>ĐÁNH GIÁ CỦA KHÁCH HÀNG</p>
             </div>
             <div class="homeRateImg">
-                <img src="../assets/images/module-5/iustomer-Review-1.png" alt="">
-                <img src="../assets/images/module-5/iustomer-Review.png" alt="">
-                <img src="../assets/images/module-5/iustomer-Review-1.png" alt="">
+                <img src="../assets/images/module-5/customer-Review-1.png" alt="">
+                <img src="../assets/images/module-5/customer-Review.png" alt="">
+                <img src="../assets/images/module-5/customer-Review-1.png" alt="">
             </div>
         </div>
 

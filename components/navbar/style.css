@@ -16,10 +16,10 @@ body {
 .nav {
     background-color: #000;
     width: 100%;
-    /* position: fixed; */
-    top: 0;
+    position: fixed;
+    /* top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
 }
 
 .navList {
@@ -28,6 +28,8 @@ body {
     font-size: 17px;
     display: flex;
     line-height: 3.5;
+    width: 1400px;
+    margin: auto;
 }
 
 .navList li a,
