@@ -282,29 +282,7 @@ include '../../components/payment-product-item/index.php';
     </div>
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
-    <?php
-    echo
-        '<script>
-            //Modal OrderButton
-            const openModalButton = document.querySelector(".order-button");
-            const closeModalButton = document.getElementById("closeModalBtn");
-            const modal = document.querySelector(".modal");
-            const modalBackground = document.querySelector(".modal-background");
-            openModalButton.addEventListener("click", function () {
-                modal.classList.add("active");
-                modalBackground.classList.add("active");
-            });
-            
-            closeModalButton.addEventListener("click", function () {
-                modal.classList.remove("active");
-                modalBackground.classList.remove("active");
-            });
-            modalBackground.addEventListener("click", function () {
-                modal.classList.remove("active");
-                modalBackground.classList.remove("active");
-            });
-        </script>'
-        ?>
+
 </body>
 
 </html>
