@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="../components/carousel/style.css">
+    <link rel="stylesheet" href="../components/carousel-pro/style.css">
+    <link rel="stylesheet" href="../components/marquee/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
+    <link rel="stylesheet" href="../components/scroll-to-top-button/style.css">
     <link rel="stylesheet" href="./home/style.css">
     <link rel="stylesheet" href="../assets/icons/themify-icons/themify-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="../components/carousel/script.js" defer></script>
+    <script src="../components/carousel-pro/script.js" defer></script>
+    <script src="../components/scroll-to-top-button/script.js" defer></script>
+    <script src="../components/marquee/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <?php include_once "../components/navbar/index.php" ?>
-
+    <?php include_once "../components/scroll-to-top-button/index.php" ?>
     <div class="homePage">
         <div class="homePoster">
-            <?php include "../components/carousel/index.php" ?>
+            <?php include "../components/carousel-pro/index.php" ?>
         </div>
+        <?php include "../components/marquee/index.php" ?>
         <div class="homeCategory">
             <div>
                 <p>HẠNG MỤC</p>
@@ -77,9 +83,9 @@
             </div>
             <div class="homeNewestProductImg">
                 <img src="https://i.pinimg.com/564x/3c/a8/e5/3ca8e5a7e8509b84dd31620e22544065.jpg" alt="">
+                <img src="https://images.unsplash.com/photo-1616124619460-ff4ed8f4683c?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="">
                 <img src="https://i.pinimg.com/736x/ad/47/9d/ad479d5aaa731d35d8c2e09ee06a073d.jpg" alt="">
-                <img src="https://i.pinimg.com/564x/0f/d2/95/0fd295ce58a29c04931dffee43867a29.jpg" alt="">
-
             </div>
         </div>
 
