@@ -20,6 +20,7 @@ include '../../components/payment-product-item/index.php';
     <link rel="stylesheet" href="../../components/cart-product-item/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
     <!-- cart-product-item và payment-product-item dùng chung 1 file css -->
     <script src="./script.js" defer></script>
 </head>
@@ -115,6 +116,7 @@ include '../../components/payment-product-item/index.php';
             });
         </script>'
     ?>
+    <script src="../../components/navbar/script.js"></script>
 </body>
 
 </html>

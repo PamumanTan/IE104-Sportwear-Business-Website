@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">

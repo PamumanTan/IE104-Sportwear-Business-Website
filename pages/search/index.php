@@ -17,14 +17,15 @@ include './product-item/index.php';
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <!-- css for footer -->
     <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
 </head>
 
 <body>
     <!-- Check if user logined or not -->
     <?php
-        include_once "../../controllers/verify_token.php";
+        include "../../controllers/verify_token.php";
         include "../../db/connection.php";
-        require("../../helpers/jwt.php");
+        include "../../helpers/jwt.php";
         $user = checkAuthorization('execQuery', 'Token::Verify');
         if ($user) {
             include_once "../../components/navbar_logined/index.php";

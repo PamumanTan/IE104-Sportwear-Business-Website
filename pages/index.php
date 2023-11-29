@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../components/scroll-to-top-button/style.css">
     <link rel="stylesheet" href="./home/style.css">
     <link rel="stylesheet" href="../assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../resources/css/root.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -25,9 +26,9 @@
 <body>
     <!-- Check if user logined or not -->
     <?php
-    include_once "../controllers/verify_token.php";
+    include "../controllers/verify_token.php";
     include "../db/connection.php";
-    require("../helpers/jwt.php");
+    include "../helpers/jwt.php";
     $user = checkAuthorization('execQuery', 'Token::Verify');
     if ($user) {
         include_once "../components/navbar_logined/index.php";
@@ -37,7 +38,7 @@
     ?>
 
 
-    <?php include_once "../components/scroll-to-top-button/index.php" ?>
+    <?php include "../components/scroll-to-top-button/index.php" ?>
     
     <div class="homePage">
         <div class="homePoster">

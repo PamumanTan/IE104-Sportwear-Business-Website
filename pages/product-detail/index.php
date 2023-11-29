@@ -1,22 +1,3 @@
-<?php
-// include './product-item/index.php';
-function execQuery($query)
-{
-  require("../../db/db-config.php");
-
-  $conn = new mysqli($host, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-
-  $result = $conn->query($query);
-  $conn->close();
-
-  return $result;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,14 +10,15 @@ function execQuery($query)
   <link rel="stylesheet" href="../../components/footer/style.css">
   <link rel="stylesheet" href="../../components/navbar_logined/style.css">
   <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="../../resources/css/root.css">
   <script src="./script.js" defer></script>
 </head>
 
 <body>
   <?php
-  include_once "../../controllers/verify_token.php";
+  include "../../controllers/verify_token.php";
   include "../../db/connection.php";
-  require("../../helpers/jwt.php");
+  include "../../helpers/jwt.php";
   $user = checkAuthorization('execQuery', 'Token::Verify');
   if ($user) {
     include_once "../../components/navbar_logined/index.php";

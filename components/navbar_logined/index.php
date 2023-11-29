@@ -81,7 +81,7 @@
             </div>
 
             <div class="navMen subnav-blur nav-subnav-item">
-                <a href="/sportswear/pages/product-list/?type=1">Nam</a>
+                <a href="/sportswear/pages/product-list/?object=1">Nam</a>
                 <ul class="subnavMen ">
                     <li><a href="/sportswear/pages/product-list/?type=1">Tất cả sản phẩm</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=1&type=3">Giày</a></li>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="navWomen subnav-blur nav-subnav-item">
-                <a href="/sportswear/pages/product-list/?type=2">Nữ</a>
+                <a href="/sportswear/pages/product-list/?object=2">Nữ</a>
                 <ul class="subnavWomen ">
                     <li><a href="/sportswear/pages/product-list/?object=2">Tất cả sản phẩm</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=2&type=3">Giày</a></li>
@@ -222,7 +222,7 @@
     <div class="modalInfo">
         <img src="/sportswear/assets/images/navbar_logined/avatar.svg" class="modalImg" alt="">
         <h2> Jacob Jones</h2>
-        <a href="/sportswear/">Chỉnh sửa thông tin</a>
+        <a href="/sportswear/pages/profile/">Chỉnh sửa thông tin</a>
     </div>
     <div class="modalDetail">
         <a href="/sportswear/pages/profile/" class="modalDetailProfile modalDetailItem">

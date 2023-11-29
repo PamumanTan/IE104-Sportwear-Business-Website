@@ -14,3 +14,6 @@ totalProductPrice.textContent = VND.format(totalPrice);
 shippingFee.textContent = VND.format(fee);
 totalPay.textContent = VND.format(total);
 
+document.querySelector('.pay-button').onclick = () => {
+    window.location.href = '../payment/';
+}

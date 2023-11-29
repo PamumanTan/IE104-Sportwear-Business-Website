@@ -2,7 +2,7 @@
 html {
     padding: 0;
     margin: 0;
-    font-family: Poppins, Helvetica, sans-serif;
+    /* font-family: Poppins, Helvetica, sans-serif; */
     box-sizing: border-box;
 }
 
@@ -12,15 +12,14 @@ html {
     background-color: #FBFBFB;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row-reverse;
     column-gap: 10px;
     color: #333333;
-    padding: 50px 8px 35px 50px;
-    /* align-items: center; */
+    padding: 50px 150px 50px 50px;
 }
 
 .form {
-    font: 16px Poppins;
+    /* font: 16px Poppins; */
     font-weight: 400;
     /* margin: 50px; */
     flex: 40%;
@@ -73,7 +72,7 @@ html {
 .registerButton {
     color: white;
     font-size: 22px;
-    font-family: Poppins;
+    /* font-family: Poppins; */
     margin: auto;
     background-color: #000;
     border: 0;

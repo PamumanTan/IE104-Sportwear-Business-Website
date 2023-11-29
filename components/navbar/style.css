@@ -6,7 +6,7 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 body {
@@ -31,7 +31,7 @@ body {
     font-size: 17px;
     display: flex;
     line-height: 3.5;
-    width: 1400px;
+    /* width: 1400px; */
     margin: auto;
 }
 

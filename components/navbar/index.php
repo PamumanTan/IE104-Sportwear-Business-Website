@@ -210,8 +210,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="/sportswear/pages/login">Đăng nhập</a>
-                <a href="/sportswear/pages/register/">Đăng ký</a>
+                <a class="login" href="/sportswear/pages/login">Đăng nhập</a>
+                <a class="signup" href="/sportswear/pages/register/">Đăng ký</a>
 
             </li>
         </ul>

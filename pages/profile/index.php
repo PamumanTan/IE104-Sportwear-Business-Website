@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <!-- css for footer -->
     <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
 </head>
 
 <body>

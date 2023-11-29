@@ -1,6 +1,6 @@
 <?php
 
 echo json_encode([
-    'message' => 'Login failed',
+    'message' => 'Feature not implemented yet',
     'error' => true
 ]);

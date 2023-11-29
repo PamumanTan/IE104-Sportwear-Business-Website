@@ -2,12 +2,11 @@
 html {
     padding: 0;
     margin: 0;
-    font-family: Poppins, Helvetica, sans-serif;
+    /* font-family: Poppins, Helvetica, sans-serif; */
     box-sizing: border-box;
 }
 
 .wrap {
-    /* min-width: 100%; */
     height: 100%;
     background-color: #FBFBFB;
     display: flex;
@@ -16,7 +15,6 @@ html {
     column-gap: 10px;
     color: #333333;
     padding: 50px 150px 50px 50px;
-    /* align-items: center; */
 }
 
 .form {
@@ -71,7 +69,7 @@ html {
 .loginButton {
     color: white;
     font-size: 22px;
-    font-family: Poppins;
+    /* font-family: Poppins; */
     margin: auto;
     background-color: #000;
     border: 0;

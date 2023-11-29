@@ -13,7 +13,7 @@
 /* Body */
 body {
     /* font-family: 'my_public_sans'; */
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 /* Header */
@@ -116,7 +116,7 @@ article {
 
 /* Sort products combo box */
 .show-product-list-sort select {
-    font-family: 'my_public_sans';
+    /* font-family: 'my_public_sans'; */
 }
 
 /* Product list container */
@@ -163,7 +163,7 @@ div.product-img {
     line-height: 2.5em;
     font-weight: bold;
     background-color: inherit;
-    font-family: 'my_public_sans';
+    /* font-family: 'my_public_sans'; */
     padding-left: 1em;
     padding-right: 1em;
     cursor: pointer;
