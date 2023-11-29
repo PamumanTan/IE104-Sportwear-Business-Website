@@ -1,20 +1,6 @@
 <?php
 include './product-item/index.php';
-function execQuery($query)
-{
-    require("../../db/db-config.php");
-
-    $conn = new mysqli($host, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $result = $conn->query($query);
-    $conn->close();
-
-    return $result;
-}
+include './show-product-list-filter-option/index.php'
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
@@ -25,23 +11,35 @@ function execQuery($query)
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../product-item/style.css">
+    <link rel="stylesheet" href="./product-item/style.css">
     <!-- css for navbar -->
     <link rel="stylesheet" href="../../components/navbar/style.css">
+    <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+    <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <!-- css for footer -->
     <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
 </head>
 
 <body>
+    <!-- Check if user logined or not -->
     <?php
-    include '../../components/navbar/index.php';
+    include "../../controllers/verify_token.php";
+    include "../../db/connection.php";
+    include "../../helpers/jwt.php";
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../../components/navbar_logined/index.php";
+    } else {
+        include_once "../../components/navbar/index.php";
+    }
     ?>
 
     <header class="show-product-list-header">
         <?php if (isset($_GET['object']) || isset($_GET['type'])) { ?>
-        <div>
-            <h1>
-                <?php
+            <div>
+                <h1>
+                    <?php
                     if (isset($_GET['type'])) {
                         $query = "SELECT type_name FROM product_types where id = " . $_GET['type'];
                         $result = execQuery($query);
@@ -57,20 +55,20 @@ function execQuery($query)
                             $row = $result->fetch_row();
                             echo $row[0];
                         }
-                    } 
+                    }
                     ?>
-            </h1>
-            <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+                </h1>
+                <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
+                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
 
-        </div>
+            </div>
         <?php } else { ?>
-        <div>
-            <h1>Sản phẩm mới</h1>
-            <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+            <div>
+                <h1>Sản phẩm mới</h1>
+                <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
+                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
 
-        </div>
+            </div>
         <?php } ?>
     </header>
     <div class="main-container">
@@ -78,7 +76,7 @@ function execQuery($query)
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
 
-                <div class="show-product-list-filter-option">
+                <!-- <div class="show-product-list-filter-option">
                     <label>Hạng mục</label>
                     <br>
 
@@ -110,7 +108,11 @@ function execQuery($query)
                         <label>Mũ</label>
                         <br>
                     </div>
-                </div>
+                </div> -->
+                <?php 
+                    ShowProductListFilterOption('Hạng mục', ['Giày', 'Áo', 'Quần', 'Tất', 'Mũ']);
+                    ShowProductListFilterOption('Giới tính', ['Nam', 'Nữ', 'Unisex']);
+                ?>
 
 
                 <br>
@@ -142,26 +144,26 @@ function execQuery($query)
                     } else {
                         $query .= " where 1";
                     }
-                    
+
                     $result = execQuery($query);
                     if ($result && $result->num_rows > 0) {
                         $rows = $result->fetch_all();
                         foreach ($rows as $row) {
                             ProductItem($row[0], $row[1], $row[2], $row[3]);
-                        } 
+                        }
                     ?>
-                    </div>
-                    <div class="show-product-list-more">
-                        <button>Hiển thị thêm sản phẩm</button>
-                    </div>
+                </div>
+                <div class="show-product-list-more">
+                    <button>Hiển thị thêm sản phẩm</button>
+                </div>
 
-                    <?php
+            <?php
                     } else {
                         echo "<h3>Không tìm thấy sản phẩm</h3></div>";
                     }
-                    ?>
-                    
-                
+            ?>
+
+
 
             </article>
         </main>
@@ -173,6 +175,7 @@ function execQuery($query)
     ?>
 
     <script src="./script.js"></script>
+    <script src="../../components/navbar/script.js"></script>
 </body>
 
 </html>

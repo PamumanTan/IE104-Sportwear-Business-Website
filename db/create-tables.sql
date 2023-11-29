@@ -1,3 +1,5 @@
+-- Database: ecommerce-sportswear
+
 CREATE TABLE product_objects
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -49,8 +51,8 @@ CREATE TABLE discount_products
 CREATE TABLE users
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_name VARCHAR(255) NOT NULL,
-    PASSWORD VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     phonenumber VARCHAR(255) NOT NULL,
     address VARCHAR(255) NOT NULL,
@@ -65,9 +67,11 @@ CREATE TABLE comments
     rating INT,
     product_id INT,
     user_id INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY(product_id) REFERENCES products(id),
-    FOREIGN KEY(user_id) REFERENCES USERS(id)
+    FOREIGN KEY(user_id) REFERENCES users(id)
 );
+
 
 CREATE TABLE orders
 (
@@ -92,6 +96,7 @@ CREATE TABLE shopping_carts
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     product_id INT,
+    product_quantity INT,
     FOREIGN KEY(user_id) REFERENCES USERS(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );

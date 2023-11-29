@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register </title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
 </head>
 
 <body>
@@ -38,12 +39,12 @@
                     <div>
                         <label for="password">Mật khẩu</label>
                         <br>
-                        <input type="text" , id="password">
+                        <input type="password" , id="password">
                     </div>
                     <div>
                         <label for="verify">Xác nhận mật khẩu</label>
                         <br>
-                        <input type="text" , id="verify">
+                        <input type="password" , id="verify">
                     </div>
                 </div>
                 <p style="margin: 16px 0px">Sử dụng 8 ký tự trở lên kết hợp chữ cái, chữ số và ký hiệu đặc biệt !</p>
@@ -57,7 +58,11 @@
         <div class="logo">
             <img src="../../assets/images/logo-removebg-preview.png" alt="Store's logo">
         </div>
+        <div id="snackbar"></div>
     </div>
+
+    <script src="../../resources/js/root.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

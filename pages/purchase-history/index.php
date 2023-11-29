@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lịch sử mua hàng</title>
-    <link rel="stylesheet" href="../../components\navbar\style.css">
-    <link rel="stylesheet" href="../../components\footer\style.css">
+    <link rel="stylesheet" href="../../components/navbar/style.css">
+    <link rel="stylesheet" href="../../components/footer/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+    <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
     <style>
         $base-spacing-unit: 24px;
         $half-spacing-unit: $base-spacing-unit / 2;
@@ -179,7 +183,19 @@
 </head>
 
 <body>
-    <?php include_once "../../components/navbar/index.php" ?>
+    <!-- Check if user logined or not -->
+    <?php
+    include "../../controllers/verify_token.php";
+    include "../../db/connection.php";
+    include "../../helpers/jwt.php";
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../../components/navbar_logined/index.php";
+    } else {
+        include_once "../../components/navbar/index.php";
+    }
+    ?>
+
     <div class="page-container">
         <h1>Lịch sử mua hàng</h1>
         <div class="select-div">
@@ -295,5 +311,6 @@
     <?php include_once "../../components/footer/index.php" ?>
 </body>
 <script src="./script.js" defer></script>
+<script src="../../components/navbar/script.js"></script>
 
 </html>

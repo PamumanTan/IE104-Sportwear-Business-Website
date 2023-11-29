@@ -6,7 +6,7 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 body {
@@ -265,7 +265,7 @@ body {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 4rem;
     font-size: 1.5rem;

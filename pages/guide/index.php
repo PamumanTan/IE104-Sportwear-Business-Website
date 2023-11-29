@@ -8,14 +8,26 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../components/footer/style.css">
     <link rel="stylesheet" href="../../components/navbar/style.css">
+    <link rel="stylesheet" href="../../components/navbar_logined/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../../resources/css/root.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <?php require('../../components/navbar/index.php'); ?>
+    <?php
+    include_once "../../controllers/verify_token.php";
+    include "../../db/connection.php";
+    require("../../helpers/jwt.php");
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../../components/navbar_logined/index.php";
+    } else {
+        include_once "../../components/navbar/index.php";
+    }
+    ?>
     <div class="guide">
         <div class="guide1">
             <p class="guideTitle bold">HƯỚNG DẪN</p>

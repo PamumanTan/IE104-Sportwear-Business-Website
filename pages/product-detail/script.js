@@ -1,38 +1,3 @@
-const colorArray = [
-    {
-        colorName: 'black',
-        hex: 'black',
-    },
-    {
-        colorName: 'white',
-        hex: 'white',
-    },
-    {
-        colorName: 'beige',
-        hex: '#F0DBAF',
-    },
-    {
-        colorName: 'cyan',
-        hex: '#78D6C6',
-    },
-    {
-        colorName: 'orange',
-        hex: 'orange',
-    },
-
-]
-
-const colorOption = document.querySelector('.product-color-option');
-const createColorButton = () => {
-    for (let color of colorArray) {
-        const button = document.createElement('label');
-        button.className = 'radio-button-color';
-        button.innerHTML = `<input type="radio" id="${color.colorName}" name="color" value="${color.colorName}" />`
-        button.style.backgroundColor = color.hex;
-        colorOption.appendChild(button);
-    }
-}
-createColorButton();
 const sizeButtons = document.querySelectorAll('.radio-button-size input');
 const colorButtons = document.querySelectorAll('.radio-button-color input');
 const quantityButtons = document.querySelectorAll('.product-quantity-option button');
@@ -45,25 +10,35 @@ const handlePrice = (num) => {
         style: 'currency',
         currency: 'VND',
     });
-    return VND.format(num * 1000);
+    return VND.format(num);
 }
+
+function convertToInteger(inputString) {
+    let numericString = inputString.replace(/[^0-9,]/g, '');
+    let integerValue = parseInt(numericString.replace(/,/g, ''), 10);
+    return integerValue;
+}
+
+
 const handleQuantityButtonClick = (calculaton) => {
     let val = parseInt(quantityDisplay.value);
-    let numbers = productPrice.innerHTML.match(/\d+/g);
-    let price = numbers[0];
+    let price = convertToInteger(productPrice.innerHTML);
     val = (calculaton === '-') ? val - 1 : val + 1;
     val = (val < 1) ? 1 : val;
     quantityDisplay.value = val;
     price *= val;
     addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${handlePrice(price)} `;
 }
+
+
 const handleQuantity = () => {
     let val = parseInt(quantityDisplay.value);
-    let numbers = productPrice.innerHTML.match(/\d+/g);
-    let price = numbers[0];
+    let price = convertToInteger(productPrice.innerHTML);
     price *= val;
     addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${handlePrice(price)} `;
 }
+
+
 sizeButtons.forEach(element => {
     element.addEventListener('click', () => {
         for (let sizeButton of sizeButtons) {
@@ -92,12 +67,39 @@ const reviewCounterArray = [0, 1, 2, 4, 9];
 const total = reviewCounterArray.reduce((ans, number) => {
     return ans + number;
 }, 0)
-reviewCounter.innerHTML = total + ' đánh giá';
-for (let i = 5; i > 0; i--) {
-    let string = ` <div id="reviews-counter-child"> 
-                        <p>${i} sao </p>
-                        <div id="line"></div> 
-                        <p>(${reviewCounterArray[i - 1]})</p>
-                   </div> `;
-    reviewLeftDiv.innerHTML += string;
+
+// reviewCounter.innerHTML = total + ' đánh giá';
+// for (let i = 5; i > 0; i--) {
+//     let string = ` <div id="reviews-counter-child">
+//                         <p>${i} sao </p>
+//                         <div id="line"></div>
+//                         <p>(${reviewCounterArray[i - 1]})</p>
+//                    </div> `;
+//     reviewLeftDiv.innerHTML += string;
+// }
+
+
+// Add to cart
+function handleAddToCartButton() {
+    // window.location.href = '../payment/';
 }
+
+
+//Modal OrderButton
+const openModalButton = document.querySelector(".add-to-cart");
+const closeModalButton = document.getElementById("closeModalBtn");
+const modal = document.querySelector(".modal");
+const modalBackground = document.querySelector(".modal-background");
+openModalButton.addEventListener("click", function () {
+    modal.classList.add("active");
+    modalBackground.classList.add("active");
+});
+
+closeModalButton.addEventListener("click", function () {
+    modal.classList.remove("active");
+    modalBackground.classList.remove("active");
+});
+modalBackground.addEventListener("click", function () {
+    modal.classList.remove("active");
+    modalBackground.classList.remove("active");
+});
