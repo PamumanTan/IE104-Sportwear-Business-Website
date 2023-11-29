@@ -1,5 +1,5 @@
 <?php 
-    include "../../../helpers/saleReport/timeNavBarActive.php";
+    include "../../../helpers/sale-report/time-navbar-active.php";
     function TimeNavBar() {
         return '
             <div class="time-navbar">

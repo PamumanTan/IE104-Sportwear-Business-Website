@@ -53,7 +53,8 @@ html {
     display: flex;
 }
 
-.category-management-filter-text, .category-management-filter-combobox {
+.category-management-filter-text,
+.category-management-filter-combobox {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
@@ -62,6 +63,7 @@ html {
 .category-management-table {
     width: 100%;
     overflow: auto;
+    background-color: white;
 }
 
 .category-management-table tr:not(:first-child) th:nth-child(2) {

@@ -1,6 +1,6 @@
 <?php
-include '../../../components/ProductRow/index.php';
-include '../../../components/admin-sidebar/Sidebar.php';
+include './product-row/index.php';
+include '../../../components/admin-sidebar/index.php';
 ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
@@ -11,8 +11,8 @@ include '../../../components/admin-sidebar/Sidebar.php';
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="icon" type="image/png" href="../../../assets/images/logo-removebg-preview.png">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="../../../components/admin-sidebar/Sidebar.css">
-    <link rel="stylesheet" href="../../../components/ProductRow/style.css">
+    <link rel="stylesheet" href="../../../components/admin-sidebar/style.css">
+    <link rel="stylesheet" href="./product-row/style.css">
 </head>
 
 <body>
@@ -26,11 +26,11 @@ include '../../../components/admin-sidebar/Sidebar.php';
         <div class="product-management-filter">
             <div class="product-management-filter-option">
                 <label>Mã sản phẩm</label>
-                <input type="text" id="product-id" class="product-management-filter-text" placeholder="Nhập mã sản phẩm">
+                <input type="text" id="product-id" class="product-management-filter-text" placeholder="Mã sản phẩm">
             </div>
             <div class="product-management-filter-option">
                 <label>Tên sản phẩm</label>
-                <input type="text" id="product-name" class="product-management-filter-text" placeholder="Nhập tên sản phẩm">
+                <input type="text" id="product-name" class="product-management-filter-text" placeholder="Tên sản phẩm">
             </div>
             <div class="product-management-filter-option">
                 <label>Giá sản phẩm</label>
@@ -65,7 +65,9 @@ include '../../../components/admin-sidebar/Sidebar.php';
             </table>
 
             <div class="product-management-add-product">
-                <button>Thêm sản phẩm</button>
+                <a href="./create/index.php">
+                    <button>Thêm sản phẩm</button>
+                </a>
             </div>
         </div>
     </main>
