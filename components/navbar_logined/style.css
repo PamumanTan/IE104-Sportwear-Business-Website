@@ -286,3 +286,17 @@ body {
 .modalAccount.open {
     display: block;
 }
+
+.modalDetailItem:hover {
+    cursor: pointer;
+    background-color: rgba(146, 159, 168, 0.15);
+}
+
+.modalDetailItem {
+    text-decoration: none;
+    color: #000;
+}
+
+#account:hover {
+    cursor: pointer;
+}

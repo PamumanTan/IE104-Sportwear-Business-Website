@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../components/carousel/style.css">
     <link rel="stylesheet" href="../components/marquee/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
+    <link rel="stylesheet" href="../components/navbar_logined/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
     <link rel="stylesheet" href="../components/scroll-to-top-button/style.css">
     <link rel="stylesheet" href="./home/style.css">
@@ -22,8 +23,22 @@
 </head>
 
 <body>
-    <?php include_once "../components/navbar/index.php" ?>
+    <!-- Check if user logined or not -->
+    <?php
+    include_once "../controllers/verify_token.php";
+    include "../db/connection.php";
+    require("../helpers/jwt.php");
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../components/navbar_logined/index.php";
+    } else {
+        include_once "../components/navbar/index.php";
+    }
+    ?>
+
+
     <?php include_once "../components/scroll-to-top-button/index.php" ?>
+    
     <div class="homePage">
         <div class="homePoster">
             <?php include "../components/carousel/index.php" ?>
@@ -189,6 +204,7 @@
         });
     </script>
 
+    <script src="../components/navbar/script.js"></script>
 </body>
 
 </html>

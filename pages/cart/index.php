@@ -29,7 +29,9 @@ include "../../components/cart-product-item/index.php"
         include_once "../../components/navbar/index.php";
     }
     ?>
-    ?>
+
+
+
     <h1 id="heading">Giỏ hàng của bạn</h1>
     <div class="container">
         <div class="cart-container">
@@ -45,7 +47,7 @@ include "../../components/cart-product-item/index.php"
                 // $img, $name, $price, $size, $quantity
                 $query = 'select product_image, product_name, product_price, product_size, product_quantity
                         from shopping_carts join products 
-                        where shopping_carts.user_id = ' . $user['user_id'];
+                        where shopping_carts.user_id = ' . $user['user_id'] . ' limit 5';
                 $result = execQuery($query);
                 if ($result && $result->num_rows > 0) {
                     $rows = $result->fetch_all();
@@ -77,6 +79,7 @@ include "../../components/cart-product-item/index.php"
     </div>
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
+    <script src="../../components/navbar/script.js"></script>
 </body>
 
 </html>

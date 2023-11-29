@@ -1,22 +1,23 @@
 <?php
 // session_start();
 require '../helpers/jwt.php';
+require '../db/connection.php';
 
-function execQuery($query)
-{
-    require("../db/db-config.php");
+// function execQuery($query)
+// {
+//     require("../db/db-config.php");
 
-    $conn = new mysqli($host, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+//     $conn = new mysqli($host, $username, $password, $dbname);
+//     // Check connection
+//     if ($conn->connect_error) {
+//         die("Connection failed: " . $conn->connect_error);
+//     }
 
-    $result = $conn->query($query);
-    $conn->close();
+//     $result = $conn->query($query);
+//     $conn->close();
 
-    return $result;
-}
+//     return $result;
+// }
 
 const KEY = 'secret';
 if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenumber'] != "" && $_POST['password'] != "") {

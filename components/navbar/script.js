@@ -26,21 +26,53 @@ searchBtn.onclick = (e) => {
 //     }
 // })
 
-console.log('hello');
+
 
 const accountBtn = document.querySelector('#account');
 const accountModal = document.querySelector('.modalAccount');
 const body = document.querySelector('body');
+const logoutBtn = document.querySelector('.modalDetailLogout');
+const navbar = document.querySelector('.nav');
+// const fakeNavbar = document.querySelector('.fake-nav');
+// console.log('fake nav: ', fakeNavbar);
+
+// Set position for account modal
+console.log("height: ", navbar.offsetHeight);
+accountModal.style.top = navbar.offsetHeight + 'px';
+// fakeNavbar.style.position = 'relative';
+// fakeNavbar.style.height = navbar.offsetHeight + 'px';
+// fakeNavbar.style.width = '100%';
 
 function toggleAccountModal() {
     accountModal.classList.toggle('open');
 }
 
+function hideAccountModal() {
+    accountModal.classList.remove('open');
+}
+
+console.log('account button: ', accountBtn);
 accountBtn.onclick = e => {
+    console.log("click");
     e.stopPropagation();
     toggleAccountModal();
 }
 accountModal.onclick = e => {
     e.stopPropagation();
 }
-body.onclick = toggleAccountModal;
+body.onclick = hideAccountModal;
+
+logoutBtn.onclick = e => {
+    fetch('http://localhost/sportswear/controllers/logout.php', {
+        method: 'POST'
+
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (!data.error) {
+                window.location.href = "http://localhost/sportswear/";
+            } else {
+                alert(data.message);
+            }
+        })
+}

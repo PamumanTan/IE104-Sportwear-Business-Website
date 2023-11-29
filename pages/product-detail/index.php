@@ -82,11 +82,12 @@
 
         <!-- Query reviews  -->
         <?php
-        $query = "select comments.*, users.user_name as user_name 
+        $query = "select comments.*, users.username as username 
                   from comments 
                   join users  
                   where comments.user_id = users.id and comments.product_id = $id";
         $result = execQuery($query);
+        if ($result) {
         ?>
 
         <div class="review-container">
@@ -124,7 +125,7 @@
                     <h2 id="cmt-title">
                       <?php echo $row['title']; ?>
                     </h2>
-                    <p id="cmt-username"><?php echo $row['user_name']; ?></p>
+                    <p id="cmt-username"><?php echo $row['username']; ?></p>
                   </div>
 
                   <div class="cmt-main">
@@ -150,6 +151,7 @@
         </div>
 
     <?php
+        } echo "<h2>Lỗi chức năng đánh giá</h2>";
       }
     }
     ?>

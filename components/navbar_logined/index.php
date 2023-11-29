@@ -215,36 +215,36 @@
                 <p>10</p>
             </a>
             <div id="account" class="accountImg" href="#"><img src="/sportswear/assets/images/navbar_logined/account_circle.svg" alt=""></div>
-
         </li>
     </ul>
 </div>
 <div class="modalAccount">
     <div class="modalInfo">
-        <img src="../../assets/images/navbar_logined/avatar.svg" class="modalImg" alt="">
+        <img src="/sportswear/assets/images/navbar_logined/avatar.svg" class="modalImg" alt="">
         <h2> Jacob Jones</h2>
-        <a href="#">Chỉnh sửa thông tin</a>
+        <a href="/sportswear/">Chỉnh sửa thông tin</a>
     </div>
     <div class="modalDetail">
-        <div class="modalDetailProfile">
-            <img src="../../assets/images/navbar_logined/profile2.svg" alt="">
+        <a class="modalDetailProfile modalDetailItem">
+            <img src="/sportswear/assets/images/navbar_logined/profile2.svg" alt="">
             <p>Hồ sơ</p>
             <i class="ti-angle-right"></i>
-        </div>
-        <div class="modalDetailCart">
-            <img src="../../assets/images/navbar_logined/cart2.svg" alt="">
+        </a>
+        <a href="/sportswear/pages/cart/" class="modalDetailCart modalDetailItem">
+            <img src="/sportswear/assets/images/navbar_logined/cart2.svg" alt="">
             <p>Giỏ hàng</p>
             <i class="ti-angle-right"></i>
-        </div>
-        <div class="modalDetailPurchase">
-            <img src="../../assets/images/navbar_logined/purchaseHistory.svg" alt="">
+        </a>
+        <a class="modalDetailPurchase modalDetailItem">
+            <img src="/sportswear/assets/images/navbar_logined/purchaseHistory.svg" alt="">
             <p>Lịch sử mua hàng</p>
             <i class="ti-angle-right"></i>
-        </div>
-        <div class="modalDetailLogout">
-            <img src="../../assets/images/navbar_logined/logout2.svg" alt="">
+        </a>
+        <a class="modalDetailLogout modalDetailItem">
+            <img src="/sportswear/assets/images/navbar_logined/logout2.svg" alt="">
             <p>Đăng xuất</p>
             <i class="ti-angle-right"></i>
-        </div>
+        </a>
     </div>
 </div>
+<!-- <div class="fake-nav"></div> -->
