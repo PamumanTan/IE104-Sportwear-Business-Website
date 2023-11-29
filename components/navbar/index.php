@@ -216,5 +216,3 @@
             </li>
         </ul>
 </div>
-
-<!-- <div class="fake-nav"></div> -->

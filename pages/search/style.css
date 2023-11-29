@@ -33,8 +33,8 @@ body {
 
 /* Header content container */
 .show-product-list-header div {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-right: 40%;
 }
 
@@ -51,7 +51,7 @@ body {
 /* Main content*/
 .show-product-list-content {
     display: flex;
-    padding-top: 0.75em;
+    padding-top: 2.5em;
     padding-left: 0.75em;
     padding-right: 0.75em;
     width: 1200px;

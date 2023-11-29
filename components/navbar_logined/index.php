@@ -210,7 +210,7 @@
                     </div>
                 </div>
             </div>
-            <a class="cartImg" href="#">
+            <a class="cartImg" href="/sportswear/pages/cart/">
                 <img src="/sportswear/assets/images/navbar_logined/cart.svg" alt="">
                 <p>10</p>
             </a>
@@ -225,7 +225,7 @@
         <a href="/sportswear/">Chỉnh sửa thông tin</a>
     </div>
     <div class="modalDetail">
-        <a class="modalDetailProfile modalDetailItem">
+        <a href="/sportswear/pages/profile/" class="modalDetailProfile modalDetailItem">
             <img src="/sportswear/assets/images/navbar_logined/profile2.svg" alt="">
             <p>Hồ sơ</p>
             <i class="ti-angle-right"></i>
@@ -235,7 +235,7 @@
             <p>Giỏ hàng</p>
             <i class="ti-angle-right"></i>
         </a>
-        <a class="modalDetailPurchase modalDetailItem">
+        <a href="/sportswear/pages/purchase-history/" class="modalDetailPurchase modalDetailItem">
             <img src="/sportswear/assets/images/navbar_logined/purchaseHistory.svg" alt="">
             <p>Lịch sử mua hàng</p>
             <i class="ti-angle-right"></i>
@@ -247,4 +247,3 @@
         </a>
     </div>
 </div>
-<!-- <div class="fake-nav"></div> -->

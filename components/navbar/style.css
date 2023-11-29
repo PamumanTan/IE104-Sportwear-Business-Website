@@ -11,16 +11,18 @@ html {
 
 body {
     background-color: #ffffff;
+    padding-top: 60px;
 }
 
 .nav {
     background-color: #000;
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
     z-index: 9900;
-    /* top: 0;
+    /* margin-bottom: 80px; */
+    top: 0;
     left: 0;
-    right: 0; */
+    right: 0;
 }
 
 .navList {

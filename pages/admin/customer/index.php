@@ -2,7 +2,11 @@
 <html lang="en">
 
 <?php
-include "../../product-list/product-item/index.php";
+include "../../../components/customer-item/index.php";
+include "../../../components/admin-sidebar/index.php";
+
+// Used for pagination
+$page = $_GET["p"] ?? 1;
 ?>
 
 <head>
@@ -10,8 +14,8 @@ include "../../product-list/product-item/index.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sport</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./customers/manage-customers.css" />
-    <link rel="stylesheet" href="../../../components/Admin_SideBar/Sidebar.css" />
+    <link rel="stylesheet" href="./customer/style.css" />
+    <link rel="stylesheet" href="../../../components/admin-sidebar/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -94,6 +98,7 @@ include "../../product-list/product-item/index.php";
     <?php Customers($cutomersList) ?>
     <?php SideBar_End() ?>
     <script src="./script.js"></script>
+    <script src="./customer/script.js"></script>
 </body>
 
 </html>
