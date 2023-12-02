@@ -49,25 +49,40 @@ include '../../../components/admin-sidebar/index.php';
                     <th><label>Mã loại sản phẩm</label></th>
                     <th><label>Tên loại sản phẩm</label></th>
                     <th><label>Số lượng SP</label></th>
-                    <th><label>Ngày tạo</label></th>
-                    <th><label>Ngày sửa đổi gần nhất</label></th>
+                    <!-- <th><label>Ngày tạo</label></th>
+                    <th><label>Ngày sửa đổi gần nhất</label></th> -->
                     <th><label>Hành động</label></th>
                 </tr>
 
-                <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
-                <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
-                <?php ProductCategoryRow('LSP001', 'Giày', '300', '01/09/2022', '07/09/2022') ?>
+                <?php
+                include "../../../db/connection.php";
+                $sql = "SELECT * FROM product_types";
+                $result = execQuery($sql);
+                for ($i = 0; $i < $result->num_rows; $i++) {
+                    $row = $result->fetch_assoc();
+                    // find number of products in this category
+                    $sql = "SELECT COUNT(*) AS amount FROM products WHERE product_type_id = " . $row['id'];
+                    $amount = execQuery($sql)->fetch_assoc()['amount'];
+
+                    ProductCategoryRow($row['id'], $row['type_name'], $amount);
+                }
+                ?>
             </table>
 
-            <div class="category-management-add-category">
-                <button>Thêm loại sản phẩm</button>
-            </div>
+            <a href="#" style="text-decoration: none;">
+                <div class="category-management-add-category">
+                    <button>Thêm loại sản phẩm</button>
+                </div>
+            </a>
         </div>
     </main>
 
     <?php SideBar_End(); ?>
 
     <script src="./script.js"></script>
+    <script>
+        document.getElementById("category").style.color = "#013cc6";
+    </script>
 </body>
 
 </html>

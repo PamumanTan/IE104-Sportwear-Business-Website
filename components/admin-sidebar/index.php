@@ -26,31 +26,23 @@ function SideBar_Start()
             </header>
             <main class="admin-layout">
                 <div class="sidebar">
-                    <a href="" class="sidebar-item" onclick="return false">
-                        <div class="sidebar-item-container" id="account">
-                            <div class="sidebar-item-icon">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <p>Tài khoản</p>
-                        </div>
-                    </a>
-                    <a href="" class="sidebar-item" onclick="return false">
-                        <div class="sidebar-item-container" id="orders">
+                    <a href="/sportswear/pages/404" class="sidebar-item">
+                        <div class="sidebar-item-container" id="order">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </div>
                             <p>Đơn hàng</p>
                         </div>
                     </a>
-                    <a href="" class="sidebar-item" onclick="return false">
-                        <div class="sidebar-item-container" id="products">
+                    <a href="/sportswear/pages/admin/product" class="sidebar-item">
+                        <div class="sidebar-item-container" id="product">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </div>
                             <p>Sản phẩm</p>
                         </div>
                     </a>
-                    <a href="" class="sidebar-item" onclick="return false">
+                    <a href="/sportswear/pages/admin/customer" class="sidebar-item">
                         <div class="sidebar-item-container" id="customer">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-person"></i>
@@ -58,23 +50,23 @@ function SideBar_Start()
                             <p>Khách hàng</p>
                         </div>
                     </a>
-                    <a href="" class="sidebar-item" onclick="return false">
-                        <div class="sidebar-item-container" id="categories">
+                    <a href="/sportswear/pages/admin/category" class="sidebar-item">
+                        <div class="sidebar-item-container" id="category">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-shapes"></i>
                             </div>
                             <p>Hạng mục</p>
                         </div>
                     </a>
-                    <a href="" class="sidebar-item" onclick="return false">
-                        <div class="sidebar-item-container" id="discounts">
+                    <a href="/sportswear/pages/admin/coupons" class="sidebar-item">
+                        <div class="sidebar-item-container" id="coupon">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-piggy-bank"></i>
                             </div>
                             <p>Giảm giá</p>
                         </div>
                     </a>
-                    <a href="" class="sidebar-item" onclick="return false">
+                    <a href="/sportswear/pages/admin/report" class="sidebar-item">
                         <div class="sidebar-item-container" id="revenue">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-dollar-sign"></i>

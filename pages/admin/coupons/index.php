@@ -71,15 +71,24 @@ $page = $_GET['page'] ?? 1;
                 </thead>
                 <tbody>
                     <?php /** Đợi BE có API */ ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
-                    <?php CouponItem('KM001', '30%', 'Giày nam', '1/9/2022', '7/9/2022') ?>
+                    <?php
+                    include "../../../db/connection.php";
+                    $query = "SELECT * FROM discounts";
+                    $result = execQuery($query);
+                    for ($i = 0; $i < $result->num_rows; $i++) {
+                        $row = $result->fetch_assoc();
+                        // random product type
+                        $options = ['giày nam', 'giày nữ', 'áo nam'];
+                        if ($row["id"] % 3 == 0) {
+                            $productType = $options[0];
+                        } else if ($row["id"] % 3 == 1) {
+                            $productType = $options[1];
+                        } else {
+                            $productType = $options[2];
+                        }
+                        CouponItem($row["id"], $row["discount_percent"], $productType, $row["begin_at"], $row["end_at"]);
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -98,6 +107,7 @@ $page = $_GET['page'] ?? 1;
     <?php include "./detail.php"; ?>
     <?php include "./create.php"; ?>
     <script src="manage-coupon.js"></script>
+
 </body>
 
 </html>

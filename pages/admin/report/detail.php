@@ -1,5 +1,3 @@
-
-
 <div class="detail-report-area disable">
     <div class="detail-report-modal">
         <div class="report-modal__heading">

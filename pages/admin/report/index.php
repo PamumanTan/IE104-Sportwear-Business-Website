@@ -24,10 +24,10 @@ $GLOBALS['$time'] = $time;
     <?php
     include('../../../components/sale-report-item/index.php');
     include("../../../components/admin-sidebar/index.php");
-    $saleReportList = SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
-        SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
-        SaleReportItem('2022', '10', '4', '200', '20.000.000 VNĐ') .
-        SaleReportItem('2022', '4', '4', '200', '20.000.000 VNĐ');
+    $saleReportList = SaleReportItem('2022', '10', '4', '200', 20000000) .
+        SaleReportItem('2022', '10', '4', '200', 20000000) .
+        SaleReportItem('2022', '10', '4', '200', 20000000) .
+        SaleReportItem('2022', '4', '4', '200', 20000000);
     ?>
 
     <?php SideBar_Start() ?>

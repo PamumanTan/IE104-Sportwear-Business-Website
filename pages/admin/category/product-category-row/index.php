@@ -1,5 +1,5 @@
 <?php
-function ProductCategoryRow($id, $name, $amount, $date_created, $date_modified)
+function ProductCategoryRow($id, $name, $amount)
 {
     echo '
             <tr class="category-management-table-row">
@@ -7,8 +7,6 @@ function ProductCategoryRow($id, $name, $amount, $date_created, $date_modified)
                 <th><label class="category-row">' . $id . '</label></th>
                 <th><label class="category-row">' . $name . '</label></th>
                 <th><label class="category-row">' . $amount . '</label></th>
-                <th><label class="category-row">' . $date_created . '</label></th>
-                <th><label class="category-row">' . $date_modified . '</label></th>
                 <th>
                     <img src="../../../assets/images/detail.svg" alt="detail">
                     <img src="../../../assets/images/delete.svg" alt="detail">

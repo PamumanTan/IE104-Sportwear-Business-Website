@@ -3,19 +3,16 @@
 } */
 
 /* Set up custom fonts */
-@font-face {
-    font-family: 'my_public_sans';
-    src: url('../../../assets/fonts/public-sans-regular.ttf');
-}
-
+html,
 * {
-    font-family: 'my_public_sans';
+    font-family: 'public sans', sans-serif;
 }
 
 div,
 main,
 section,
-article, body {
+article,
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -26,9 +23,12 @@ html {
 }
 
 .product-management-content {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
 }
 
 .product-management-title {
@@ -106,4 +106,16 @@ html {
     color: #1C1B1F;
     opacity: 60%;
     cursor: pointer;
+}
+
+th a {
+    text-decoration: none;
+    color: black;
+}
+
+.product-management-list {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
 }

@@ -48,7 +48,7 @@ include '../../../components/admin-sidebar/index.php';
             </div>
         </div>
 
-        <div>
+        <div class="product-management-list">
             <table class="product-management-table">
                 <tr class="product-management-table-row">
                     <th><input type="checkbox"></th>
@@ -58,17 +58,25 @@ include '../../../components/admin-sidebar/index.php';
                     <th><label>Số lượt mua</label></th>
                     <th><label>Hành động</label></th>
                 </tr>
-
-                <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
-                <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
-                <?php ProductRow('SP001', 'Giày Thượng Đình', '100.000 VNĐ', '200') ?>
+                <?php
+                require "../../../db/connection.php";
+                $con = connectDb();
+                $sql = "SELECT * FROM products";
+                $result = $con->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ProductRow($row['id'], $row['product_name'], $row['product_price'], 5);
+                    }
+                }
+                closeConnectDb($con);
+                ?>
             </table>
 
-            <div class="product-management-add-product">
-                <a href="./create/index.php">
-                    <button>Thêm sản phẩm</button>
-                </a>
-            </div>
+        </div>
+        <div class="product-management-add-product">
+            <a href="./create/index.php">
+                <button>Thêm sản phẩm</button>
+            </a>
         </div>
     </main>
 

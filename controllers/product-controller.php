@@ -14,40 +14,65 @@ if (isset($_GET['action']) && $_POST['action'] == 'search') {
     echo search($keyword);
 }
 
+if (isset($_GET['action']) && $_GET['action'] == 'delete') {
+    deleteProduct();
+}
+
+
 function createProduct()
 {
     $productName = $_POST['productName'];
-    $productType1 = $_POST['productType-1'];
-    $productType2 = $_POST['productType-2'];
+    $productObject = $_POST['productObject'];
+    $productType = $_POST['productType'];
     $productPrice = $_POST['productPrice'];
     $productDescription = $_POST['productDescription'];
     $productColor = $_POST['productColor'];
     $productSize = $_POST['productSize'];
-    
-    $con = include('./db/dbConfig.php');
+    $productImage = $_POST['productImage'];
 
-    $query = "INSERT INTO product (product_name, product_price, product_description, product_color, product_size) 
-          VALUES ('$productName', '$productPrice', '$productDescription', '$productColor', '$productSize')";
+    include '../db/connection.php';
+    $con = connectDb();
+    $query = "INSERT INTO `products`(`product_name`, `product_price`, `product_description`, `product_size`, `product_color`, `product_image`, `product_object_id`, `product_type_id`) VALUES ( '$productName', $productPrice, '$productDescription', '$productSize', '$productColor', '$productImage', $productObject, $productType)";
 
     $result = $con->query($query);
-
-    if ($result) {
-        // Get the ID of the last inserted row
-        $lastInsertedId = $con->insert_id;
-        echo "Product inserted successfully. Product ID: $lastInsertedId";
-    } else {
-        echo "Error inserting product: " . $con->error;
+    if (!$result) {
+        echo "Error creating product: " . $con->error;
+        return;
     }
-
-    $productTypeId1 = $con->query("select id from product_type where product_type_name = $productType1");
-    $productTypeId2 = $con->query("select id from product_type where product_type_name = $productType2");
-    $con->query("insert into product_product_type (product_id, product_type_id) values ($lastInsertedId, $productTypeId1)");
-    $con->query("insert into product_product_type (product_id, product_type_id) values ($lastInsertedId, $productTypeId2)");
+    header("Location: ../pages/admin/product/index.php");
     $con->close();
 }
 
 function updateProduct()
 {
+    $productId = $_GET['product_id'];
+    $productName = $_POST['productName'];
+    $productObject = $_POST['productObject'];
+    $productType = $_POST['productType'];
+    $productPrice = $_POST['productPrice'];
+    $productDescription = $_POST['productDescription'];
+    $productColor = $_POST['productColor'];
+    $productSize = $_POST['productSize'];
+    $productImage = $_POST['productImage'];
+
+    include '../db/connection.php';
+    $con = connectDb();
+
+    if ($productImage == null) {
+        $query = "SELECT product_image FROM products WHERE id = $productId";
+        $result = $con->query($query);
+        $productImage = $result->fetch_assoc()['product_image'];
+    }
+    $query = "UPDATE products SET product_name = '$productName', product_price = $productPrice, product_description = '$productDescription', product_object_id = $productObject, product_type_id = $productType , product_color = '$productColor', product_size = '$productSize', product_image = '$productImage' WHERE id = $productId";
+
+    $result = $con->query($query);
+
+    if (!$result) {
+        echo "Error updating product: " . $con->error;
+        return;
+    }
+    $con->close();
+    header("Location: ../pages/admin/product/index.php");
 }
 
 function search($keyword)
@@ -63,4 +88,21 @@ function search($keyword)
     $con->close();
 
     return $resultJSON;
+}
+
+function deleteProduct()
+{
+    $productId = $_GET['product_id'];
+
+    include '../db/connection.php';
+    $con = connectDb();
+    $query = "DELETE FROM products WHERE id = $productId";
+
+    $result = $con->query($query);
+    if (!$result) {
+        echo "Error deleting product: " . $con->error;
+        return;
+    }
+    header("Location: ../pages/admin/product/index.php");
+    $con->close();
 }

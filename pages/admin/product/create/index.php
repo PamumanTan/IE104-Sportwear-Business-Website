@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add</title>
     <link rel="stylesheet" href="./style.css">
-    
+
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     </header>
     <div class="main">
         <div class="container">
-            <form action="../productController.php" method="POST" value='create'>
+            <form action="../../../../controllers/product-controller.php" method="POST" value='create'>
                 <h2>Thêm sản phẩm</h2>
                 <br>
                 <input type="hidden" name="action" value="create">
@@ -25,22 +25,22 @@
                 </div>
 
                 <div>
-                    <label for="productType-1">Loại sản phẩm 1 : </label>
-                    <select name="productType-1" id="productType-1">
-                        <option value="men">Nam</option>
-                        <option value="women">Nữ</option>
-                        <option value="kids">Trẻ em</option>
-                        <option value="unisex">unisex</option>
+                    <label for="productObject">Đối tượng : </label>
+                    <select name="productObject" id="productObject">
+                        <option value=1>Nam</option>
+                        <option value=2>Nữ</option>
+                        <option value=3>Trẻ em</option>
+                        <option value=4>unisex</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="productType-2">Loại sản phẩm 2 : </label>
-                    <select name="productType-2" id="productType-2">
-                        <option value="shirt">Áo</option>
-                        <option value="pant">Quần</option>
-                        <option value="shoes">Giày</option>
-                        <option value="socks">Tất</option>
+                    <label for="productType">Loại sản phẩm : </label>
+                    <select name="productType" id="productType">
+                        <option value=1>Áo</option>
+                        <option value=2>Quần</option>
+                        <option value=3>Giày</option>
+                        <option value=4>Tất</option>
                     </select>
                 </div>
 
@@ -76,7 +76,7 @@
                     <label for="productImage">Ảnh : </label>
                     <input class="form-control" type="file" id="productImage" name="productImage" multiple="multiple">
                 </div>
-                <button>
+                <button style="cursor: pointer;">
                     Lưu
                 </button>
             </form>
