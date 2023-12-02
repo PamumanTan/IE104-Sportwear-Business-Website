@@ -28,7 +28,7 @@ const detailAcceptBtn = document.querySelector('#detail-accept-btn');
  */
 const detailCancelBtn = document.querySelector('#detail-cancel-btn');
 
-/** Create coupon */ 
+/** Create coupon */
 addCouponButton.addEventListener('click', e => {
     e.preventDefault();
     // Open modal
@@ -45,7 +45,7 @@ createCancelBtn.addEventListener('click', e => {
 
 /** BE cho biết sẽ chứa coupon data ở đâu? */
 
-/** Detail coupon */ 
+/** Detail coupon */
 function openUpdateModal(id) {
     // Open modal
     detailModal.classList.remove('disable');
@@ -61,5 +61,6 @@ detailCancelBtn.addEventListener('click', e => {
 
 function deleteCoupon(id) {
     // Delete coupon
-
 }
+
+document.getElementById("coupon").style.color = "#013cc6";

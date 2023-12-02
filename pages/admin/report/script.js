@@ -20,3 +20,5 @@ exportBtn.addEventListener('click', () => {
 exitBtn.addEventListener('click', () => {
     reportModal.classList.add('disable');
 })
+
+document.getElementById("revenue").style.color = "#013cc6";

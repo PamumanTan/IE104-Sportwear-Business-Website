@@ -1,5 +1,6 @@
-html {
-    font-family: 'Roboto', sans-serif;
+html,
+* {
+    font-family: 'public sans', sans-serif;
 }
 
 div,
