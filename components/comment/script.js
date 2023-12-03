@@ -6,9 +6,11 @@ const addReviewStar = (element, num) => {
         element.appendChild(star);
     }
 }
+
 // addReviewStar(5);
 ratings.forEach(rating => {
-    addReviewStar(rating, 5);
+    let starNum = rating.getAttribute('rating');
+    addReviewStar(rating, starNum);
 })
 
 

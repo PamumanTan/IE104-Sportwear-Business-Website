@@ -75,43 +75,42 @@ include './show-product-list-filter-option/index.php'
         <main class="show-product-list-content">
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
-
-                <!-- <div class="show-product-list-filter-option">
-                    <label>Hạng mục</label>
-                    <br>
-
-                    <div>
-                        <input type="checkbox">
-                        <label>Giày</label>
-                        <br>
-                    </div>
-
-                    <div>
-                        <input type="checkbox">
-                        <label>Áo</label>
-                        <br>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label>Quần</label>
-                        <br>
-                    </div>
-
-                    <div>
-                        <input type="checkbox">
-                        <label>Tất</label>
-                        <br>
-                    </div>
-
-                    <div>
-                        <input type="checkbox">
-                        <label>Mũ</label>
-                        <br>
-                    </div>
-                </div> -->
                 <?php 
-                    ShowProductListFilterOption('Hạng mục', ['Giày', 'Áo', 'Quần', 'Tất', 'Mũ']);
-                    ShowProductListFilterOption('Giới tính', ['Nam', 'Nữ', 'Unisex']);
+                    $categoriesQuery = "SELECT type_name FROM product_types";
+                    $objectsQuery = "SELECT object_name FROM product_objects";
+                    $sizesQuery = "SELECT distinct product_size FROM products";
+                    $categoriesResult = execQuery($categoriesQuery);
+                    $objectResult = execQuery($objectsQuery);
+                    $sizesResult = execQuery($sizesQuery);
+
+                    // sql result to list of string
+                    $categories = [];
+                    $objects = [];
+                    $sizes = [];
+                    if ($categoriesResult && $categoriesResult->num_rows > 0) {
+                        $rows = $categoriesResult->fetch_all();
+                        foreach ($rows as $row) {
+                            array_push($categories, $row[0]);
+                        }
+                    }
+                    if ($objectResult && $objectResult->num_rows > 0) {
+                        $rows = $objectResult->fetch_all();
+                        foreach ($rows as $row) {
+                            array_push($objects, $row[0]);
+                        }
+                    }
+                    if ($sizesResult && $sizesResult->num_rows > 0) {
+                        $rows = $sizesResult->fetch_all();
+                        foreach ($rows as $row) {
+                            array_push($sizes, $row[0]);
+                        }
+                    }
+
+
+                    ShowProductListFilterOption('Hạng mục', $categories);
+                    ShowProductListFilterOption('Giới tính', $categories);
+                    ShowProductListFilterOption('Giới tính', $sizes);
+                    ShowProductListFilterOption('Giá', ['Dưới 100.000đ', '100.000đ - 200.000đ', '200.000đ - 500.000đ', '500.000đ - 1.000.000đ', '1.000.000đ - 2.000.000đ', '2.000.000đ - 5.000.000đ', 'Trên 5.000.000đ']);
                 ?>
 
 

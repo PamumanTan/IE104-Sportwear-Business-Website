@@ -1,8 +1,8 @@
 <?php
-function CartProductItem($img, $name, $price, $size, $quantity)
+function CartProductItem($id, $img, $name, $price, $size, $quantity)
 {
     echo '
-        <div class="cart-product-container">
+        <div class="cart-product-container" product_id='.$id.'>
             <div class="cart-product-img">
                 <img src="' . $img . '" alt="Hình ảnh sản phẩm">
             </div>

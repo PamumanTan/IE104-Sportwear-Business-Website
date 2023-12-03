@@ -17,9 +17,10 @@ CREATE TABLE products
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
     product_price INT NOT NULL,
+    product_promote_price INT,
     rating INT,
-    purchasing_quantity INT,
-    amount INT,
+    purchasing_quantity INT DEFAULT 0,
+    quantity INT,
     production_day DATE,
     product_description VARCHAR(255),
     product_size VARCHAR(255),
@@ -52,10 +53,11 @@ CREATE TABLE users
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
+    fullname VARCHAR(255),
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    phonenumber VARCHAR(255) NOT NULL,
-    address VARCHAR(255) NOT NULL,
+    phonenumber VARCHAR(255),
+    address VARCHAR(255),
     is_admin BOOLEAN NOT NULL
 );
 
@@ -72,31 +74,22 @@ CREATE TABLE comments
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
-
 CREATE TABLE orders
 (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    total_money INT,
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,   
+    total_money INT NOT NULL,
+    payed BOOLEAN NOT NULL DEFAULT false,
     FOREIGN KEY(user_id) REFERENCES USERS(id)
 );
 
-CREATE TABLE order_products
+CREATE TABLE order_details
 (
     order_id INT,
     product_id INT,
-    amount INT,
+    quantity INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(order_id, product_id),
     FOREIGN KEY(order_id) REFERENCES ORDERS(id),
-    FOREIGN KEY(product_id) REFERENCES products(id)
-);
-
-CREATE TABLE shopping_carts
-(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    product_id INT,
-    product_quantity INT,
-    FOREIGN KEY(user_id) REFERENCES USERS(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );
