@@ -195,7 +195,7 @@
                 </div>
 
                 <div class="navIntroduce">
-                    <a href="/sportswear/pages/guide">Giới thiệu</a>
+                    <a href="/sportswear/pages/introduce">Giới thiệu</a>
                 </div>
 
             </li>

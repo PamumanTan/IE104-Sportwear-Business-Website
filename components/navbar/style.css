@@ -31,8 +31,8 @@ body {
     font-size: 17px;
     display: flex;
     line-height: 3.5;
-    /* width: 1400px; */
-    margin: auto;
+    width: 1400px;
+    margin: 0 auto;
 }
 
 .navList li a,

@@ -1,7 +1,7 @@
 <?php
 include './product-item/index.php';
 include './show-product-list-filter-option/index.php'
-?>
+    ?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
 <html lang="vi"> <!--Set the language-->
@@ -12,6 +12,7 @@ include './show-product-list-filter-option/index.php'
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./product-item/style.css">
+    <link rel="stylesheet" href="../../components/scroll-to-top-button/style.css">
     <!-- css for navbar -->
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
@@ -19,6 +20,8 @@ include './show-product-list-filter-option/index.php'
     <!-- css for footer -->
     <link rel="stylesheet" href="../../components/footer/style.css">
     <link rel="stylesheet" href="../../resources/css/root.css">
+    <script src="../../components/scroll-to-top-button/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,7 +37,7 @@ include './show-product-list-filter-option/index.php'
         include_once "../../components/navbar/index.php";
     }
     ?>
-
+    <?php include "../../components/scroll-to-top-button/index.php" ?>
     <header class="show-product-list-header">
         <?php if (isset($_GET['object']) || isset($_GET['type'])) { ?>
             <div>
@@ -59,14 +62,16 @@ include './show-product-list-filter-option/index.php'
                     ?>
                 </h1>
                 <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.
+                </p>
 
             </div>
         <?php } else { ?>
             <div>
                 <h1>Sản phẩm mới</h1>
                 <p>Đắm chìm trong thế giới thể thao với những sản phẩm mới nhất tại cửa hàng của chúng tôi!
-                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.</p>
+                    Dòng sản phẩm mới này bao gồm đủ phụ kiện để bạn có thể chuẩn bị cho mọi hoạt động thể thao của mình.
+                </p>
 
             </div>
         <?php } ?>
@@ -75,42 +80,42 @@ include './show-product-list-filter-option/index.php'
         <main class="show-product-list-content">
             <aside class="show-product-list-filter">
                 <label>Bộ lọc</label> <button id="show-product-list-clear-filter">Xoá bộ lọc</button><br>
-                <?php 
-                    $categoriesQuery = "SELECT type_name FROM product_types";
-                    $objectsQuery = "SELECT object_name FROM product_objects";
-                    $sizesQuery = "SELECT distinct product_size FROM products";
-                    $categoriesResult = execQuery($categoriesQuery);
-                    $objectResult = execQuery($objectsQuery);
-                    $sizesResult = execQuery($sizesQuery);
+                <?php
+                $categoriesQuery = "SELECT type_name FROM product_types";
+                $objectsQuery = "SELECT object_name FROM product_objects";
+                $sizesQuery = "SELECT distinct product_size FROM products";
+                $categoriesResult = execQuery($categoriesQuery);
+                $objectResult = execQuery($objectsQuery);
+                $sizesResult = execQuery($sizesQuery);
 
-                    // sql result to list of string
-                    $categories = [];
-                    $objects = [];
-                    $sizes = [];
-                    if ($categoriesResult && $categoriesResult->num_rows > 0) {
-                        $rows = $categoriesResult->fetch_all();
-                        foreach ($rows as $row) {
-                            array_push($categories, $row[0]);
-                        }
+                // sql result to list of string
+                $categories = [];
+                $objects = [];
+                $sizes = [];
+                if ($categoriesResult && $categoriesResult->num_rows > 0) {
+                    $rows = $categoriesResult->fetch_all();
+                    foreach ($rows as $row) {
+                        array_push($categories, $row[0]);
                     }
-                    if ($objectResult && $objectResult->num_rows > 0) {
-                        $rows = $objectResult->fetch_all();
-                        foreach ($rows as $row) {
-                            array_push($objects, $row[0]);
-                        }
+                }
+                if ($objectResult && $objectResult->num_rows > 0) {
+                    $rows = $objectResult->fetch_all();
+                    foreach ($rows as $row) {
+                        array_push($objects, $row[0]);
                     }
-                    if ($sizesResult && $sizesResult->num_rows > 0) {
-                        $rows = $sizesResult->fetch_all();
-                        foreach ($rows as $row) {
-                            array_push($sizes, $row[0]);
-                        }
+                }
+                if ($sizesResult && $sizesResult->num_rows > 0) {
+                    $rows = $sizesResult->fetch_all();
+                    foreach ($rows as $row) {
+                        array_push($sizes, $row[0]);
                     }
+                }
 
 
-                    ShowProductListFilterOption('Hạng mục', $categories);
-                    ShowProductListFilterOption('Giới tính', $categories);
-                    ShowProductListFilterOption('Giới tính', $sizes);
-                    ShowProductListFilterOption('Giá', ['Dưới 100.000đ', '100.000đ - 200.000đ', '200.000đ - 500.000đ', '500.000đ - 1.000.000đ', '1.000.000đ - 2.000.000đ', '2.000.000đ - 5.000.000đ', 'Trên 5.000.000đ']);
+                ShowProductListFilterOption('Hạng mục', $categories);
+                ShowProductListFilterOption('Giới tính', $categories);
+                ShowProductListFilterOption('Giới tính', $sizes);
+                ShowProductListFilterOption('Giá', ['Dưới 100.000đ', '100.000đ - 200.000đ', '200.000đ - 500.000đ', '500.000đ - 1.000.000đ', '1.000.000đ - 2.000.000đ', '2.000.000đ - 5.000.000đ', 'Trên 5.000.000đ']);
                 ?>
 
 
@@ -150,17 +155,17 @@ include './show-product-list-filter-option/index.php'
                         foreach ($rows as $row) {
                             ProductItem($row[0], $row[1], $row[2], $row[3]);
                         }
-                    ?>
-                </div>
-                <div class="show-product-list-more">
-                    <button>Hiển thị thêm sản phẩm</button>
-                </div>
+                        ?>
+                    </div>
+                    <div class="show-product-list-more">
+                        <button>Hiển thị thêm sản phẩm</button>
+                    </div>
 
-            <?php
+                    <?php
                     } else {
                         echo "<h3>Không tìm thấy sản phẩm</h3></div>";
                     }
-            ?>
+                    ?>
 
 
 
