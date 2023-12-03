@@ -26,8 +26,8 @@ function removeProductFromCart(product_id) {
     console.log(JSON.stringify({
         product_id: product_id
     }));
-    return fetch('http://localhost/sportswear/controllers/cart', {
-        method: 'DELETE',
+    return fetch('http://localhost/sportswear/controllers/cart.php?action=remove', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
