@@ -1,5 +1,6 @@
-html {
-    font-family: 'Roboto', sans-serif;
+html,
+* {
+    font-family: 'public sans', sans-serif;
 }
 
 div,
@@ -29,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
 }
 
 .search-customer {
@@ -122,7 +123,9 @@ body {
     /* padding-top: 2rem; */
     font-size: 1rem;
     background-color: white;
-    /* overflow-x: auto; */ 
+    overflow: hidden;
+    overflow-y: auto;
+    /* overflow-x: auto; */
 }
 
 .list-container input[type='checkbox'] {
