@@ -1,5 +1,7 @@
 <?php
 
+const KEY = 'secret';
+
 class Token
 {
 
@@ -7,12 +9,12 @@ class Token
      * Sign - Static method to generate token
      *  
      * @param array $payload
-     * @param string $key - The signature key
+     * @param string KEY - The signature KEY
      * @param int $expire - (optional) Max age of token in seconds. Leave it blank for no expiration.
      * 
      * @return string token
      */
-    static function Sign($payload, $key, $expire = null)
+    static function Sign($payload, $expire = null)
     {
 
         // Header
@@ -27,7 +29,7 @@ class Token
         $payload_encoded = base64_encode(json_encode($payload));
 
         // Signature
-        $signature = hash_hmac('SHA256', $headers_encoded . $payload_encoded, $key);
+        $signature = hash_hmac('SHA256', $headers_encoded . $payload_encoded, KEY);
         $signature_encoded = base64_encode($signature);
 
         // Token
@@ -40,19 +42,19 @@ class Token
      * Verify - Static method verify token
      * 
      * @param string $token
-     * @param string $key - The signature key
+     * @param string KEY - The signature KEY
      * 
      * @return boolean false if token is invalid or expired
      * @return array payload
      */
-    static function Verify($token, $key)
+    static function Verify($token)
     {
 
         // Break token parts
         $token_parts = explode('.', $token);
 
         // Verigy Signature
-        $signature = base64_encode(hash_hmac('SHA256', $token_parts[0] . $token_parts[1], $key));
+        $signature = base64_encode(hash_hmac('SHA256', $token_parts[0] . $token_parts[1], KEY));
         if ($signature != $token_parts[2]) {
             return false;
         }
@@ -70,3 +72,19 @@ class Token
         return $payload;
     }
 }
+
+function parseToken() {
+    if (!isset($_COOKIE['access_token'])) {
+        echo json_encode([
+            'message' => 'Unauthenticated',
+            'error' => true
+        ]);
+        return null;
+    } 
+
+    // Authorize
+    $token = $_COOKIE['access_token'];
+    $payload = Token::Verify($token, KEY);
+    return $payload;
+}
+

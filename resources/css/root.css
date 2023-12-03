@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #32ba9a;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -10,6 +14,12 @@
     opacity: 0.3;
 }
 
+.primary-button-hover:hover {
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+}
 
 /* Snackbar  */
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -100,8 +110,14 @@
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap'); */
+
+@font-face {
+    font-family: 'Helvetica-Vietnamese';
+    src: url(../../assets/fonts/Helvetica-Vietnamese/Helvetica-Light.ttf);
+}
+
 html {
 
-    font-family: Helvetica, sans-serif;
+    font-family: 'Helvetica-Vietnamese', Helvetica, sans-serif;
 }

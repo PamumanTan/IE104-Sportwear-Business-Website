@@ -3,23 +3,6 @@
 require '../helpers/jwt.php';
 require '../db/connection.php';
 
-// function execQuery($query)
-// {
-//     require("../db/db-config.php");
-
-//     $conn = new mysqli($host, $username, $password, $dbname);
-//     // Check connection
-//     if ($conn->connect_error) {
-//         die("Connection failed: " . $conn->connect_error);
-//     }
-
-//     $result = $conn->query($query);
-//     $conn->close();
-
-//     return $result;
-// }
-
-const KEY = 'secret';
 if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenumber'] != "" && $_POST['password'] != "") {
     
     $query = "select * from users where phonenumber=" . $_POST['phonenumber'] . " and PASSWORD='" . $_POST['password'] . "'";
@@ -30,13 +13,13 @@ if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenu
             'id' => $row['id'],
             'is_admin' => $row['is_admin']
         ];
-        $token = Token::Sign($payload, KEY, 60 * 5);
+        $token = Token::Sign($payload, 60 * 5);
 
         // Set the cookie
         $sameSite = 'Strict';
         $secure = true; 
         $httpOnly = true;
-        $expirationTime = time() + (60 * 5);
+        $expirationTime = time() + (60 * 60 * 60);
         setcookie('access_token', $token, $expirationTime, '/', '', $secure, $httpOnly);
 
         $res = (object) [

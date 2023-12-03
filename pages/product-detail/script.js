@@ -68,20 +68,14 @@ const total = reviewCounterArray.reduce((ans, number) => {
     return ans + number;
 }, 0)
 
-// reviewCounter.innerHTML = total + ' đánh giá';
-// for (let i = 5; i > 0; i--) {
-//     let string = ` <div id="reviews-counter-child">
-//                         <p>${i} sao </p>
-//                         <div id="line"></div>
-//                         <p>(${reviewCounterArray[i - 1]})</p>
-//                    </div> `;
-//     reviewLeftDiv.innerHTML += string;
-// }
-
-
 // Add to cart
 function handleAddToCartButton() {
-    // window.location.href = '../payment/';
+    addProductToCart()
+        .then(data => {
+            console.log(data);
+            NotifyAddToCartSuccessfully(data['message']);
+            // window.location.href = '../payment/';
+            })
 }
 
 
@@ -90,10 +84,15 @@ const openModalButton = document.querySelector(".add-to-cart");
 const closeModalButton = document.getElementById("closeModalBtn");
 const modal = document.querySelector(".modal");
 const modalBackground = document.querySelector(".modal-background");
-openModalButton.addEventListener("click", function () {
+const modalContent = document.querySelector(".modal-content h2");
+
+// openModalButton.addEventListener("click", NotifyAddToCartSuccessfully);
+
+function NotifyAddToCartSuccessfully(message) {
+    modalContent.innerHTML = message;
     modal.classList.add("active");
-    modalBackground.classList.add("active");
-});
+    modalBackground.classList.add("active")
+}
 
 closeModalButton.addEventListener("click", function () {
     modal.classList.remove("active");
@@ -103,3 +102,32 @@ modalBackground.addEventListener("click", function () {
     modal.classList.remove("active");
     modalBackground.classList.remove("active");
 });
+
+// Add to cart 
+function addProductToCart() {
+    let url = window.location.href;
+    url = new URL(url);
+    var product_id = url.searchParams.get("id");
+
+    var requestOptions = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        
+        },
+        body : JSON.stringify({
+            "product_id": product_id,
+            "quantity": quantityDisplay.value
+        })
+    };
+
+    console.log(JSON.stringify({
+        "product_id": product_id,
+        "quantity": quantityDisplay.value
+    }))
+
+    return fetch("http://localhost/sportswear/controllers/cart.php?action=add", requestOptions)
+        .then(response => response.json())
+        .catch(error => null);
+}

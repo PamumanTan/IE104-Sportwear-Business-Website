@@ -27,7 +27,9 @@ include "../../components/cart-product-item/index.php"
     if ($user) {
         include_once "../../components/navbar_logined/index.php";
     } else {
-        include_once "../../components/navbar/index.php";
+        // include_once "../../components/navbar/index.php";
+        // redirect to login page
+        header("Location: ../../pages/login/index.php");
     }
     ?>
 
@@ -45,24 +47,32 @@ include "../../components/cart-product-item/index.php"
             <div class="cart-product-list" id="style-3">
                 <!-- Generate cart-product-item từ cartProductItem components -->
                 <?php
-                // $img, $name, $price, $size, $quantity
-                $query = 'select product_image, product_name, product_price, product_size, product_quantity
-                        from shopping_carts join products 
-                        where shopping_carts.user_id = ' . $user['user_id'] . ' limit 5';
+                $query = 'select products.id as product_id, product_image, product_name, product_price, product_size, order_details.quantity
+                        from products join order_details join orders
+                        where order_details.order_id = orders.id and order_details.product_id = products.id
+                        and payed = 0 and orders.user_id = ' . $user['user_id'] . ' limit 5';
                 $result = execQuery($query);
                 if ($result && $result->num_rows > 0) {
                     $rows = $result->fetch_all();
                     foreach ($rows as $row) {
-                        CartProductItem($row[0], $row[1], $row[2], $row[3], $row[4]);
+                        CartProductItem($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
                     }
-                }?>
+                }
+                ?>
             </div>
         </div>
         <div class="total-container">
+            <?php 
+                $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
+                $result = execQuery($query);
+                if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                }
+            ?>
             <h2>Tổng kết đặt hàng</h2>
             <div class="total-div">
                 <p>Tổng tiền sản phẩm</p>
-                <p id="total"></p>
+                <p id="total"><?php echo number_format($row['total_money']) ?> </p>
             </div>
             <div class="shipping-fee-div">
                 <p>Phí ship</p>
