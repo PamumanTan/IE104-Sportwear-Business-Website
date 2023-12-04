@@ -196,6 +196,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
     $action = $_GET['action'];
     if ($action === 'get') {
         getAllProductsInCart($user_id);
+    } else if ($action === 'number') {
+        // Get cart number (number of product * quantity)
+        $query = "select sum(quantity) as cart_number 
+                from order_details join orders 
+                where order_details.order_id = orders.id 
+                and orders.user_id = " . $user_id . " 
+                and orders.payed = 0";
+
+        $result = execQuery($query);
+        $row = $result->fetch_assoc();
+        if ($row) {
+            echo json_encode([
+                'message' => 'Get cart number successfully',
+                'error' => false,
+                'data' => $row['cart_number']
+            ]);
+        } else {
+            echo json_encode([
+                'message' => 'Get cart number failed',
+                'error' => true
+            ]);
+        }
     }
 } else {
     echo "Wrong request method";
