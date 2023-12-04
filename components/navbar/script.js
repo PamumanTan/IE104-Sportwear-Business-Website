@@ -10,22 +10,6 @@ searchBtn.onclick = (e) => {
     window.location.href = `http://localhost/sportswear/pages/search/?keyword=${searchInput.value}`;
 };
 
-// const navItem = document.querySelectorAll('.nav-subnav-item');
-// // get next element of navbar 
-// const navbar = document.querySelector('.nav');
-// const nextToNav = navbar.nextElementSibling;
-// console.log(nextToNav)
-
-// console.log(navItem);
-// navItem.forEach((item) => {
-//     item.onmouseover = (e) => {
-//         nextToNav.classList.add('blur');
-//     }
-//     item.onmouseout = (e) => {
-//         nextToNav.classList.remove('blur');
-//     }
-// })
-
 
 
 const accountBtn = document.querySelector('#account');
@@ -70,19 +54,25 @@ if (accountBtn) {
     }
 }
 
-// Hide login and signup when hover input search
-// const search = document.querySelector('.navSearchContent');
-// const loginBtn = document.querySelector('.login');
-// const signupBtn = document.querySelector('.signup');
-
-// search.onmouseover = e => {
-//     loginBtn.style.display = 'none';
-//     signupBtn.style.display = 'none';
-// }
-// search.onmouseout = e => {
-//     loginBtn.style.display = 'inline-block';
-//     signupBtn.style.display = 'inline-block';
-// }
-
 // update cart number
 getCartNumber();
+
+// update account modal information
+if (accountModal) {
+    fetch('http://localhost/sportswear/controllers/me.php')
+        .then(res => res.json())
+        .then(res => {
+            if (!res.error) {
+                const username = res['data']['username'];
+                const avatar = res['data']['avatar'];
+
+                const accountUsername = document.querySelector('.modalInfo h2');
+                const accountImage = document.querySelector('.modalInfo img');
+
+                accountUsername.innerHTML = username;
+                accountImage.src = avatar;
+            } else {
+                alert(data.message);
+            }
+        })
+}

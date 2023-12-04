@@ -2,11 +2,6 @@
 include '../../components/payment-product-item/index.php';
 ?>
 
-<!-- Còn thiếu:
-    - Tính tổng tiền sau khi get data từng sản phẩm 
-    - Submit form to database
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +44,8 @@ include '../../components/payment-product-item/index.php';
                     <input type="text" placeholder="Tên" id="last-name" required>
                 </div>
                 <input type="text" placeholder="Địa chỉ" id="address" required>
-                <input type="text" placeholder="Ghi chú" id="note" required>
+                <input type="text" placeholder="Số điện thoại" id="phone-number" required>
+                <input type="text" placeholder="Ghi chú" id="note">
                 <div id="save-info-checkbox">
                     <input type="checkbox" name="save-info" id="save-info" required>
                     <label for="save-info">Lưu thông tin</label>
@@ -85,6 +81,8 @@ include '../../components/payment-product-item/index.php';
                 $result = execQuery($query);
                 if ($result && $result->num_rows > 0) {
                     $row = $result->fetch_assoc();
+                } else {
+                    $row = ['total_money' => 0];
                 }
                 ?>
                 <div class="total-container">
@@ -139,6 +137,8 @@ include '../../components/payment-product-item/index.php';
             });
         </script>'
     ?>
+
+    <script src="../../resources/js/root.js"></script>
     <script src="../../components/navbar/script.js"></script>
 </body>
 

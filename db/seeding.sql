@@ -252,29 +252,3 @@ INSERT INTO comments (title, content, rating, product_id, user_id) VALUES
     ('Sản phẩm trung bình', 'Sản phẩm này trung bình về chất lượng và thiết kế. Nó đáp ứng mục đích sử dụng của nó nhưng không nổi bật. Một mua hàng ổn định cho việc sử dụng hàng ngày.', 3, 6, 8),
     ('Tuyệt vời cho tập luyện', 'Tôi sử dụng sản phẩm này cho các buổi tập luyện và nó hoạt động tốt. Chất liệu chống ẩm giữ cho tôi thoải mái trong các buổi tập cường độ cao. Một mua hàng tốt!', 4, 8, 10),
     ('Sự lựa chọn màu sắc độc đáo', 'Tôi đánh giá cao sự đa dạng của các màu sắc cho sản phẩm này. Nó giúp tôi thể hiện phong cách cá nhân của mình. Sự vừa vặn cũng thoải mái.', 4, 10, 6);
-
--- Insert data into orders table
-INSERT INTO orders (user_id, total_money) VALUES
-    (1, 50),
-    (2, 75),
-    (3, 120),
-    (4, 40),
-    (5, 90),
-    (6, 110),
-    (7, 70),
-    (8, 60),
-    (9, 80),
-    (10, 100);
-
--- Insert data into order_products table
-INSERT INTO order_details (order_id, product_id, quantity) VALUES
-    (1, 1, 2),
-    (2, 2, 1),
-    (3, 3, 3),
-    (4, 4, 2),
-    (5, 5, 1),
-    (6, 6, 2),
-    (7, 7, 1),
-    (8, 8, 2),
-    (9, 9, 3),
-    (10, 10, 1);
