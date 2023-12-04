@@ -1,3 +1,9 @@
+const productPrices = document.querySelectorAll('.product-price');
+productPrices.forEach(productPrice => {
+    productPrice.textContent = formatPrice(parseInt(productPrice.textContent));
+})
+
+
 let page = 1;
 const productItems = document.querySelectorAll('.show-product');
 productItems.forEach((productItem) => {
@@ -9,7 +15,6 @@ productItems.forEach((productItem) => {
             }
             target = target.parentElement;
         }
-        console.log(target);
         const id = target.id.substring(11);
         window.location.href = '/sportswear/pages/product-detail/?id=' + id;
     }
@@ -30,7 +35,6 @@ const loadMoreProduct = () => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-            console.log(this.responseText)
             if (this.responseText == 'no data') {
                 return;
             }
