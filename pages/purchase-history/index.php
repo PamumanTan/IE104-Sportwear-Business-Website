@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../resources/css/root.css">
     <style>
-        $base-spacing-unit: 24px;
-        $half-spacing-unit: $base-spacing-unit / 2;
+        :root {
+            --base-spacing-unit: 24px;
+            --half-spacing-unit: --base-spacing-unit / 2;
 
-        $color-alpha: #1772FF;
-        $color-form-highlight: #EEEEEE;
+            --color-alpha: #1772FF;
+            --color-form-highlight: #EEEEEE;
+        }
 
         *,
         *:before,
@@ -25,7 +27,7 @@
         }
 
         body {
-            padding: $base-spacing-unit;
+            padding: --base-spacing-unit;
             font-family: 'Source Sans Pro', sans-serif;
             margin: 0;
         }
@@ -51,25 +53,25 @@
 
         .table {
             width: 100%;
-            border: 1px solid $color-form-highlight;
+            border: 1px solid --color-form-highlight;
         }
 
         .table-header {
             display: flex;
             width: 100%;
             background: #000;
-            padding: ($half-spacing-unit * 1.5) 0;
+            padding: (--half-spacing-unit * 1.5) 0;
         }
 
         .table-row {
             display: flex;
             width: 100%;
-            padding: ($half-spacing-unit * 1.5) 0;
+            padding: (--half-spacing-unit * 1.5) 0;
 
         }
 
         .table-row:nth-of-type(odd) {
-            /* background-color: $color-form-highlight; */
+            /* background-color: --color-form-highlight; */
             background-color: #ececec;
         }
 
@@ -98,15 +100,15 @@
             text-decoration: none;
             position: relative;
             display: inline-block;
-            padding-left: $base-spacing-unit;
-            padding-right: $base-spacing-unit;
+            padding-left: --base-spacing-unit;
+            padding-right: --base-spacing-unit;
 
             &::after {
                 content: '';
                 position: absolute;
-                right: -($half-spacing-unit * 1.5);
+                right: -(--half-spacing-unit * 1.5);
                 color: white;
-                font-size: $half-spacing-unit;
+                font-size: --half-spacing-unit;
                 top: 50%;
                 transform: translateY(-50%);
             }
@@ -227,6 +229,9 @@
                 </div>
                 <div class="table-content" id="style-3">
                     <!-- Generate data from database -->
+                    <?php
+                    $query = "SELECT * FROM orders WHERE user_id = " . $user['user_id'];
+                    ?>
                     <div class="table-row">
                         <div class="table-data narrow">TS0047</div>
                         <div class="table-data narrow">27/11/2023</div>
@@ -234,73 +239,6 @@
                         <div class="table-data">
                             Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa,
                             Thành phố Dĩ An, Tỉnh Bình Dương
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
-                        </div>
-                    </div>
-
-                    <div class="table-row">
-                        <div class="table-data narrow">FS0028</div>
-                        <div class="table-data narrow">27/10/2023</div>
-                        <div class="table-data narrow" id="total-money">2500000</div>
-                        <div class="table-data">
-                            Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh
-                            Bình Dương
                         </div>
                     </div>
 
