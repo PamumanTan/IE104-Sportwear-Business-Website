@@ -192,3 +192,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Mobile */
+@media (max-width: 426px) {
+    .navList {
+        display: none;
+    }
+}
