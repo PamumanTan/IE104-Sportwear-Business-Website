@@ -205,6 +205,7 @@
         });
     </script>
 
+    <script src="../resources/js/root.js"></script>
     <script src="../components/navbar/script.js"></script>
 </body>
 
