@@ -37,7 +37,7 @@ body {
 
 .navListFirst,
 .navListMiddle,
-.navListEnd {
+.navListEndLogined {
     display: flex;
 
 }
@@ -53,7 +53,7 @@ body {
     flex: 3;
 }
 
-.navListEnd {
+.navListEndLogined {
     flex: 2;
     float: right;
     padding-right: 20px;
@@ -145,16 +145,16 @@ body {
 }
 
 
-.navSearch {
+.navListEndLogined .navSearch {
     display: flex;
     align-items: center;
 }
 
-.navSearchContent input:focus {
+.navListEndLogined .navSearchContent input:focus {
     outline: none;
 }
 
-.navSearchContent input {
+.navListEndLogined .navSearchContent input {
     border-style: hidden;
     font-size: 14px;
     line-height: 1.9;
@@ -162,14 +162,14 @@ body {
     transition: width 0.75s ease;
 }
 
-.navSearchContent div:hover {
+.navListEndLogined .navSearchContent div:hover {
     background-color: rgba(146, 159, 168, 0.15);
     border-radius: 50%;
     cursor: pointer
 }
 
 
-.navSearchContent {
+.navListEndLogined .navSearchContent {
     background-color: white;
     display: flex;
     /* height: 0px; */
@@ -178,38 +178,38 @@ body {
     border-radius: 20px;
 }
 
-.navSearchContent:hover input {
+.navListEndLogined .navSearchContent:hover input {
     width: 176px;
     cursor: text;
     padding-left: 6px;
 }
 
-.navSearchIcon {
+.navListEndLogined .navSearchIcon {
     width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cartImg {
+.navListEndLogined .cartImg {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.accountImg {
+.navListEndLogined .accountImg {
     display: flex;
     align-items: center;
     margin-right: 30px;
 }
 
-.cartImg img {
+.navListEndLogined .cartImg img {
     height: 25px;
     color: white;
 }
 
-.accountImg img {
+.navListEndLogined .accountImg img {
     height: 30px;
 }
 

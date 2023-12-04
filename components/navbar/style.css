@@ -44,7 +44,7 @@ body {
 
 .navListFirst,
 .navListMiddle,
-.navListEnd {
+.navListEndUn {
     display: flex;
 
 }
@@ -60,13 +60,14 @@ body {
     flex: 3;
 }
 
-.navListEnd {
+.navListEndUnlogined {
     flex: 2;
     float: right;
     /* padding-left: 50px;   */
     padding-right: 20px;
     justify-content: flex-end;
     gap: 1rem;
+    display: flex;
 }
 
 .subnavNewProduct,
@@ -109,12 +110,23 @@ body {
     text-align: left;
     position: absolute;
     list-style-type: none;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem;
     line-height: 1.5;
     top: 62px;
     background-color: #fff;
     color: #000;
     gap: 0.6rem;
+    z-index: 5; */
+
+    padding: 2rem 3rem;
+    line-height: 1.5;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    /* gap: 6rem; */
+    align-items: center;
     z-index: 5;
 }
 
@@ -149,15 +161,15 @@ body {
 }
 
 
-.navSearch {
+.navListEndUnlogined .navSearch {
     display: flex;
     align-items: center;
 }
 
-.navSearchContent input:focus {
+.navListEndUnlogined .navSearchContent input:focus {
     outline: none;
 }
-.navSearchContent input {
+.navListEndUnlogined .navSearchContent input {
     border-style: hidden;
     font-size: 14px;
     line-height: 1.9;
@@ -165,14 +177,14 @@ body {
     transition: width 0.75s ease;   
 }   
 
-.navSearchContent div:hover {
+.navListEndUnlogined .navSearchContent div:hover {
     background-color: rgba(146, 159, 168, 0.15);
     border-radius: 50%; 
     cursor: pointer
 }
 
 
-.navSearchContent {
+.navListEndUnlogined .navSearchContent {
     background-color: white;
     display: flex;
     /* height: 0px; */
@@ -180,15 +192,16 @@ body {
     padding: 3px 10px;
     border-radius: 20px;
 }
-.navSearchContent:hover input {
+.navListEndUnlogined .navSearchContent:hover input {
     width: 176px;
     cursor: text;
     padding-left: 6px;
 }
 
-.navSearchIcon {
+.navListEndUnlogined .navSearchIcon {
     width: 30px;
     display: flex; 
     justify-content: center;
     align-items: center;
+    color: black;
 }

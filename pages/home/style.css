@@ -22,13 +22,13 @@ body {
     right: 0;
 }
 
-.navList {
+/* .navList {
     justify-content: space-between;
     list-style-type: none;
     font-size: 17px;
     display: flex;
     line-height: 3.5;
-}
+} */
 
 .navList li a,
 .navList li>div>a {
