@@ -129,8 +129,8 @@ include './show-product-list-filter-option/index.php'
                     <select>
                         <option value="popular">Phổ biến</option>
                         <option value="newest">Mới nhất</option>
-                        <option value="price-ascending">Giá tăng dần</option>
-                        <option value="price-decending">Giá giảm dần</option>
+                        <option value="price-ascdecendingending">Giá tăng dần</option>
+                        <option value="price-">Giá giảm dần</option>
                         <option value="sale">Có khuyến mãi</option>
                     </select>
                 </div>

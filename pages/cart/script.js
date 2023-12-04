@@ -3,6 +3,10 @@ const shippingFee = document.querySelector('#shipping-fee');
 const totalPay = document.querySelector('#total-pay');
 const productPrices = document.querySelectorAll('.product-price');
 
+productPrices.forEach(productPrice => {
+    productPrice.textContent = formatPrice(parseInt(productPrice.textContent));
+})
+
 // giá trị này lấy bằng cách tính tổng tiền từng cart-product-item
 let totalPrice = parseInt(totalProductPrice.textContent);
 // shipping-fee
