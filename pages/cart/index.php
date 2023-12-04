@@ -1,6 +1,6 @@
 <?php
 include "../../components/cart-product-item/index.php"
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +41,7 @@ include "../../components/cart-product-item/index.php"
             <!-- Chèn link direct đến page danh sách sản phẩm  -->
             <div class="direct-text">
                 <p>Sẵn sàng thanh toán ?
-                    <a href="#">Tiếp tục mua sắm</a>
+                    <a href="/sportswear/pages/product-list">Tiếp tục mua sắm</a>
                 </p>
             </div>
             <div class="cart-product-list" id="style-3">
@@ -61,18 +61,21 @@ include "../../components/cart-product-item/index.php"
                 ?>
             </div>
         </div>
+
         <div class="total-container">
-            <?php 
-                $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
-                $result = execQuery($query);
-                if ($result && $result->num_rows > 0) {
-                    $row = $result->fetch_assoc();
-                }
+            <?php
+            $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
+            $result = execQuery($query);
+            if ($result && $result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+            }
             ?>
             <h2>Tổng kết đặt hàng</h2>
             <div class="total-div">
                 <p>Tổng tiền sản phẩm</p>
-                <p id="total"><?php echo number_format($row['total_money']) ?> </p>
+                <p id="total">
+                    <?php echo number_format($row['total_money']) ?>
+                </p>
             </div>
             <div class="shipping-fee-div">
                 <p>Phí ship</p>
@@ -87,6 +90,7 @@ include "../../components/cart-product-item/index.php"
                 <p>Tiếp tục thanh toán</p>
             </div>
         </div>
+
     </div>
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>

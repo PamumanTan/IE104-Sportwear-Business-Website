@@ -6,6 +6,7 @@
     gap: 10px;
     border-left: solid 0.7px rgb(71, 71, 71);
     padding-left: 10px;
+    /* background-color: aqua; */
 }
 #product-name-div{
     max-width: 560px;
@@ -35,4 +36,9 @@
 }
 .underline{
     width: 1px;
+}
+.cart-product-delete button{
+    background-color: black;
+    color: white;
+    padding: 10px 36px;
 }
