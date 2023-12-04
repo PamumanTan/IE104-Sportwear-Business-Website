@@ -85,8 +85,17 @@ CREATE TABLE orders
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     shipping_address VARCHAR(255),
     shipping_phonenumber VARCHAR(255),
+    shipping_note VARCHAR(255),
+    shipping_firstname VARCHAR(255),
+    shipping_lastname VARCHAR(255),
     FOREIGN KEY(user_id) REFERENCES USERS(id)
 );
+
+-- sql to add 2 columns to table orders
+ALTER TABLE orders
+ADD COLUMN shipping_firstname VARCHAR(255) AFTER shipping_note,
+ADD COLUMN shipping_lastname VARCHAR(255) AFTER shipping_firstname;
+
 
 CREATE TABLE order_details
 (

@@ -53,7 +53,15 @@ if (accountBtn) {
             })
     }
 }
-
+const cartNumber = document.querySelector('.cartImg p');
+function getCartNumber() {
+    fetch('http://localhost/sportswear/controllers/cart.php?action=number')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            cartNumber.innerText = data['data'];
+        })
+}
 // update cart number
 getCartNumber();
 
@@ -71,8 +79,8 @@ if (accountModal) {
 
                 accountUsername.innerHTML = username;
                 accountImage.src = avatar;
-            } else {
-                alert(data.message);
             }
         })
 }
+
+console.log('navbar')

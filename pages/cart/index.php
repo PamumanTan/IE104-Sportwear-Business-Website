@@ -13,7 +13,7 @@ include "../../components/cart-product-item/index.php"
     <link rel="stylesheet" href="../../components/footer/style.css">
     <link rel="stylesheet" href="../../components/cart-product-item/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
-    <link rel="stylesheet" href="../../components/cart-notification-modal/style.css">
+    <link rel="stylesheet" href="../../components/notification-modal/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../resources/css/root.css">
     <script src="./script.js" defer></script>
@@ -98,7 +98,7 @@ include "../../components/cart-product-item/index.php"
 
     <script src="../../resources/js/root.js"></script>
     <script src="../../components/navbar/script.js"></script>
-    <script src="../../components/cart-notification-modal/script.js"></script>
+    <script src="../../components/notification-modal/script.js"></script>
 </body>
 
 </html>

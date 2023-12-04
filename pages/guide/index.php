@@ -124,6 +124,10 @@
 
     <?php require('../../components/footer/index.php'); ?>
 
+    <script src="../../resources/js/root.js"></script>
+    <script src="../../components/navbar/script.js"></script>
+    <script src="../../components/navbar_logined/script.js"></script>
+
     <script>
         const subNavBlurs = document.querySelectorAll('.subnav-blur');
         const body = document.querySelector('body');

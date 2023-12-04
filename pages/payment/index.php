@@ -22,7 +22,7 @@ include '../../components/payment-product-item/index.php';
 </head>
 
 <body>
-    <?php
+<?php
     include_once "../../controllers/verify_token.php";
     include "../../db/connection.php";
     require("../../helpers/jwt.php");
@@ -30,7 +30,7 @@ include '../../components/payment-product-item/index.php';
     if ($user) {
         include_once "../../components/navbar_logined/index.php";
     } else {
-        include_once "../../components/navbar/index.php";
+        header("Location: ../../pages/login/index.php");
     }
     ?>
 
@@ -50,9 +50,9 @@ include '../../components/payment-product-item/index.php';
                     <input type="checkbox" name="save-info" id="save-info" required>
                     <label for="save-info">Lưu thông tin</label>
                 </div>
-                <button type="submit" class="order-button" role="button">
+                <div type="submit" class="order-button" role="button">
                     <p>Đặt hàng</p>
-                </button>
+                </div>
             </form>
             <div class="container">
                 <div class="cart-container">
@@ -68,14 +68,18 @@ include '../../components/payment-product-item/index.php';
                         if ($result && $result->num_rows > 0) {
                             $rows = $result->fetch_all();
                             foreach ($rows as $row) {
-                                // CartProductItem($row[0], $row[1], $row[2], $row[3], $row[4]);
                                 PaymentProductItem($row[0], $row[1], $row[2], $row[3], $row[4]);
                                 echo '<div id="line"></div>';
                             }
-                        }?>
+                        } else {
+                            echo '<p>Không có sản phẩm nào trong giỏ hàng</p>';
+                        }
+                        
+                        ?>
 
                     </div>
                 </div>
+
                 <?php
                 $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
                 $result = execQuery($query);
@@ -85,6 +89,7 @@ include '../../components/payment-product-item/index.php';
                     $row = ['total_money' => 0];
                 }
                 ?>
+
                 <div class="total-container">
                     <h2>Tổng kết đặt hàng</h2>
                     <div class="total-div">
@@ -104,41 +109,12 @@ include '../../components/payment-product-item/index.php';
             </div>
         </div>
     </div>
-    <div class="modal-background"></div>
-    <div class="modal">
-        <div class="modal-content">
-            <h2>Đặt hàng thành công</h2>
-            <p>Buy successfully.</p>
-            <button id="closeModalBtn">Thoát</button>
-        </div>
-    </div>
+    <?php include "../../components/notification-modal/index.php"; ?>
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
-    <?php
-    echo
-    '<script>
-            //Modal OrderButton
-            const openModalButton = document.querySelector(".order-button");
-            const closeModalButton = document.getElementById("closeModalBtn");
-            const modal = document.querySelector(".modal");
-            const modalBackground = document.querySelector(".modal-background");
-            openModalButton.addEventListener("click", function () {
-                modal.classList.add("active");
-                modalBackground.classList.add("active");
-            });
-            
-            closeModalButton.addEventListener("click", function () {
-                modal.classList.remove("active");
-                modalBackground.classList.remove("active");
-            });
-            modalBackground.addEventListener("click", function () {
-                modal.classList.remove("active");
-                modalBackground.classList.remove("active");
-            });
-        </script>'
-    ?>
 
     <script src="../../resources/js/root.js"></script>
+    <script src="../../components/notification-modal/script.js"></script>
     <script src="../../components/navbar/script.js"></script>
 </body>
 

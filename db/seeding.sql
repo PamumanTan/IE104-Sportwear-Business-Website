@@ -8,7 +8,7 @@ INSERT INTO product_types (type_name) VALUES
     ('Áo'),
     ('Quần'),
     ('Giày'),
-    ('Tất');
+    ('Tất');    
 
 -- Insert data into products table
 INSERT INTO products (product_name, product_price, rating, purchasing_quantity, quantity, production_day, product_description, product_size, product_color, product_image, product_object_id, product_type_id) VALUES

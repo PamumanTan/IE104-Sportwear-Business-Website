@@ -15,7 +15,7 @@ modalBackground.addEventListener("click", function () {
     modalBackground.classList.remove("active");
 });
 
-function NotifyAddToCartSuccessfully(message) {
+function notify(message) {
     modalContent.innerHTML = message;
     modal.classList.add("active");
     modalBackground.classList.add("active")

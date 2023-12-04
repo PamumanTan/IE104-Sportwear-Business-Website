@@ -15,12 +15,3 @@ function formatPrice(price) {
 }
 
 
-const cartNumber = document.querySelector('.cartImg p');
-function getCartNumber() {
-    fetch('http://localhost/sportswear/controllers/cart.php?action=number')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            cartNumber.innerText = data['data'];
-        })
-}

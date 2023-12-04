@@ -62,7 +62,7 @@ function handleAddToCartButton() {
     addProductToCart()
         .then(data => {
             getCartNumber();
-            NotifyAddToCartSuccessfully(data['message']);
+            notify(data['message']);
         })
 }
 

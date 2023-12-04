@@ -49,12 +49,12 @@ removeButtons.forEach(removeButton => {
                         document.querySelector('.cart-product-list').innerHTML = '<h2>Không có sản phẩm nào trong giỏ hàng</h2>';
                     }
                 }
-                NotifyAddToCartSuccessfully(res['message']);
+                notify(res['message']);
             })
     }
 })
 
 // format price
-totalProductPrice.textContent = formatPrice(parseInt(totalProductPrice.textContent))
-shippingFee.textContent = formatPrice(parseInt(shippingFee.textContent))
-totalPay.textContent = formatPrice(parseInt(totalPay.textContent))
+totalProductPrice.textContent = formatPrice(parseInt(totalProductPrice.textContent));
+shippingFee.textContent = formatPrice(parseInt(shippingFee.textContent));
+totalPay.textContent = formatPrice(parseInt(totalPay.textContent));
