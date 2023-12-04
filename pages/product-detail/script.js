@@ -72,36 +72,13 @@ const total = reviewCounterArray.reduce((ans, number) => {
 function handleAddToCartButton() {
     addProductToCart()
         .then(data => {
-            console.log(data);
             NotifyAddToCartSuccessfully(data['message']);
-            // window.location.href = '../payment/';
-            })
+        })
 }
 
 
-//Modal OrderButton
-const openModalButton = document.querySelector(".add-to-cart");
-const closeModalButton = document.getElementById("closeModalBtn");
-const modal = document.querySelector(".modal");
-const modalBackground = document.querySelector(".modal-background");
-const modalContent = document.querySelector(".modal-content h2");
 
-// openModalButton.addEventListener("click", NotifyAddToCartSuccessfully);
 
-function NotifyAddToCartSuccessfully(message) {
-    modalContent.innerHTML = message;
-    modal.classList.add("active");
-    modalBackground.classList.add("active")
-}
-
-closeModalButton.addEventListener("click", function () {
-    modal.classList.remove("active");
-    modalBackground.classList.remove("active");
-});
-modalBackground.addEventListener("click", function () {
-    modal.classList.remove("active");
-    modalBackground.classList.remove("active");
-});
 
 // Add to cart 
 function addProductToCart() {
@@ -121,11 +98,6 @@ function addProductToCart() {
             "quantity": quantityDisplay.value
         })
     };
-
-    console.log(JSON.stringify({
-        "product_id": product_id,
-        "quantity": quantityDisplay.value
-    }))
 
     return fetch("http://localhost/sportswear/controllers/cart.php?action=add", requestOptions)
         .then(response => response.json())

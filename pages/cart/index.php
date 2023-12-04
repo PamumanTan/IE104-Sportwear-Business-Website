@@ -13,6 +13,7 @@ include "../../components/cart-product-item/index.php"
     <link rel="stylesheet" href="../../components/footer/style.css">
     <link rel="stylesheet" href="../../components/cart-product-item/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+    <link rel="stylesheet" href="../../components/cart-notification-modal/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../resources/css/root.css">
     <script src="./script.js" defer></script>
@@ -32,8 +33,6 @@ include "../../components/cart-product-item/index.php"
         header("Location: ../../pages/login/index.php");
     }
     ?>
-
-
 
     <h1 id="heading">Giỏ hàng của bạn</h1>
     <div class="container">
@@ -88,9 +87,15 @@ include "../../components/cart-product-item/index.php"
             </div>
         </div>
     </div>
+
+    
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
+    <?php include '../../components/cart-notification-modal/index.php' ?>
+
+
     <script src="../../components/navbar/script.js"></script>
+    <script src="../../components/cart-notification-modal/script.js"></script>
 </body>
 
 </html>

@@ -23,10 +23,7 @@ document.querySelector('.pay-button').onclick = () => {
 
 function removeProductFromCart(product_id) {
     // remove product from cart in database
-    console.log(JSON.stringify({
-        product_id: product_id
-    }));
-    return fetch('http://localhost/sportswear/controllers/cart.php?action=remove', {
+    const options = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -34,19 +31,24 @@ function removeProductFromCart(product_id) {
         body: JSON.stringify({
             product_id: product_id
         })
-    })
-        // .then(res => res.json())
-        .catch(err => err);
+    }
+
+    return fetch('http://localhost/sportswear/controllers/cart.php?action=remove', options)
+        .then(response => response.json())
 }
 
 const removeButtons = document.querySelectorAll('.cart-product-delete p');
-// console.log(removeButtons);
 removeButtons.forEach(removeButton => {
     removeButton.onclick = (event) => {
         const product_id = event.target.parentElement.parentElement.getAttribute('product_id');
         removeProductFromCart(product_id)
-            .then(res => {
-                console.log(res);
+        .then(res => {
+                if (!res['error']) {
+                    // remove product from cart in DOM
+                    const cartProductItem = event.target.parentElement.parentElement;
+                    cartProductItem.remove();
+                }
+                NotifyAddToCartSuccessfully(res['message']);
             })
     }
 })

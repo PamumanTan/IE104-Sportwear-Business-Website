@@ -76,16 +76,7 @@ include '../../components/payment-product-item/index.php';
                                 PaymentProductItem($row[0], $row[1], $row[2], $row[3], $row[4]);
                                 echo '<div id="line"></div>';
                             }
-                        }
-                        // PaymentProductItem()
-                        PaymentProductItem('https://thejerseyhubshop.com/cdn/shop/products/ScreenShot2023-06-07at2.35.25PM.png?v=1687310379', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Real', 2500000, 'XL', 1);
-                        echo '<div id="line"></div>';
-                        // PaymentProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
-                        // echo '<div id="line"></div>';
-                        // PaymentProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
-                        // echo '<div id="line"></div>';
-                        // PaymentProductItem('https://jerseysempire.com/cdn/shop/files/f1a7595d.webp?v=1692645760&width=533', 'Áo đấu sân nhà mùa giải 2023/2024 bản player Thái Thun của CLB Chelsea', 2500000, 'XL', 1);
-                        ?>
+                        }?>
 
                     </div>
                 </div>

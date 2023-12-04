@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="../../components/comment/style.css">
   <link rel="stylesheet" href="../../components/footer/style.css">
   <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+  <link rel="stylesheet" href="../../components/cart-notification-modal/style.css">
   <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="../../resources/css/root.css">
-  <script src="./script.js" defer></script>
+
 </head>
 
 <body>
@@ -160,18 +161,14 @@
     <!-- End of product detail page -->
   </main>
   <?php include '../../components/footer/index.php' ?>
+  <?php include '../../components/cart-notification-modal/index.php' ?>
 
-  <div class="modal-background"></div>
-  <div class="modal">
-    <div class="modal-content">
-      <h2></h2>
-      <!-- <p>Add to cart successfully.</p> -->
-      <button id="closeModalBtn">Thoát</button>
-    </div>
-  </div>
 
+
+  <script src="../../components/cart-notification-modal/script.js" defer></script>
   <script src="../../components/navbar/script.js"></script>
   <script src="../../components/comment/script.js" defer></script>
+  <script src="./script.js" defer></script>
 </body>
 
 </html>
