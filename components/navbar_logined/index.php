@@ -200,7 +200,7 @@
 
         </li>
 
-        <li class="navListEnd">
+        <li class="navListEndLogined">
             <!-- <a class="navSearch" href="/sportswear/pages/product-list"> -->
             <div class="navSearch">
                 <div class="navSearchContent">
