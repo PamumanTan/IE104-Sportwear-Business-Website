@@ -13,7 +13,7 @@ if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenu
             'id' => $row['id'],
             'is_admin' => $row['is_admin']
         ];
-        $token = Token::Sign($payload, 60 * 5);
+        $token = Token::Sign($payload, 60 * 60);
 
         // Set the cookie
         $sameSite = 'Strict';
