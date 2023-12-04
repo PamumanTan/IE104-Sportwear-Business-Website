@@ -204,15 +204,7 @@ body {
 }
 
 .modalAccount {
-    /* position: fixed;
-    top:0;
-    left:0;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: fit-content; */
-    
-    
+   
     padding: 30px;
     /* display: none; */
     position: relative;
