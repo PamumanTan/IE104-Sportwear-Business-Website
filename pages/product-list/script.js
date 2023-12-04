@@ -1,3 +1,4 @@
+let page = 1;
 const productItems = document.querySelectorAll('.show-product');
 productItems.forEach((productItem) => {
     productItem.onclick = (event) => {
@@ -15,23 +16,51 @@ productItems.forEach((productItem) => {
 });
 
 
-function showMoreProducts() {
-    // Select product list container
-    const productList = document.getElementById("show-product-list");
-    
-    // Number of products added
-    let productNum = 6;
+const loadMoreProduct = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    let objectOfPage = searchParams.get('object');
+    let typeOfPage = searchParams.get('type');
 
-    for(let i = 0; i < productNum; i++) {
-        // Clone productItem template
-        let productItemTemplate = productList.querySelector(".show-product").cloneNode(true);
 
-        // Add product to the list
-        productList.appendChild(productItemTemplate);
-        
-        // Modify the information of the product
-        let productItem = productList.querySelector(".show-product:last-child");
-        productItem.querySelector(".product-name").textContent = "Woman's Shoes";
-        productItem.querySelector(".product-price").textContent = "200.000 VNĐ";
+    let data = new FormData();
+    data.append('object', objectOfPage);
+    data.append('type', typeOfPage);
+    data.append('page', page);
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log(this.responseText)
+            if (this.responseText == 'no data') {
+                return;
+            }
+            var result = JSON.parse(this.responseText);
+            for (let i = 0; i < result.length; i++) {
+                let product = document.createElement('div');
+                product.id = 'product-id-' + result[i]['id'];
+                product.classList.add('show-product');
+                let productImg = document.createElement('div');
+                productImg.classList.add('product-img');
+                let productImgInner = document.createElement('img');
+                productImgInner.classList.add('product-img-inner');
+                productImgInner.src = result[i]['product_image'];
+                productImgInner.alt = 'product-img';
+                productImg.appendChild(productImgInner);
+                let productName = document.createElement('div');
+                productName.classList.add('product-name');
+                productName.textContent = result[i]['product_name'];
+                let productPrice = document.createElement('div');
+                productPrice.classList.add('product-price');
+                productPrice.textContent = result[i]['product_price'];
+                product.appendChild(productImg);
+                product.appendChild(productName);
+                product.appendChild(productPrice);
+                document.getElementById('show-product-list').appendChild(product);
+            }
+        };
+        page++;
     }
-};
+    let url = '../../controllers/load-more.php';
+    xhttp.open('POST', url, true);
+    xhttp.send(data);
+}
