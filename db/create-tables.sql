@@ -53,12 +53,14 @@ CREATE TABLE users
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
-    fullname VARCHAR(255),
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     phonenumber VARCHAR(255),
     address VARCHAR(255),
-    is_admin BOOLEAN NOT NULL
+    is_admin BOOLEAN NOT NULL DEFAULT false,
+    avatar VARCHAR(255) DEFAULT 'https://pbs.twimg.com/media/FoUoGo3XsAMEPFr?format=jpg&name=4096x4096'
 );
 
 CREATE TABLE comments
@@ -80,8 +82,20 @@ CREATE TABLE orders
     user_id INT NOT NULL,   
     total_money INT NOT NULL,
     payed BOOLEAN NOT NULL DEFAULT false,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    shipping_address VARCHAR(255),
+    shipping_phonenumber VARCHAR(255),
+    shipping_note VARCHAR(255),
+    shipping_firstname VARCHAR(255),
+    shipping_lastname VARCHAR(255),
     FOREIGN KEY(user_id) REFERENCES USERS(id)
 );
+
+-- sql to add 2 columns to table orders
+ALTER TABLE orders
+ADD COLUMN shipping_firstname VARCHAR(255) AFTER shipping_note,
+ADD COLUMN shipping_lastname VARCHAR(255) AFTER shipping_firstname;
+
 
 CREATE TABLE order_details
 (
@@ -93,3 +107,27 @@ CREATE TABLE order_details
     FOREIGN KEY(order_id) REFERENCES ORDERS(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );
+
+-- trigger to update total money of order after insert order detail
+DELIMITER $$
+
+CREATE TRIGGER update_total_money_order
+AFTER INSERT ON order_details
+FOR EACH ROW
+BEGIN
+    UPDATE orders
+    SET total_money = total_money + NEW.quantity * (SELECT product_price FROM products WHERE id = NEW.product_id)
+    WHERE id = NEW.order_id;
+END$$
+
+-- trigger to update total money of order after update order detail
+DELIMITER $$
+CREATE TRIGGER update_total_money_order_after_update_order_detail
+AFTER UPDATE ON order_details
+FOR EACH ROW
+BEGIN
+    UPDATE orders
+    SET total_money = total_money + (NEW.quantity - OLD.quantity) * (SELECT product_price FROM products WHERE id = NEW.product_id)
+    WHERE id = NEW.order_id;
+END$$
+

@@ -129,6 +129,14 @@ function removeProductFromCart($user_id) {
     $row = $result->fetch_assoc();
     $order_id = $row['order_id'];
     
+    // find the order detail and minus the quantity of product to total money of order
+    $query = "update orders 
+            set total_money = total_money - " . $row['quantity'] . " * (select product_price from products where id = " . $product_id . ") 
+            where id = " . $order_id;
+    $result = execQuery($query);
+
+
+
     // 2. delete order detail
     $query = "delete from order_details 
             where order_id = " . $order_id . " and product_id = " . $product_id;
@@ -144,11 +152,6 @@ function removeProductFromCart($user_id) {
         $result = execQuery($query);
     }
     
-    // minus the price of product to total money of order
-    $query = "update orders 
-            set total_money = total_money - " . $data['quantity'] . " * (select price from products where id = " . $product_id . ") 
-            where id = " . $order_id;
-    $result = execQuery($query);
     
     echo json_encode([
         'message' => 'Delete item from cart successfully',
@@ -157,35 +160,29 @@ function removeProductFromCart($user_id) {
 
 }
 
-function getAllDishesInCart($user_id) {
-    $query = "select * from order_details join orders 
-            where order_details.order_id = orders.id 
-            and orders.user_id = " . $user_id . " 
-            and orders.payed = 0";
+function getAllProductsInCart($user_id) {
+    // Get products from orders join order_details join products
+    $query = "select products.id as product_id, product_image, product_name, product_price, product_size, order_details.quantity as order_quantity
+            from products join order_details join orders
+            where order_details.order_id = orders.id and order_details.product_id = products.id
+            and payed = 0 and orders.user_id = " . $user_id;
+
     $result = execQuery($query);
-    
-    if ($result) {
-        $products = [];
-        while ($row = $result->fetch_assoc()) {
-            $product_id = $row['product_id'];
-            $query = "select * from products where id = " . $product_id;
-            $product = execQuery($query)->fetch_assoc();
-            $product['quantity'] = $row['quantity'];
-            array_push($products, $product);
-        }
-    
+
+    if ($result && $result->num_rows > 0) {
+        $rows = $result->fetch_assoc();
         echo json_encode([
-            'message' => 'Get cart successfully',
+            'message' => 'Get all products in cart successfully',
             'error' => false,
-            'data' => $products
+            'data' => $rows
         ]);
+        
     } else {
         echo json_encode([
-            'message' => 'Get cart failed',
+            'message' => 'Get all products in cart failed',
             'error' => true
         ]);
     }
-
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
@@ -198,9 +195,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
 } else if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action'])) {
     $action = $_GET['action'];
     if ($action === 'get') {
-        getAllDishesInCart($user_id);
+        getAllProductsInCart($user_id);
+    } else if ($action === 'number') {
+        // Get cart number (number of product * quantity)
+        $query = "select sum(quantity) as cart_number 
+                from order_details join orders 
+                where order_details.order_id = orders.id 
+                and orders.user_id = " . $user_id . " 
+                and orders.payed = 0";
+
+        $result = execQuery($query);
+        $row = $result->fetch_assoc();
+        if ($row) {
+            echo json_encode([
+                'message' => 'Get cart number successfully',
+                'error' => false,
+                'data' => $row['cart_number']
+            ]);
+        } else {
+            echo json_encode([
+                'message' => 'Get cart number failed',
+                'error' => true
+            ]);
+        }
     }
-} else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } else {
     echo "Wrong request method";
     return;

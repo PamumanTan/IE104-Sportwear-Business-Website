@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="../../components/comment/style.css">
   <link rel="stylesheet" href="../../components/footer/style.css">
   <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+  <link rel="stylesheet" href="../../components/notification-modal/style.css">
   <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="../../resources/css/root.css">
-  <script src="./script.js" defer></script>
+
 </head>
 
 <body>
@@ -44,7 +45,7 @@
 
           <div class="product-details">
             <h1 id="product-name"><?php echo $row['product_name'] ?></h1>
-            <p id="product-price"><?php echo number_format($row['product_price']) ?> VND</p>
+            <p id="product-price" product-price="<?php echo $row['product_price'] ?>"><?php echo $row['product_price'] ?> </p>
             <div id="p-decription">
               <p id="product-decription">
                 <?php echo $row['product_description'] ?>
@@ -141,7 +142,6 @@
                         <p id="vote-no">(1)</p>
                       </div>
                     </div>
-
                   </div>
 
                 <?php
@@ -160,18 +160,15 @@
     <!-- End of product detail page -->
   </main>
   <?php include '../../components/footer/index.php' ?>
+  <?php include '../../components/notification-modal/index.php' ?>
 
-  <div class="modal-background"></div>
-  <div class="modal">
-    <div class="modal-content">
-      <h2></h2>
-      <!-- <p>Add to cart successfully.</p> -->
-      <button id="closeModalBtn">Thoát</button>
-    </div>
-  </div>
 
+
+  <script src="../../resources/js/root.js"></script>
+  <script src="../../components/notification-modal/script.js" defer></script>
   <script src="../../components/navbar/script.js"></script>
   <script src="../../components/comment/script.js" defer></script>
+  <script src="./script.js" defer></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <?php
 include './product-item/index.php';
 include './show-product-list-filter-option/index.php'
-    ?>
+?>
 
 <!DOCTYPE html> <!--Define the version of HTML-->
 <html lang="vi"> <!--Set the language-->
@@ -129,8 +129,8 @@ include './show-product-list-filter-option/index.php'
                     <select>
                         <option value="popular">Phổ biến</option>
                         <option value="newest">Mới nhất</option>
-                        <option value="price-ascending">Giá tăng dần</option>
-                        <option value="price-decending">Giá giảm dần</option>
+                        <option value="price-ascdecendingending">Giá tăng dần</option>
+                        <option value="price-">Giá giảm dần</option>
                         <option value="sale">Có khuyến mãi</option>
                     </select>
                 </div>
@@ -148,6 +148,11 @@ include './show-product-list-filter-option/index.php'
                     } else {
                         $query .= " where 1";
                     }
+                    if (isset($_GET['page'])) {
+                        $query .= " limit " . $_GET['page'] * 12;
+                    } else {
+                        $query .= " limit 12";
+                    }
 
                     $result = execQuery($query);
                     if ($result && $result->num_rows > 0) {
@@ -155,17 +160,17 @@ include './show-product-list-filter-option/index.php'
                         foreach ($rows as $row) {
                             ProductItem($row[0], $row[1], $row[2], $row[3]);
                         }
-                        ?>
-                    </div>
-                    <div class="show-product-list-more">
-                        <button>Hiển thị thêm sản phẩm</button>
-                    </div>
+                    ?>
+                </div>
+                <div class="show-product-list-more" onclick="loadMoreProduct()">
+                    <button>Hiển thị thêm sản phẩm</button>
+                </div>
 
-                    <?php
+            <?php
                     } else {
                         echo "<h3>Không tìm thấy sản phẩm</h3></div>";
                     }
-                    ?>
+            ?>
 
 
 
@@ -178,6 +183,7 @@ include './show-product-list-filter-option/index.php'
     include '../../components/footer/index.php';
     ?>
 
+    <script src="../../resources/js/root.js"></script>
     <script src="./script.js"></script>
     <script src="../../components/navbar/script.js"></script>
 </body>

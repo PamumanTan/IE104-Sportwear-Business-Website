@@ -46,7 +46,7 @@
         <div class="homePoster">
             <?php include "../components/carousel-pro/index.php" ?>
         </div>
-        <?php include "../components/marquee/index.php" ?>
+            <?php include "../components/marquee/index.php" ?>
         <div class="homeCategory">
             <div>
                 <p>HẠNG MỤC</p>
@@ -226,6 +226,7 @@
         });
     </script>
 
+    <script src="../resources/js/root.js"></script>
     <script src="../components/navbar/script.js"></script>
 </body>
 

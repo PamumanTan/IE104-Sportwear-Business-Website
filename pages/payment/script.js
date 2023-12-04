@@ -2,34 +2,58 @@
 const totalProductPrice = document.querySelector("#total");
 const shippingFee = document.querySelector("#shipping-fee");
 const totalPay = document.querySelector("#total-pay");
-let VND = new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-});
+
 
 // giá trị này lấy bằng cách tính tổng tiền từng cart-product-item
-let totalPrice = 200000;
-let fee = 20000;
+let totalPrice = parseInt(document.querySelector("#total").textContent);
+let fee = 0;
 let total = totalPrice + fee;
 totalProductPrice.textContent = VND.format(totalPrice);
 shippingFee.textContent = VND.format(fee);
 totalPay.textContent = VND.format(total);
 
-//Modal OrderButton
-const openModalButton = document.querySelector(".order-button");
-const closeModalButton = document.getElementById("closeModalBtn");
-const modal = document.querySelector(".modal");
-const modalBackground = document.querySelector(".modal-background");
-openModalButton.addEventListener("click", function () {
-    modal.classList.add("active");
-    modalBackground.classList.add("active");
-});
+const payButton = document.querySelector(".order-button");
 
-closeModalButton.addEventListener("click", function () {
-    modal.classList.remove("active");
-    modalBackground.classList.remove("active");
-});
-modalBackground.addEventListener("click", function () {
-    modal.classList.remove("active");
-    modalBackground.classList.remove("active");
-});
+function pay() {
+    // get order info 
+    const firstname = document.querySelector("#first-name").value;
+    const lastname = document.querySelector("#last-name").value;
+    const address = document.querySelector("#address").value;
+    const phoneNumber = document.querySelector("#phone-number").value;
+    const note = document.querySelector("#note").value;
+
+    console.log(firstname, lastname, address, phoneNumber, note);
+
+    return fetch("http://localhost/sportswear/controllers/payment.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            phonenumber: phoneNumber,
+            note: note,
+        }),
+    })
+        .then((res) => res.json())
+}
+    
+// order
+payButton.onclick = () => {
+    pay()
+        .then(res => {
+            console.log(res);
+            notify(res['message']);
+            if (!res['error']) {
+                clearProductstList();
+            }
+        })
+}
+
+// cart-container
+const cartContainer = document.querySelector(".cart-container");
+function clearProductstList() {
+    cartContainer.innerHTML = "h2>Giỏ hàng của bạn</h2><p>Không có sản phẩm nào trong giỏ hàng</p>"
+}

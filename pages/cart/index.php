@@ -13,6 +13,7 @@ include "../../components/cart-product-item/index.php"
     <link rel="stylesheet" href="../../components/footer/style.css">
     <link rel="stylesheet" href="../../components/cart-product-item/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+    <link rel="stylesheet" href="../../components/notification-modal/style.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../resources/css/root.css">
     <script src="./script.js" defer></script>
@@ -27,13 +28,9 @@ include "../../components/cart-product-item/index.php"
     if ($user) {
         include_once "../../components/navbar_logined/index.php";
     } else {
-        // include_once "../../components/navbar/index.php";
-        // redirect to login page
         header("Location: ../../pages/login/index.php");
     }
     ?>
-
-
 
     <h1 id="heading">Giỏ hàng của bạn</h1>
     <div class="container">
@@ -57,34 +54,36 @@ include "../../components/cart-product-item/index.php"
                     foreach ($rows as $row) {
                         CartProductItem($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
                     }
+                } else {
+                    echo "<h2>Không có sản phẩm nào trong giỏ hàng</h2>";
                 }
                 ?>
             </div>
         </div>
 
         <div class="total-container">
-            <?php
-            $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
-            $result = execQuery($query);
-            if ($result && $result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-            }
+            <?php 
+                $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
+                $result = execQuery($query);
+                if ($result && $result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                } else {
+                    $row = ['total_money' => 0];
+                }
             ?>
             <h2>Tổng kết đặt hàng</h2>
             <div class="total-div">
                 <p>Tổng tiền sản phẩm</p>
-                <p id="total">
-                    <?php echo number_format($row['total_money']) ?>
-                </p>
+                <p id="total"><?php echo $row['total_money']; ?> </p>
             </div>
             <div class="shipping-fee-div">
                 <p>Phí ship</p>
-                <p id="shipping-fee"></p>
+                <p id="shipping-fee">0</p>
             </div>
             <div id="line"></div>
             <div class="total-pay">
                 <p>Tổng</p>
-                <p id="total-pay"></p>
+                <p id="total-pay"><?php echo $row['total_money'] + 0; ?> </p>
             </div>
             <div class="pay-button">
                 <p>Tiếp tục thanh toán</p>
@@ -92,9 +91,16 @@ include "../../components/cart-product-item/index.php"
         </div>
 
     </div>
+
+    
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
+    <?php include '../../components/cart-notification-modal/index.php' ?>
+
+
+    <script src="../../resources/js/root.js"></script>
     <script src="../../components/navbar/script.js"></script>
+    <script src="../../components/notification-modal/script.js"></script>
 </body>
 
 </html>

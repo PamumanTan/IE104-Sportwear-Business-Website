@@ -79,16 +79,18 @@
                         </li>
                     </ol>
                 </div>
-
+            
                 <div class="navMen subnav-blur nav-subnav-item">
                     <a href="/sportswear/pages/product-list/?object=1">Nam</a>
-                    <ul class="subnavMen ">
-                        <li><a href="/sportswear/pages/product-list">Tất cả sản phẩm</a></li>
-                        <li><a href="/sportswear/pages/product-list/?object=1&type=3">Giày</a></li>
-                        <li><a href="/sportswear/pages/product-list/?object=1&type=1">Áo</a></li>
-                        <li><a href="/sportswear/pages/product-list/?object=1&type=2">Quần</a></li>
-                        <li><a href="/sportswear/pages/product-list/?object=1&type=4">Tất</a></li>
-                    </ul>
+                    <div class="wrapSubnavMen clearfix">
+                        <ul class="subnavMen ">
+                            <li><a href="/sportswear/pages/product-list">Tất cả sản phẩm</a></li>
+                            <li><a href="/sportswear/pages/product-list/?object=1&type=3">Giày</a></li>
+                            <li><a href="/sportswear/pages/product-list/?object=1&type=1">Áo</a></li>
+                            <li><a href="/sportswear/pages/product-list/?object=1&type=2">Quần</a></li>
+                            <li><a href="/sportswear/pages/product-list/?object=1&type=4">Tất</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="navWomen subnav-blur nav-subnav-item">
@@ -115,7 +117,7 @@
 
                 <div class="navPromotion subnav-blur nav-subnav-item">
                     <a href="/sportswear/pages/product-list">Khuyến mãi</a>
-                    <ol class="subnavPromotion">
+                    <ol class="subnavPromotion"> 
                         <!-- Nam -->
                         <li>
                             <ul>
@@ -200,8 +202,8 @@
 
             </li>
 
-            <li class="navListEnd">
-                <!-- <a class="navSearch" href="/sportswear/pages/product-list"> -->
+            <li class="navListEndUnlogined"> 
+                <a class="navSearch" href="/sportswear/pages/product-list">
                 <div class="navSearch">
                     <div class="navSearchContent">
                         <input type="text" id="search-input" placeholder='Bạn muốn lựa gì :3'>
