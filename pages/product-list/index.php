@@ -178,6 +178,7 @@ include './show-product-list-filter-option/index.php'
     include '../../components/footer/index.php';
     ?>
 
+    <script src="../../resources/js/root.js"></script>
     <script src="./script.js"></script>
     <script src="../../components/navbar/script.js"></script>
 </body>

@@ -45,7 +45,7 @@
 
           <div class="product-details">
             <h1 id="product-name"><?php echo $row['product_name'] ?></h1>
-            <p id="product-price"><?php echo number_format($row['product_price']) ?> VND</p>
+            <p id="product-price" product-price="<?php echo $row['product_price'] ?>"><?php echo $row['product_price'] ?> </p>
             <div id="p-decription">
               <p id="product-decription">
                 <?php echo $row['product_description'] ?>
@@ -142,7 +142,6 @@
                         <p id="vote-no">(1)</p>
                       </div>
                     </div>
-
                   </div>
 
                 <?php
@@ -165,6 +164,7 @@
 
 
 
+  <script src="../../resources/js/root.js"></script>
   <script src="../../components/cart-notification-modal/script.js" defer></script>
   <script src="../../components/navbar/script.js"></script>
   <script src="../../components/comment/script.js" defer></script>

@@ -35,3 +35,8 @@ function showMoreProducts() {
         productItem.querySelector(".product-price").textContent = "200.000 VNĐ";
     }
 };
+
+const productPrices = document.querySelectorAll('.product-price');
+productPrices.forEach(productPrice => {
+    productPrice.textContent = VND.format(parseInt(parseInt(productPrice.textContent)));
+})

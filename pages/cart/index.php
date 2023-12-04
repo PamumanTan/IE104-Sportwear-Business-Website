@@ -28,8 +28,6 @@ include "../../components/cart-product-item/index.php"
     if ($user) {
         include_once "../../components/navbar_logined/index.php";
     } else {
-        // include_once "../../components/navbar/index.php";
-        // redirect to login page
         header("Location: ../../pages/login/index.php");
     }
     ?>
@@ -40,7 +38,7 @@ include "../../components/cart-product-item/index.php"
             <!-- Chèn link direct đến page danh sách sản phẩm  -->
             <div class="direct-text">
                 <p>Sẵn sàng thanh toán ?
-                    <a href="#">Tiếp tục mua sắm</a>
+                    <a href="/sportswear/pages/product-list/">Tiếp tục mua sắm</a>
                 </p>
             </div>
             <div class="cart-product-list" id="style-3">
@@ -56,6 +54,8 @@ include "../../components/cart-product-item/index.php"
                     foreach ($rows as $row) {
                         CartProductItem($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
                     }
+                } else {
+                    echo "<h2>Không có sản phẩm nào trong giỏ hàng</h2>";
                 }
                 ?>
             </div>
@@ -66,21 +66,23 @@ include "../../components/cart-product-item/index.php"
                 $result = execQuery($query);
                 if ($result && $result->num_rows > 0) {
                     $row = $result->fetch_assoc();
+                } else {
+                    $row = ['total_money' => 0];
                 }
             ?>
             <h2>Tổng kết đặt hàng</h2>
             <div class="total-div">
                 <p>Tổng tiền sản phẩm</p>
-                <p id="total"><?php echo number_format($row['total_money']) ?> </p>
+                <p id="total"><?php echo $row['total_money']; ?> </p>
             </div>
             <div class="shipping-fee-div">
                 <p>Phí ship</p>
-                <p id="shipping-fee"></p>
+                <p id="shipping-fee">0</p>
             </div>
             <div id="line"></div>
             <div class="total-pay">
                 <p>Tổng</p>
-                <p id="total-pay"></p>
+                <p id="total-pay"><?php echo $row['total_money'] + 0; ?> </p>
             </div>
             <div class="pay-button">
                 <p>Tiếp tục thanh toán</p>
@@ -94,6 +96,7 @@ include "../../components/cart-product-item/index.php"
     <?php include '../../components/cart-notification-modal/index.php' ?>
 
 
+    <script src="../../resources/js/root.js"></script>
     <script src="../../components/navbar/script.js"></script>
     <script src="../../components/cart-notification-modal/script.js"></script>
 </body>

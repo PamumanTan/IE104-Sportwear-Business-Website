@@ -83,3 +83,6 @@ if (accountBtn) {
 //     loginBtn.style.display = 'inline-block';
 //     signupBtn.style.display = 'inline-block';
 // }
+
+// update cart number
+getCartNumber();

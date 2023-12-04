@@ -5,37 +5,29 @@ const quantityDisplay = document.getElementById('product-quantity');
 const addToCartButton = document.querySelector('.add-to-cart');
 const productPrice = document.querySelector('#product-price');
 
-const handlePrice = (num) => {
-    let VND = new Intl.NumberFormat('vi-VN', {
-        style: 'currency',
-        currency: 'VND',
-    });
-    return VND.format(num);
-}
+addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${formatPrice(productPrice.getAttribute('product-price'))} `
 
-function convertToInteger(inputString) {
-    let numericString = inputString.replace(/[^0-9,]/g, '');
-    let integerValue = parseInt(numericString.replace(/,/g, ''), 10);
-    return integerValue;
-}
-
+// Format price
+productPrice.textContent = formatPrice(productPrice.textContent);
 
 const handleQuantityButtonClick = (calculaton) => {
     let val = parseInt(quantityDisplay.value);
-    let price = convertToInteger(productPrice.innerHTML);
+    let price = parseInt(productPrice.getAttribute('product-price'));
     val = (calculaton === '-') ? val - 1 : val + 1;
     val = (val < 1) ? 1 : val;
     quantityDisplay.value = val;
+    console.log(price, val);
     price *= val;
-    addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${handlePrice(price)} `;
+    addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${formatPrice(price)} `;
+    console.log(quantityDisplay.value)
 }
 
 
 const handleQuantity = () => {
     let val = parseInt(quantityDisplay.value);
-    let price = convertToInteger(productPrice.innerHTML);
+    let price = parseInt(productPrice.getAttribute('product-price'));
     price *= val;
-    addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${handlePrice(price)} `;
+    addToCartButton.innerHTML = `Thêm vào giỏ hàng - ${formatPrice(price)} `;
 }
 
 
@@ -50,9 +42,6 @@ sizeButtons.forEach(element => {
 
 colorButtons.forEach(element => {
     element.addEventListener('click', () => {
-        console.log(
-            element
-        );
         for (let colorButton of colorButtons) {
             colorButton.parentElement.style.borderColor = '#b7b7b7'
         }
@@ -72,11 +61,10 @@ const total = reviewCounterArray.reduce((ans, number) => {
 function handleAddToCartButton() {
     addProductToCart()
         .then(data => {
+            getCartNumber();
             NotifyAddToCartSuccessfully(data['message']);
         })
 }
-
-
 
 
 
@@ -101,5 +89,4 @@ function addProductToCart() {
 
     return fetch("http://localhost/sportswear/controllers/cart.php?action=add", requestOptions)
         .then(response => response.json())
-        .catch(error => null);
 }

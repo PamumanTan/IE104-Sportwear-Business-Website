@@ -93,3 +93,33 @@ CREATE TABLE order_details
     FOREIGN KEY(order_id) REFERENCES ORDERS(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
 );
+
+-- trigger to update total money of order after insert order detail
+DELIMITER $$
+
+CREATE TRIGGER update_total_money_order
+AFTER INSERT ON order_details
+FOR EACH ROW
+BEGIN
+    UPDATE orders
+    SET total_money = total_money + NEW.quantity * (SELECT product_price FROM products WHERE id = NEW.product_id)
+    WHERE id = NEW.order_id;
+END$$
+
+-- trigger to update total money of order after update order detail
+DELIMITER $$
+CREATE TRIGGER update_total_money_order_after_update_order_detail
+AFTER UPDATE ON order_details
+FOR EACH ROW
+BEGIN
+    UPDATE orders
+    SET total_money = total_money + (NEW.quantity - OLD.quantity) * (SELECT product_price FROM products WHERE id = NEW.product_id)
+    WHERE id = NEW.order_id;
+END$$
+
+
+-- drop all triggers in database    
+DROP TRIGGER update_total_money_order;
+DROP TRIGGER update_total_money_order_after_update_order_detail;
+DROP TRIGGER update_product_quantity_after_update_order_detail;
+DROP TRIGGER update_product_quantity_after_insert_order_detail;

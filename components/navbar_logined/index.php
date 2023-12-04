@@ -210,9 +210,15 @@
                     </div>
                 </div>
             </div>
+            <?php 
+            // get cart quantity
+            // include '../../db/connection.php';
+            
+            // $query = "select sum(quantity) as quantity from cart where user_id = " . $_SESSION['user_id'];
+            ?>
             <a class="cartImg" href="/sportswear/pages/cart/">
                 <img src="/sportswear/assets/images/navbar_logined/cart.svg" alt="">
-                <p>10</p>
+                <p>...</p>
             </a>
             <div id="account" class="accountImg" href="#"><img src="/sportswear/assets/images/navbar_logined/account_circle.svg" alt=""></div>
         </li>

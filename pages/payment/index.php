@@ -42,22 +42,22 @@ include '../../components/payment-product-item/index.php';
     <div class="page-content">
         <h1 id="heading">Thanh toán</h1>
         <div class="payment-page-container">
-            <div class="payment-form">
+            <form class="payment-form">
                 <p>Thông tin giao hàng</p>
                 <div id='customer-name'>
-                    <input type="text" placeholder="Họ" id="first-name">
-                    <input type="text" placeholder="Tên" id="last-name">
+                    <input type="text" placeholder="Họ" id="first-name" required>
+                    <input type="text" placeholder="Tên" id="last-name" required>
                 </div>
-                <input type="text" placeholder="Địa chỉ" id="address">
-                <input type="text" placeholder="Ghi chú" id="note">
+                <input type="text" placeholder="Địa chỉ" id="address" required>
+                <input type="text" placeholder="Ghi chú" id="note" required>
                 <div id="save-info-checkbox">
-                    <input type="checkbox" name="save-info" id="save-info">
+                    <input type="checkbox" name="save-info" id="save-info" required>
                     <label for="save-info">Lưu thông tin</label>
                 </div>
-                <div class="order-button" role="button">
+                <button type="submit" class="order-button" role="button">
                     <p>Đặt hàng</p>
-                </div>
-            </div>
+                </button>
+            </form>
             <div class="container">
                 <div class="cart-container">
                     <h2>Giỏ hàng của bạn</h2>
@@ -91,11 +91,11 @@ include '../../components/payment-product-item/index.php';
                     <h2>Tổng kết đặt hàng</h2>
                     <div class="total-div">
                         <p>Tổng tiền sản phẩm</p>
-                        <p id="total"><?php echo number_format($row['total_money']) ?></p>
+                        <p id="total"><?php echo $row['total_money'] ?></p>
                     </div>
                     <div class="shipping-fee-div">
                         <p>Phí ship</p>
-                        <p id="shipping-fee"></p>
+                        <p id="shipping-fee">0</p>
                     </div>
                     <div id="line"></div>
                     <div class="total-pay">
