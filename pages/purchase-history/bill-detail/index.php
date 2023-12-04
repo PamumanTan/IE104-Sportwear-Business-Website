@@ -7,7 +7,7 @@ include "./bill-product-item/index.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng của tôi</title>
+    <title>Chi tiết đơn hàng</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../../components/navbar/style.css">
     <link rel="stylesheet" href="../../../components/footer/style.css">

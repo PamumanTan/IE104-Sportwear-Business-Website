@@ -37,8 +37,13 @@
 .underline{
     width: 1px;
 }
+.cart-product-delete button:hover{
+    opacity: 0.8;
+}
 .cart-product-delete button{
     background-color: black;
     color: white;
-    padding: 10px 36px;
+    padding: 10px 40px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
