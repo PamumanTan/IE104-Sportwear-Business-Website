@@ -4,17 +4,6 @@
     src: url('../../assets/fonts/PublicSans-Regular.ttf');
 }
 
-/* All elements */
-
-* {
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    /* font-family: 'my_public_sans'; */
-    /* font-family: 'Roboto', sans-serif; */
-}
 
 /* Header */
 .show-product-list-header {
@@ -109,7 +98,7 @@ article {
 .show-product-list-filter-option input[type="checkbox"] {
     width: 1rem;
     height: 1rem;
-} 
+}
 
 /* Sort products */
 .show-product-list-sort {
@@ -183,9 +172,13 @@ div.product-img {
 }
 
 .show-product .product-name,
-.show-product .product-price  {
+.show-product .product-price {
     text-align: left;
     width: 100%;
     padding-left: 2rem;
     line-height: 1.25rem;
+}
+
+.hidden {
+    display: none;
 }
