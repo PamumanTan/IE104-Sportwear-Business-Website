@@ -8,6 +8,7 @@ include '../../components/payment-product-item/index.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This webpage shows payment of order"> <!--Set the content-->
     <title>Thanh toán</title>
     <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
     <link rel="stylesheet" href="./style.css">
@@ -23,7 +24,7 @@ include '../../components/payment-product-item/index.php';
 </head>
 
 <body>
-<?php
+    <?php
     include_once "../../controllers/verify_token.php";
     include "../../db/connection.php";
     require("../../helpers/jwt.php");
@@ -75,7 +76,7 @@ include '../../components/payment-product-item/index.php';
                         } else {
                             echo '<p>Không có sản phẩm nào trong giỏ hàng</p>';
                         }
-                        
+
                         ?>
 
                     </div>
