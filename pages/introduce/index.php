@@ -12,6 +12,7 @@
     <!-- css for navbar -->
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+    <link rel="stylesheet" href="../../components/navbar/navbar-animation.css">
     <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
     <!-- css for footer -->
     <link rel="stylesheet" href="../../components/footer/style.css">

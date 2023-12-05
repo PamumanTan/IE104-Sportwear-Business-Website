@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../../components/comment/style.css">
   <link rel="stylesheet" href="../../components/footer/style.css">
   <link rel="stylesheet" href="../../components/navbar_logined/style.css">
+  <link rel="stylesheet" href="../../components/navbar/navbar-animation.css">
   <link rel="stylesheet" href="../../components/notification-modal/style.css">
   <link rel="stylesheet" href="../../assets/icons/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="../../resources/css/root.css">
