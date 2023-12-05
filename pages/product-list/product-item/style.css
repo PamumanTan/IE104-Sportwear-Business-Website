@@ -1,0 +1,20 @@
+.show-product:hover {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.show-product {
+    padding: 10px;
+    text-align: center;
+}
+
+.show-product img {
+    margin-bottom: 10px;
+    height: 15rem;
+}
+
+
+.show-product:hover img {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}

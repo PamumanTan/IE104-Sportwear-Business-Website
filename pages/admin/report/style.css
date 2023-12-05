@@ -1,0 +1,261 @@
+html,
+* {
+    font-family: 'public sans', sans-serif;
+}
+
+div,
+main,
+section,
+article,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    --blue: #0B63F8;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.time-navbar {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.time-navbar__item {
+    display: flex;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.time-navbar__item.active {
+    border-bottom: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+/* List container */
+.list-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    font-size: 1rem;
+    /* overflow-x: auto; */
+}
+
+.customers-table {
+    background-color: white;
+    padding: 1rem;
+}
+
+.list-container input[type='checkbox'] {
+    width: 1rem;
+    height: 1rem;
+}
+
+.list-container .cell-center {
+    text-align: center;
+}
+
+.list-container .cell-start {
+    text-align: left;
+}
+
+.list-container .list-container__name {
+    max-width: 15rem;
+}
+
+.list-container .list-container__name>p {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list-container tr {
+    height: 3rem;
+}
+
+.list-container .cell-action a {
+    text-decoration: none;
+    transition: opacity 0.25s;
+    cursor: pointer;
+}
+
+.list-container .cell-action a:hover {
+    opacity: 0.5;
+}
+
+
+.hover {
+    cursor: pointer;
+}
+
+/* Customer footer */
+.customers-footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.customers-footer .pagination {
+    display: flex;
+    flex-direction: row;
+}
+
+.customers-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    background-color: white;
+    font-weight: bold;
+}
+
+.customers-footer a.active {
+    border: 1px solid #4200FF;
+}
+
+.customers-footer button {
+    position: absolute;
+    background-color: #9ecaff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    transition: opacity 0.25s;
+    color: gray;
+}
+
+.customers-footer button:hover {
+    opacity: 0.85;
+}
+
+/* Detail modal */
+.detail-report-area {
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    overflow-x: auto;
+}
+
+.detail-report-area.disable {
+    display: none;
+}
+
+.detail-report-modal {
+    width: 50rem;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.report-modal__heading {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #F0F0F0;
+    color: var(--blue);
+}
+
+.report-modal__body {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+.report-modal__table {
+    gap: 0.5rem;
+}
+
+.report-modal__table tr {
+    height: 2rem;
+}
+
+.report-modal__table td {
+    text-align: center;
+}
+
+.report-modal__table input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+.report-modal__button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.report-modal__button-container button {
+    height: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    /* border: none; */
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.25s;
+}
+
+.report-modal__button-container button:hover {
+    opacity: 0.8;
+}
+
+.report-modal__export-btn {
+    background-color: #A5A58D;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.report-modal__exit-btn {
+    background-color: white;
+    color: #A5A58D;
+    border: 2px solid #A5A58D;
+}

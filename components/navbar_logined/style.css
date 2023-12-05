@@ -1,0 +1,342 @@
+* {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.nav {
+    background-color: #000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navList {
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 17px;
+    display: flex;
+    line-height: 3.5;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.navList li a,
+.navList li>div>a {
+    text-decoration: none;
+    color: white;
+}
+
+.navListFirst,
+.navListMiddle,
+.navListEndLogined {
+    display: flex;
+
+}
+
+.navListFirst {
+    flex: 0.7;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.navListMiddle {
+    justify-content: space-between;
+    flex: 3;
+}
+
+.navListEndLogined {
+    flex: 2;
+    float: right;
+    padding-right: 20px;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.subnavNewProduct,
+.subnavPromotion {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    list-style-type: none;
+    padding: 2rem 3rem;
+    line-height: 1.5;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    gap: 6rem;
+    z-index: 5;
+}
+
+
+.subnavNewProduct ul,
+.subnavPromotion ul {
+    list-style-type: none;
+}
+
+.subnavNewProduct ul li>a,
+.subnavPromotion ul li>a,
+.subnavMen li>a,
+.subnavWomen li>a,
+.subnavKids li>a {
+    color: black;
+}
+
+.subnavMen,
+.subnavWomen,
+.subnavKids {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    position: absolute;
+    list-style-type: none;
+    padding: 1rem 2rem;
+    line-height: 1.5;
+    top: 62px;
+    background-color: #fff;
+    color: #000;
+    gap: 0.6rem;
+    z-index: 5;
+    transition: all .5s ease;
+}
+
+.navNewProduct,
+.navPromotion,
+.navMen,
+.navWomen,
+.navKids,
+.navHelp,
+.navIntroduce {
+    border-bottom: 2px solid#000;
+}
+
+/* --------- hover --------------- */
+.navNewProduct:hover ol,
+.navPromotion:hover ol,
+.navMen:hover ul,
+.navWomen:hover ul,
+.navKids:hover ul {
+    display: flex;
+}
+
+.navNewProduct:hover body {
+    opacity: 0.5;
+}
+
+.navNewProduct:hover,
+.navPromotion:hover,
+.navMen:hover,
+.navWomen:hover,
+.navKids:hover,
+.navHelp:hover,
+.navIntroduce:hover {
+    border-bottom: 2px solid #fff;
+
+}
+
+
+.navListEndLogined .navSearch {
+    display: flex;
+    align-items: center;
+}
+
+.navListEndLogined .navSearchContent input:focus {
+    outline: none;
+}
+
+.navListEndLogined .navSearchContent input {
+    border-style: hidden;
+    font-size: 14px;
+    line-height: 1.9;
+    width: 0;
+    transition: width 0.75s ease;
+}
+
+.navListEndLogined .navSearchContent div:hover {
+    background-color: rgba(146, 159, 168, 0.15);
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.navListEndLogined .navSearchContent {
+    background-color: white;
+    display: flex;
+    /* height: 0px; */
+    border-radius: 0px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.navListEndLogined .navSearchContent:hover input {
+    width: 176px;
+    cursor: text;
+    padding-left: 6px;
+}
+
+.navListEndLogined .navSearchIcon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navListEndLogined .cartImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.navListEndLogined .accountImg {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.navListEndLogined .cartImg img {
+    height: 25px;
+    color: white;
+}
+
+.navListEndLogined .accountImg img {
+    height: 30px;
+}
+
+/* Modal  */
+
+.modalAccount {
+    display: none;
+    padding: 30px;
+    z-index: 9999;
+    width: fit-content;
+    position: fixed;
+    right: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    animation: rotateIn 0.25s;
+}
+
+@keyframes rotateIn {
+    from {
+        /* transform: rotateY(360deg); */
+        transform: translateX(100%);
+    }
+    to {
+        /* transform: rotateY(0deg); */
+        transform: translateX(0);
+    }
+}
+
+.modalImg {
+    width: 200px;
+    margin-bottom: 6px;
+    border-radius: 1rem;
+}
+
+.modalInfo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modalInfo a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.modalInfo a:hover {
+    text-decoration: underline;
+}
+
+.modalDetail {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modalDetailProfile,
+.modalDetailCart,
+.modalDetailPurchase,
+.modalDetailLogout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-weight: bolder;
+}
+
+
+.modalDetail i {
+    font-weight: bolder;
+    /* font-size: 16px; */
+}
+
+.modalDetail p {
+    width: 16rem;
+    /* font-size:14px ; */
+}
+
+.modalDetailProfile:hover {
+    cursor: pointer;
+}
+
+.modalDetail img {
+    width: 28px;
+    height: 28px;
+}
+
+.modalAccount.open {
+    display: block;
+}
+
+.modalDetailItem:hover {
+    cursor: pointer;
+    background-color: rgba(146, 159, 168, 0.15);
+}
+
+.modalDetailItem {
+    text-decoration: none;
+    color: #000;
+}
+
+#account:hover {
+    cursor: pointer;
+}
+
+/* Animation */
+.navListFirst--animation > a {
+    transition: transform 0.25s;
+}
+
+.navListFirst--animation > a:hover {
+    transform: scale(1.5, 1.5) rotate(3deg);
+}
+
+.sub-navbar--animation {
+    animation: subnavbar 0.25s;
+}
+
+@keyframes subnavbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
