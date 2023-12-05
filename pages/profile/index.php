@@ -65,23 +65,25 @@
                 <form>
                     <label for="address">
                         <h4>Địa chỉ</h4>
-                        <textarea class="text-content" name="address" id="address" cols="70"
-                            rows="5">Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương</textarea>
+                        <textarea class="text-content" name="address" id="address" cols="70" rows="5"
+                            disabled>Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương</textarea>
                     </label>
 
                     <label for="email">
                         <h4>Email</h4>
-                        <input class="text-content" type="text" value="goat@gmail.com">
+                        <input class="text-content" type="text" value="goat@gmail.com" disabled>
                     </label>
 
                     <label for="phone-number">
                         <h4>Số điện thoại</h4>
-                        <input class="text-content" type="text" value="1037-0650">
+                        <input class="text-content" type="text" value="1037-0650" disabled>
                     </label>
                     <br>
-                    <input id="save" type="submit" value="Lưu">
+                    <div class="btn">
+                        <input id="save" type="submit" value="Lưu">
+                        <button type="button" id="edit">Sửa</button>
+                    </div>
                 </form>
-                <!-- <button id="save">Lưu</button> -->
             </div>
         </div>
     </div>
