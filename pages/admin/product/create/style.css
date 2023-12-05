@@ -58,6 +58,10 @@ label {
     border-radius: 4px;
 }
 
+#productDescription {
+    resize: none;
+}
+
 .container div {
     margin-bottom: 16px;
 }
@@ -71,4 +75,3 @@ label {
     height: 50px;
     background-color: rgb(209, 248, 248);
 }
-

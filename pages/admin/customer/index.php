@@ -81,6 +81,7 @@ $page = $_GET["p"] ?? 1;
                         $queryTotalMoney = "SELECT SUM(total_money) AS total FROM orders WHERE user_id = " . $row["id"];
                         $resultTotalMoney = execQuery($queryTotalMoney);
                         $totalMoney = $resultTotalMoney->fetch_assoc()["total"];
+                        $totalMoney = $totalMoney ?? 0;
                         // echo customer item
                         echo CustomerItem($row["id"], $row["username"], $totalMoney, $countBuy);
                     }

@@ -30,6 +30,9 @@
     } else {
         include_once "../../components/navbar/index.php";
     }
+    $sql = "SELECT * FROM users WHERE id = " . $user['user_id'];
+    $result = execQuery($sql);
+    $row = $result->fetch_assoc();
     ?>
     <div class="page-container">
         <div id="header">
@@ -38,20 +41,30 @@
         <div class="profile-container">
             <div class="profile-left">
                 <div class="avatar">
-                    <img src="https://i.pinimg.com/564x/14/64/29/146429d7896694e3c361e0d3f957cedd.jpg" alt="User avatar">
+                    <img src="<?php echo $row['avatar'] ?>" alt="User avatar">
                 </div>
                 <div class="bio">
-                    <h2 id="name">Lionel Messi</h2>
-                    <p id="biography">Greatest of all time - G.O.A.T</p>
+                    <h2 id="name"><?php echo $row['username'] ?></h2>
+                    <p id="biography"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></p>
                 </div>
                 <div class="statistics">
                     <div class="total-paid">
-                        <h4>100.000 VND</h4>
+                        <h4><?php
+                            $sql = "SELECT SUM(total_money) AS total FROM orders WHERE payed = 1 and user_id = " . $user['user_id'];
+                            $totalMoney = execQuery($sql)
+                                ->fetch_assoc()['total'];
+                            echo $totalMoney;
+                            ?></h4>
                         <p>Đã chi</p>
                     </div>
                     <div class="line-y"></div>
                     <div class="purchased">
-                        <h4>20</h4>
+                        <h4><?php
+                            $sql = "SELECT COUNT(*) AS total FROM orders WHERE payed = 1 and user_id = " . $user['user_id'];
+                            $totalOrder = execQuery($sql)
+                                ->fetch_assoc()['total'];
+                            echo $totalOrder;
+                            ?></h4>
                         <p>Đơn hàng</p>
                     </div>
                 </div>
@@ -65,18 +78,27 @@
                 <form>
                     <label for="address">
                         <h4>Địa chỉ</h4>
-                        <textarea class="text-content" name="address" id="address" cols="70" rows="5"
-                            disabled>Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương</textarea>
+                        <textarea class="text-content" name="address" id="address" cols="70" rows="3" disabled>
+                            <?php if ($row['address']) {
+                                echo $row['address'];
+                            } else {
+                                echo 'Chưa cập nhật địa chỉ';
+                            } ?>
+                        </textarea>
                     </label>
 
                     <label for="email">
                         <h4>Email</h4>
-                        <input class="text-content" type="text" value="goat@gmail.com" disabled>
+                        <input class="text-content" type="text" value="<?php
+                                                                        if ($row['email'])
+                                                                            echo $row['email'];
+                                                                        else
+                                                                            echo 'Chưa cập nhật email'; ?>" disabled>
                     </label>
 
                     <label for="phone-number">
                         <h4>Số điện thoại</h4>
-                        <input class="text-content" type="text" value="1037-0650" disabled>
+                        <input class="text-content" type="text" value="<?php echo $row['phonenumber'] ?>" disabled>
                     </label>
                     <br>
                     <div class="btn">
@@ -93,6 +115,11 @@
     ?>
     <script src="./script.js" defer></script>
     <script src="../../components/navbar/script.js"></script>
+    <script src="../../resources/js/root.js"></script>
+    <script>
+        const totalMoney = document.querySelector('.total-paid h4');
+        totalMoney.textContent = formatPrice(totalMoney.textContent);
+    </script>
 </body>
 
 </html>

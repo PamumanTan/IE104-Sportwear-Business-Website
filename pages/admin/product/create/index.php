@@ -74,7 +74,7 @@
                 <!-- ảnh -->
                 <div>
                     <label for="productImage">Ảnh : </label>
-                    <input class="form-control" type="file" id="productImage" name="productImage" multiple="multiple">
+                    <input class="form-control" type="text" id="productImage" name="productImage" placeholder="nhập image link của sản phẩm">
                 </div>
                 <button style="cursor: pointer;">
                     Lưu

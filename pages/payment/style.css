@@ -4,11 +4,11 @@ body {
 }
 
 .page-content {
+    flex: 1;
     max-width: 1400px;
     margin: 0 auto;
     padding-left: 100px;
     padding-right: 50px;
-    padding-top: 40px;
 }
 
 #heading {
