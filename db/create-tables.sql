@@ -91,12 +91,6 @@ CREATE TABLE orders
     FOREIGN KEY(user_id) REFERENCES USERS(id)
 );
 
--- sql to add 2 columns to table orders
-ALTER TABLE orders
-ADD COLUMN shipping_firstname VARCHAR(255) AFTER shipping_note,
-ADD COLUMN shipping_lastname VARCHAR(255) AFTER shipping_firstname;
-
-
 CREATE TABLE order_details
 (
     order_id INT,

@@ -205,3 +205,12 @@ body {
     align-items: center;
     color: black;
 }
+
+
+
+/* Mobile */
+/* @media only screen and (max-width: 426px) {
+    .navList {
+        display: none;
+    }
+} */
