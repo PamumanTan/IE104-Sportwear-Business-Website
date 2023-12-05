@@ -6,7 +6,7 @@ include '../db/connection.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (!isset($_COOKIE['access_token'])) {
         echo json_encode([
-            'message' => 'Unauthenticated',
+            'message' => 'Chưa xác thực',
             'error' => true
         ]);
         return;
@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (!$user_id) {
         echo json_encode([
-            'message' => 'Unauthenticated',
+            'message' => 'Chưa xác thực',
             'error' => true
         ]);
         return;
     }
 } else {
-    echo "Wrong request method";
+    echo "Sai phương thức";
     return;
 }
 
@@ -34,13 +34,13 @@ function getUserInfo($user_id) {
     if ($result) {
         $row = $result->fetch_assoc();
         return [
-            'message' => 'Get user info successfully',
+            'message' => 'Xem thông tin tài khoản thành công',
             'error' => false,
             'data' => $row
         ];
     }
     return [
-        'message' => 'Get user info failed',
+        'message' => 'Xem thông tin tài khoản thất bại',
         'error' => true
     ];
 }

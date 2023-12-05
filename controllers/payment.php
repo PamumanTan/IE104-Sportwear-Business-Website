@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 } else {
-    echo "Wrong request method";
+    echo "Sai phương thức";
     return;
 }
 
@@ -38,7 +38,7 @@ function payOrder($user_id) {
         && isset($data['firstname']) && $data['firstname'] 
         && isset($data['lastname']) && $data['lastname'])) {
         return [
-            'message' => 'Missing required fields',
+            'message' => 'Vui lòng nhập đầy đủ thông tin',
             'error' => true
         ];
     }
@@ -62,7 +62,7 @@ function payOrder($user_id) {
 
     if (!$result || $result->num_rows == 0) {
         return [
-            'message' => 'No product in cart',
+            'message' => 'Không có đơn hàng để thanh toán',
             'error' => true
         ];
     }
@@ -79,13 +79,13 @@ function payOrder($user_id) {
 
     if ($result) {
         return [
-            'message' => 'Pay order successfully',
+            'message' => 'Thanh toán thành công',
             'error' => false
         ];
     }
 
     return [
-        'message' => 'Pay order failed',
+        'message' => 'Thanh toán thất bại',
         'error' => true
     ];
 }

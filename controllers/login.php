@@ -23,7 +23,7 @@ if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenu
         setcookie('access_token', $token, $expirationTime, '/', '', $secure, $httpOnly);
 
         $res = (object) [
-            'message' => 'Login successfully',
+            'message' => 'Đăng nhập thành công',
             'error' => false
         ];
 
@@ -31,7 +31,7 @@ if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenu
         echo $jsonRes;
     } else {
         $res = (object) [
-            'message' => 'Wrong phonenumber or password',
+            'message' => 'Sai tài khoản hoặc mật khẩu',
             'error' => true
         ];
 
@@ -40,7 +40,7 @@ if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenu
     }
 } else {
     $res = (object) [
-        'message' => 'Not enough credentials',
+        'message' => 'Vui lòng nhập đầy đủ thông tin',
         'error' => true,
         'data' => (isset($_POST['phonenumber']) ? 1 : 0) . (isset($_POST['password']) ? 1 : 0)
     ];

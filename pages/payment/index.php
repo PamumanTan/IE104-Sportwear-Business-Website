@@ -9,6 +9,7 @@ include '../../components/payment-product-item/index.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/footer/style.css">

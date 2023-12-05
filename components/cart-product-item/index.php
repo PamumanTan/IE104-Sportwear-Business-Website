@@ -3,9 +3,9 @@ function CartProductItem($id, $img, $name, $price, $size, $quantity)
 {
     echo '
         <div class="cart-product-container" product_id='.$id.'>
-            <div class="cart-product-img">
+           <div class="cart-product-img">
                 <img src="' . $img . '" alt="Hình ảnh sản phẩm">
-            </div>
+            </div> 
             <div class="cart-product-detail">
                 <div class="product-name-div">
                     <h3 class="product-name">' . $name . '</h3>

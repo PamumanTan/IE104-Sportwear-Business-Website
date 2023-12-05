@@ -10,7 +10,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get-all') {
 
     $res = [
         'error' => false,
-        'message' => 'success',
+        'message' => 'Xem bình luận thành công',
         'data' => $rows
     ];
     echo json_encode($rows);
@@ -18,7 +18,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get-all') {
 } else {
     $res = [
         'error' => true,
-        'message' => 'error'
+        'message' => 'Xem bình luận thất bại'
     ];
     echo json_encode($res);
     return;

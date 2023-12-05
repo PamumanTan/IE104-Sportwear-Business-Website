@@ -1,7 +1,5 @@
 <?php
 
-
-
 function checkAuthorization($execQuery, $verifyToken) {
     if (isset($_COOKIE['access_token'])) {
     

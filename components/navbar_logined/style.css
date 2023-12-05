@@ -76,7 +76,6 @@ body {
     left: 0;
     right: 0;
     background-color: #fff;
-    color: #000;
     gap: 6rem;
     z-index: 5;
 }
@@ -108,12 +107,9 @@ body {
     top: 62px;
     background-color: #fff;
     color: #000;
-    /* background-color: #000;
-    color: #fff; */
     gap: 0.6rem;
     z-index: 5;
     transition: all .5s ease;
-
 }
 
 .navNewProduct,
@@ -133,6 +129,10 @@ body {
 .navWomen:hover ul,
 .navKids:hover ul {
     display: flex;
+}
+
+.navNewProduct:hover body {
+    opacity: 0.5;
 }
 
 .navNewProduct:hover,
@@ -169,7 +169,6 @@ body {
     border-radius: 50%;
     cursor: pointer
 }
-
 
 .navListEndLogined .navSearchContent {
     background-color: white;
@@ -247,6 +246,10 @@ body {
     font-size: 18px;
 }
 
+.modalInfo a:hover {
+    text-decoration: underline;
+}
+
 .modalDetail {
     margin-top: 30px;
     display: flex;
@@ -301,4 +304,26 @@ body {
 
 #account:hover {
     cursor: pointer;
+}
+
+/* Animation */
+.navListFirst--animation > a {
+    transition: transform 0.25s;
+}
+
+.navListFirst--animation > a:hover {
+    transform: scale(1.5, 1.5) rotate(3deg);
+}
+
+.sub-navbar--animation {
+    animation: subnavbar 0.25s;
+}
+
+@keyframes subnavbar {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

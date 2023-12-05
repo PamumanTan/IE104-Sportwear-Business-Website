@@ -106,6 +106,7 @@ article {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 /* Sort products title */
@@ -117,6 +118,8 @@ article {
 /* Sort products combo box */
 .show-product-list-sort select {
     /* font-family: 'my_public_sans'; */
+    padding: 8px 10px;
+    outline: none;
 }
 
 /* Product list container */
