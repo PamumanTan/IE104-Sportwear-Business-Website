@@ -48,11 +48,21 @@ removeButtons.forEach(removeButton => {
                     if (document.querySelectorAll('.cart-product-container').length == 0) {
                         document.querySelector('.cart-product-list').innerHTML = '<h2>Không có sản phẩm nào trong giỏ hàng</h2>';
                     }
+
+                    // update total price
+                    fetch("http://localhost/sportswear/controllers/cart.php?action=total-money")
+                        .then(res => res.json())
+                        .then(res => {
+                            if (!res['error']) {
+                                totalProductPrice.textContent = formatPrice(parseInt(res['data']) ? parseInt(res['data']) : 0);
+                                totalPay.textContent = formatPrice(parseInt(res['data']) ? parseInt(res['data']) : 0);
+                            }
+                        })
                 }
                 notify(res['message']);
             })
     }
-})
+});
 
 // format price
 totalProductPrice.textContent = formatPrice(parseInt(totalProductPrice.textContent));

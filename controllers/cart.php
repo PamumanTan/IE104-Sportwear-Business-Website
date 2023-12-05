@@ -191,6 +191,24 @@ function getAllProductsInCart($user_id)
     }
 }
 
+function getCartTotalMoneyOfUser($user_id) {
+    $query = "select sum(total_money) as total_money from orders where payed = 0 and user_id = " . $user_id;
+    $result = execQuery($query);
+    $row = $result->fetch_assoc();
+    if ($row) {
+        echo json_encode([
+            'message' => 'Xem tổng tiền giỏ hàng thành công',
+            'error' => false,
+            'data' => $row['total_money']
+        ]);
+    } else {
+        echo json_encode([
+            'message' => 'Xem tổng tiền giỏ hàng thất bại',
+            'error' => true
+        ]);
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
     $action = $_GET['action'];
     if ($action === 'add') {
@@ -224,6 +242,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
                 'error' => true
             ]);
         }
+    } else if ($action === 'total-money') {
+        getCartTotalMoneyOfUser($user_id);
     }
 } else {
     echo "Sai phương thức";
