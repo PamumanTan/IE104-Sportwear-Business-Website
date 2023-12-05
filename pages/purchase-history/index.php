@@ -64,11 +64,10 @@
                         <!-- Generate data from database -->
                         <?php
                         include "../../helpers/dateFormat.php";
-                        $query = "SELECT * FROM orders WHERE user_id = " . $user['user_id'];
+                        $query = "SELECT * FROM orders WHERE payed=1 and user_id = " . $user['user_id'];
                         $result = execQuery($query);
-                        if ($result->num_rows > 0) {
-                            $row = $result->fetch_assoc();
-                            for ($i = 0; $i < $result->num_rows; $i++) {
+                        if ($result && $result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
                         ?>
                                 <div class="table-row">
                                     <div class="table-data narrow"><?php echo $row['id'] ?></div>
@@ -82,6 +81,8 @@
                                 </div>
                         <?php
                             }
+                        } else {
+                            echo "<h1>Bạn chưa từng mua hàng tại đây</h1>";
                         }
                         ?>
 
