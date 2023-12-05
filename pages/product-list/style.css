@@ -87,6 +87,11 @@ article {
     text-decoration: underline;
     color: #C4C4C4;
     cursor: pointer;
+    transition: color 0.25s;
+}
+
+#show-product-list-clear-filter:hover {
+    color: red;
 }
 
 /* Filter option title */
@@ -100,6 +105,11 @@ article {
     padding-top: 0.25em;
     padding-bottom: 0.25em;
 }
+
+.show-product-list-filter-option input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+} 
 
 /* Sort products */
 .show-product-list-sort {
