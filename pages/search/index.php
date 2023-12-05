@@ -8,7 +8,7 @@ include './product-item/index.php';
 <head>
     <title>Tìm kiếm</title>
     <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
-    <meta name="description" content="This webpage shows products list"> <!--Set the content-->
+    <meta name="description" content="This webpage shows searching of web"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./product-item/style.css">
@@ -24,15 +24,15 @@ include './product-item/index.php';
 <body>
     <!-- Check if user logined or not -->
     <?php
-        include "../../controllers/verify_token.php";
-        include "../../db/connection.php";
-        include "../../helpers/jwt.php";
-        $user = checkAuthorization('execQuery', 'Token::Verify');
-        if ($user) {
-            include_once "../../components/navbar_logined/index.php";
-        } else {
-            include_once "../../components/navbar/index.php";
-        }
+    include "../../controllers/verify_token.php";
+    include "../../db/connection.php";
+    include "../../helpers/jwt.php";
+    $user = checkAuthorization('execQuery', 'Token::Verify');
+    if ($user) {
+        include_once "../../components/navbar_logined/index.php";
+    } else {
+        include_once "../../components/navbar/index.php";
+    }
     ?>
 
     <header class="show-product-list-header">

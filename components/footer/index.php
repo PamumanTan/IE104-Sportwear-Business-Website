@@ -1,37 +1,70 @@
-<div class="footer">
+<footer class="footer">
     <div class="footer-container">
-        <div class="footerAbove">
-            <div class="footerProduct">
-                <p>Sản phẩm</p>
-                <ul>
-                    <li><a href="">Chính sách</a></li>
-                    <li><a href="">Dịch vụ</a></li>
-                    <li><a href="">FAQ</a></li>
+        <div class="footer-grid__row">
+            <div class="footer-grid__column-2-4">
+                <h3 class="footer__heading">VỀ CÔNG TY</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Sportswear tuyển dụng</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Liên hệ nhượng quyền</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Về Sportswear</a>
+                    </li>
                 </ul>
             </div>
-            <div class="footerResource">
-                <p>Tài nguyên</p>
-                <ul>
-                    <li><a href="">Documentation</a></li>
-                    <li><a href="">Case Studies</a></li>
+            <div class="footer-grid__column-2-4">
+                <h3 class="footer__heading">THÔNG TIN</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Trạng thái đơn hàng</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Hình thức giao hàng</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Hình thức thanh toán</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Chính sách đổi trả</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Chính sách bảo hành</a>
+                    </li>
                 </ul>
             </div>
-            <div class="footerInfo">
-                <p>Công ty</p>
-                <ul>
-                    <li><a href="">Về chúng tôi</a></li>
-                    <li><a href="">Liên lạc với chúng tôi</a></li>
+            <div class="footer-grid__column-2-4">
+                <h3 class="footer__heading">HỖ TRỢ</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">FAQs</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Bảo mật thông tin</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Chính sách chung</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-
-        <div class="footerUnder">
-            <div class="line"></div>
-            <div class="subFooter">
-                <div>
-                    <p>© GroupX Internet And Web Technology Project™ 2023</p>
-                </div>
+            <div class="footer-grid__column-2-4">
+                <h3 class="footer__heading">LIÊN HỆ</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Email góp ý</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Hotline</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">0921 456 789</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-grid__column-2-4">
             </div>
         </div>
     </div>
-</div>
+</footer>

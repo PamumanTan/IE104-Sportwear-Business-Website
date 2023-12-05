@@ -6,7 +6,7 @@
 
 <head>
     <title>Sản phẩm</title>
-    <meta name="description" content="This webpage shows products list"> <!--Set the content-->
+    <meta name="description" content="This webpage shows the profile of user"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
     <!-- css for navbar -->
@@ -65,8 +65,7 @@
                 <form>
                     <label for="address">
                         <h4>Địa chỉ</h4>
-                        <textarea class="text-content" name="address" id="address" cols="70"
-                            rows="5">Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương</textarea>
+                        <textarea class="text-content" name="address" id="address" cols="70" rows="5">Ký túc xá khu B: Đường Mạc Đĩnh Chi, Khu phố Tân Hòa, Phường Đông Hòa, Thành phố Dĩ An, Tỉnh Bình Dương</textarea>
                     </label>
 
                     <label for="email">

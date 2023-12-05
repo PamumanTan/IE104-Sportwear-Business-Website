@@ -7,7 +7,7 @@
 <head>
     <title>Sản phẩm</title>
     <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
-    <meta name="description" content="This webpage shows products list"> <!--Set the content-->
+    <meta name="description" content="This webpage shows the introduce"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
     <!-- css for navbar -->

@@ -47,35 +47,30 @@
         <div class="homePoster">
             <?php include "../components/carousel-pro/index.php" ?>
         </div>
-            <?php include "../components/marquee/index.php" ?>
+        <?php include "../components/marquee/index.php" ?>
         <div class="homeCategory">
             <div>
                 <p>HẠNG MỤC</p>
             </div>
             <div class="homeListCategory">
                 <div>
-                    <img src="https://images.pexels.com/photos/13450843/pexels-photo-13450843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                    <img src="https://images.pexels.com/photos/13450843/pexels-photo-13450843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     <h4>SẢN PHẨM MỚI</h4>
                 </div>
                 <div>
-                    <img src="https://images.pexels.com/photos/8556754/pexels-photo-8556754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                    <img src="https://images.pexels.com/photos/8556754/pexels-photo-8556754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     <h4>NAM</h4>
                 </div>
                 <div>
-                    <img src="https://images.pexels.com/photos/5300913/pexels-photo-5300913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                    <img src="https://images.pexels.com/photos/5300913/pexels-photo-5300913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     <h4>NỮ</h4>
                 </div>
                 <div>
-                    <img src="https://images.pexels.com/photos/5896837/pexels-photo-5896837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                    <img src="https://images.pexels.com/photos/5896837/pexels-photo-5896837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     <h4>TRẺ EM</h4>
                 </div>
                 <div>
-                    <img src="https://images.pexels.com/photos/9400764/pexels-photo-9400764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                    <img src="https://images.pexels.com/photos/9400764/pexels-photo-9400764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     <h4>KHUYẾN MÃI</h4>
                 </div>
             </div>
@@ -103,8 +98,7 @@
             </div>
             <div class="homeNewestProductImg">
                 <img src="https://i.pinimg.com/564x/3c/a8/e5/3ca8e5a7e8509b84dd31620e22544065.jpg" alt="">
-                <img src="https://images.unsplash.com/photo-1616124619460-ff4ed8f4683c?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
+                <img src="https://images.unsplash.com/photo-1616124619460-ff4ed8f4683c?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 <img src="https://i.pinimg.com/736x/ad/47/9d/ad479d5aaa731d35d8c2e09ee06a073d.jpg" alt="">
             </div>
         </div>
@@ -211,19 +205,19 @@
 
     <script>
         document.querySelectorAll('.homeBannerBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list';
         });
 
         document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=1';
         });
 
         document.querySelectorAll('.homeWomenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=2';
         });
 
         document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=3';
         });
     </script>
 
