@@ -6,7 +6,7 @@
 
 <head>
     <title>Sản phẩm</title>
-    <meta name="description" content="This webpage shows products list"> <!--Set the content-->
+    <meta name="description" content="This webpage shows the profile of user"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">
     <!-- css for navbar -->
