@@ -108,7 +108,7 @@
                 </div>
                 <div>
                     <label for="productImage">Đổi ảnh : </label>
-                    <input class="form-control" type="file" id="productImage" name="productImage" multiple="multiple">
+                    <input class="form-control" type="text" id="productImage" name="productImage" placeholder="nhập imagelink mới của sản phẩm">
                 </div>
                 <button class="btn-save">
                     Lưu

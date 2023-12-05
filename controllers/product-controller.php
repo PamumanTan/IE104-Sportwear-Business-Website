@@ -31,10 +31,12 @@ function createProduct()
 
     include '../db/connection.php';
     $con = connectDb();
-    $query = "INSERT INTO `products`(`product_name`, `product_price`, `product_description`, `product_size`, `product_color`, `product_image`, `product_object_id`, `product_type_id`) VALUES ( '$productName', $productPrice, '$productDescription', '$productSize', '$productColor', '$productImage', $productObject, $productType)";
+    $query = "INSERT INTO products (product_name, product_price, product_description, product_size, product_color, product_image, product_object_id, product_type_id) VALUES ('$productName', $productPrice, '$productDescription', '$productSize', '$productColor', '$productImage', $productObject, $productType)";
+    // echo $query;
 
     $result = $con->query($query);
     if (!$result) {
+        echo $query;
         echo "Error creating product: " . $con->error;
         return;
     }

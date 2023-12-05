@@ -66,6 +66,10 @@ label {
     border-radius: 4px;
 }
 
+#productDescription {
+    resize: none;
+}
+
 .form-control-select {
     width: 70px;
     height: 30px;
