@@ -1,6 +1,6 @@
 <?php
 include "../../components/cart-product-item/index.php"
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +39,7 @@ include "../../components/cart-product-item/index.php"
             <!-- Chèn link direct đến page danh sách sản phẩm  -->
             <div class="direct-text">
                 <p>Sẵn sàng thanh toán ?
-                    <a href="/sportswear/pages/product-list/">Tiếp tục mua sắm</a>
+                    <a href="/sportswear/pages/product-list">Tiếp tục mua sắm</a>
                 </p>
             </div>
             <div class="cart-product-list" id="style-3">
@@ -61,6 +61,7 @@ include "../../components/cart-product-item/index.php"
                 ?>
             </div>
         </div>
+
         <div class="total-container">
             <?php 
                 $query = "select total_money from orders where user_id = " . $user['user_id'] . " and payed = 0";
@@ -89,6 +90,7 @@ include "../../components/cart-product-item/index.php"
                 <p>Tiếp tục thanh toán</p>
             </div>
         </div>
+
     </div>
 
     

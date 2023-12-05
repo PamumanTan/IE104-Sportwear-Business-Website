@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
     <link rel="stylesheet" href="../components/carousel-pro/style.css">
     <link rel="stylesheet" href="../components/marquee/style.css">
+    <link rel="stylesheet" href="../components/marquee-shirt/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
     <link rel="stylesheet" href="../components/navbar_logined/style.css">
     <link rel="stylesheet" href="../components/footer/style.css">
@@ -21,6 +22,7 @@
     <script src="../components/carousel-pro/script.js" defer></script>
     <script src="../components/scroll-to-top-button/script.js" defer></script>
     <script src="../components/marquee/script.js" defer></script>
+    <script src="../components/marquee-shirt/script.js" defer></script>
     <script src="https://kit.fontawesome.com/34f5218fc0.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,7 +42,7 @@
 
 
     <?php include "../components/scroll-to-top-button/index.php" ?>
-    
+
     <div class="homePage">
         <div class="homePoster">
             <?php include "../components/carousel-pro/index.php" ?>
@@ -80,14 +82,15 @@
         </div>
         <div class="homeBanner">
             <div class="homeBannerDescribe">
-                <p class="mb1 mt2">GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</p>
-                <p class="mb2">Bước vào sân cỏ với đẳng cấp cùng giày bóng đá nam Thượng Đình - sự kết hợp hoàn hảo giữa
-                    phong cách và hiệu suất. </p>
-                <div class="homeBannerDescribe-img-container">
+                <p class="mb1 mt2">ÁO ĐẤU CHÍNH HÃNG</p>
+                <p class="mb2">Sở hữu cho mình những chiếc áo đấu mới mùa giải 2023/2024 của mọi câu lạc bộ thuộc Top 5
+                    Giải đấu hàng đầu thế giới. </p>
+                <!-- <div class="homeBannerDescribe-img-container">
                     <img src="https://file.hstatic.net/200000278317/file/kham-pha-nike-blast-pack-loi-chao-nam-moi-den-tu-nha-swoosh-2_4246078fe7014d5ebffd2e25d2dba022.jpg"
                         alt="">
+                 </div> -->
 
-                </div>
+                <?php include "../components/marquee-shirt/index.php" ?>
                 <button class="homeBannerBtn">XEM CHI TIẾT</button>
             </div>
             <div>
@@ -122,17 +125,23 @@
                 <p>NAM</p>
             </div>
             <div class="homeMenList">
-                <div>
-                    <img src="../assets/images/module-6/item-1.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/52/8b/c1/528bc16d7e3dd205537ac86bbb30f76b.jpg" alt="">
+                    </div>
+                    <h4>SNEAKERS</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-2.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/736x/9b/29/a8/9b29a8248a85e523f5136cdb9ce17cad.jpg" alt="">
+                    </div>
+                    <h4>GIÀY ĐÁ BÓNG</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-3.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/fd/30/9c/fd309c63499ca24dec16ade7de27bfd6.jpg" alt="">
+                    </div>
+                    <h4>ÁO QUẦN THỂ THAO </h4>
                 </div>
             </div>
             <div>
@@ -144,17 +153,23 @@
                 <p>NỮ</p>
             </div>
             <div class="homeWomenList">
-                <div>
-                    <img src="../assets/images/module-6/item-1.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/da/8a/cf/da8acff9d7ad524034fb16f3286b06bb.jpg" alt="">
+                    </div>
+                    <h4>SNEAKERS</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-2.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/5e/3a/c1/5e3ac1112fcb2709e1173e5a33a2174d.jpg" alt="">
+                    </div>
+                    <h4>SPORT UNDERWEAR</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-3.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/a5/4e/58/a54e583e2ef19a26168acc2dcc37be8c.jpg" alt="">
+                    </div>
+                    <h4>ÁO QUẦN THỂ THAO</h4>
                 </div>
             </div>
             <div>
@@ -166,17 +181,23 @@
                 <p>TRẺ EM</p>
             </div>
             <div class="homeKidsList">
-                <div>
-                    <img src="../assets/images/module-6/item-1.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/a3/0c/10/a30c10d7582e307820320d7ab4f08401.jpg" alt="">
+                    </div>
+                    <h4>SNEAKERS</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-2.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/8a/f0/1b/8af01b800e2e7bf76178e3ca077d3b3b.jpg" alt="">
+                    </div>
+                    <h4>PHỤ KIỆN</h4>
                 </div>
-                <div>
-                    <img src="../assets/images/module-6/item-3.png" alt="">
-                    <h4>GIÀY BÓNG ĐÁ THƯỢNG ĐÌNH</h4>
+                <div class="homeListItem">
+                    <div class="homeListImg">
+                        <img src="https://i.pinimg.com/564x/e3/ed/86/e3ed86a2942789ed82274c884ad824b2.jpg" alt="">
+                    </div>
+                    <h4>ÁO QUẦN THỂ THAO</h4>
                 </div>
             </div>
             <div>

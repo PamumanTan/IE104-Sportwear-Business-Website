@@ -56,13 +56,15 @@
                 giá cao về uy tín và sự đa dạng về mẫu mã, chúng tôi không chỉ là nơi mua sắm, mà là điểm đến tin cậy
                 cho những người yêu thể thao.</p>
 
-            <img src="https://media.istockphoto.com/id/1306784188/vi/anh/ch%E1%BB%A7-c%E1%BB%ADa-h%C3%A0ng-%C4%91%E1%BB%93-th%E1%BB%83-thao-v%E1%BB%9Bi-clipboard-ki%E1%BB%83m-tra-h%C3%A0ng-t%E1%BB%93n-kho-qu%E1%BA%A3n-l%C3%BD-c%E1%BB%ADa-h%C3%A0ng-du-l%E1%BB%8Bch-l%C3%A0m-vi%E1%BB%87c.jpg?s=1024x1024&w=is&k=20&c=2ujnrZy_0gA3N9l2UzRhPMGRCtgGhEhi7bnZoPlwd_U=" alt="Cửa hàng">
+            <img src="https://media.istockphoto.com/id/1306784188/vi/anh/ch%E1%BB%A7-c%E1%BB%ADa-h%C3%A0ng-%C4%91%E1%BB%93-th%E1%BB%83-thao-v%E1%BB%9Bi-clipboard-ki%E1%BB%83m-tra-h%C3%A0ng-t%E1%BB%93n-kho-qu%E1%BA%A3n-l%C3%BD-c%E1%BB%ADa-h%C3%A0ng-du-l%E1%BB%8Bch-l%C3%A0m-vi%E1%BB%87c.jpg?s=1024x1024&w=is&k=20&c=2ujnrZy_0gA3N9l2UzRhPMGRCtgGhEhi7bnZoPlwd_U="
+                alt="Cửa hàng">
             <p>Tại Sportwears, chúng tôi tự hào mang đến cho bạn một loạt sản phẩm được lựa chọn kỹ lưỡng từ các thương
                 hiệu hàng đầu trong ngành công nghiệp thể thao. Cam kết với chất lượng, tính năng và phong cách đảm bảo
                 rằng mọi sản phẩm trong cửa hàng của chúng tôi đều đáp ứng các tiêu chuẩn cao nhất, giúp bạn tập trung
                 vào việc vượt qua giới hạn và đạt được thành công.</p>
 
-            <img src="https://file.hstatic.net/200000278317/file/index_blog_review_image_7d98d77ce4a14d01bc9290c498ccd680.png" alt="Cửa hàng">
+            <img src="https://file.hstatic.net/200000278317/file/index_blog_review_image_7d98d77ce4a14d01bc9290c498ccd680.png"
+                alt="Cửa hàng">
             <p>Hãy gia nhập cộng đồng Sportwears và khám phá một thế giới nơi đam mê gặp gỡ hiệu suất. Chúng tôi không
                 chỉ là một cửa hàng; chúng tôi là đối tác tận tâm trong hành trình hướng tới một lối sống khỏe mạnh,
                 hạnh phúc và tích cực. Hãy đến và trải nghiệm sự khác biệt tại Sportwears – nơi hành trình của bạn đến
