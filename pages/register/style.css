@@ -52,7 +52,7 @@ html {
 }
 
 .firstRow,
-.thirdRow {
+.fourthRow {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 20px;
@@ -114,12 +114,12 @@ html {
     }
 
     .firstRow,
-    .thirdRow {
+    .fourthRow {
         display: block !important;
     }
 
     .firstRow div:first-child,
-    .thirdRow div:first-child {
+    .fourthRow div:first-child {
         margin-bottom: 15px;
     }
 
