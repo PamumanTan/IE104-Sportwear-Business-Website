@@ -8,6 +8,7 @@ include "../../components/cart-product-item/index.php"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng của tôi</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../../components/navbar/style.css">
     <link rel="stylesheet" href="../../components/footer/style.css">
@@ -93,7 +94,7 @@ include "../../components/cart-product-item/index.php"
     
     <!-- Chèn footer vào đây -->
     <?php include_once "../../components/footer/index.php" ?>
-    <?php include '../../components/cart-notification-modal/index.php' ?>
+    <?php include '../../components/notification-modal/index.php' ?>
 
 
     <script src="../../resources/js/root.js"></script>

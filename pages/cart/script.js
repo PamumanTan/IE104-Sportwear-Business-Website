@@ -14,8 +14,6 @@ let fee = parseInt(document.querySelector('#shipping-fee').textContent);
 let total = totalPrice + fee;
 
 
-
-
 document.querySelector('.pay-button').onclick = () => {
     window.location.href = '../payment/';
 }
@@ -44,8 +42,10 @@ removeButtons.forEach(removeButton => {
         .then(res => {
                 if (!res['error']) {
                     const cartProductItem = event.target.parentElement.parentElement;
+                    // console.log(cartProductItem, cartProductItem.parentNode);
+                    // console.log(document.querySelectorAll('.cart-product-container'));
                     cartProductItem.parentNode.removeChild(cartProductItem);
-                    if (document.querySelectorAll('.cart-product-item').length == 0) {
+                    if (document.querySelectorAll('.cart-product-container').length == 0) {
                         document.querySelector('.cart-product-list').innerHTML = '<h2>Không có sản phẩm nào trong giỏ hàng</h2>';
                     }
                 }

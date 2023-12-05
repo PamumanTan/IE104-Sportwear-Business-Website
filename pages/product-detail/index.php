@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <title>Chi tiết sản phẩm</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css">
@@ -98,11 +100,14 @@
               <h3 id="reviews-counter"><?php echo $result->num_rows; ?> đánh giá </h3>
             </div>
 
-            <div class="review-right">
-              <select name="comment-select" id="comment-select">
-                <option value="All">Tất cả đánh giá</option>
-                <option value="Me">Đánh giá của tôi</option>
-              </select>
+            <?php if ($result->num_rows > 0) { ?>
+
+              <div class="review-right">
+                <select name="comment-select" id="comment-select">
+                  <option value="All">Tất cả đánh giá</option>
+                  <option value="Me">Đánh giá của tôi</option>
+                </select>
+              <?php } ?>
 
               <div class="review-comments">
                 <!-- Query comments  -->
@@ -148,7 +153,7 @@
                 }
                 ?>
               </div>
-            </div>
+              </div>
           </div>
 
     <?php

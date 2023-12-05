@@ -6,7 +6,7 @@ include '../db/connection.php';
 if (isset($_SERVER['REQUEST_METHOD']) && in_array($_SERVER['REQUEST_METHOD'], ['POST', 'GET'])) {
     if (!isset($_COOKIE['access_token'])) {
         echo json_encode([
-            'message' => 'Unauthenticated',
+            'message' => 'Chưa xác thực',
             'error' => true
         ]);
         return;
@@ -18,13 +18,13 @@ if (isset($_SERVER['REQUEST_METHOD']) && in_array($_SERVER['REQUEST_METHOD'], ['
 
     if (!$user_id) {
         echo json_encode([
-            'message' => 'Unauthenticated',
+            'message' => 'Chưa xác thực',
             'error' => true
         ]);
         return;
     }
 } else {
-    echo "Wrong request method";
+    echo "Sai phương thức";
     return;
 }
 
@@ -91,12 +91,12 @@ function addProductToCart($user_id) {
         }
 
         echo json_encode([
-            'message' => 'Add item to cart successfully',
+            'message' => 'Thêm sản phẩm vào giỏ hàng thành công',
             'error' => true
         ]);
     } else {
         echo json_encode([
-            'message' => 'Add item to cart failed',
+            'message' => 'Thêm sản phẩm vào giỏ hàng thất bại',
             'error' => true
         ]);
     }
@@ -119,7 +119,7 @@ function removeProductFromCart($user_id) {
     
     if (!$result || $result->num_rows == 0) {
         echo json_encode([
-            'message' => 'Product is not in cart',
+            'message' => 'Sản phẩm không tồn tại trong giỏ hàng',
             'error' => true
         ]);
         return;
@@ -154,7 +154,7 @@ function removeProductFromCart($user_id) {
     
     
     echo json_encode([
-        'message' => 'Delete item from cart successfully',
+        'message' => 'Xóa sản phẩm khỏi giỏ hàng thành công',
         'error' => false
     ]);
 
@@ -172,14 +172,19 @@ function getAllProductsInCart($user_id) {
     if ($result && $result->num_rows > 0) {
         $rows = $result->fetch_assoc();
         echo json_encode([
-            'message' => 'Get all products in cart successfully',
+            'message' => 'Xem giỏ hàng thành công',
             'error' => false,
             'data' => $rows
         ]);
         
+    } else if ($result && $result->num_rows > 0) {
+        echo json_encode([
+            'message' => 'Giỏ hàng trống',
+            'error' => true
+        ]);
     } else {
         echo json_encode([
-            'message' => 'Get all products in cart failed',
+            'message' => 'Xem giỏ hàng thất bại',
             'error' => true
         ]);
     }
@@ -208,18 +213,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action'])) {
         $row = $result->fetch_assoc();
         if ($row) {
             echo json_encode([
-                'message' => 'Get cart number successfully',
+                'message' => 'Xem số lượng sản phẩm trong giỏ hàng thành công',
                 'error' => false,
                 'data' => $row['cart_number']
             ]);
         } else {
             echo json_encode([
-                'message' => 'Get cart number failed',
+                'message' => 'Xem số lượng sản phẩm trong giỏ hàng thất bại',
                 'error' => true
             ]);
         }
     }
 } else {
-    echo "Wrong request method";
+    echo "Sai phương thức";
     return;
 }

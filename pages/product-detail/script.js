@@ -59,11 +59,15 @@ const total = reviewCounterArray.reduce((ans, number) => {
 
 // Add to cart
 function handleAddToCartButton() {
+    if (document.getElementById('account')) {
     addProductToCart()
         .then(data => {
             getCartNumber();
             notify(data['message']);
         })
+    } else {
+        notify('Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng');
+    }
 }
 
 

@@ -5,7 +5,7 @@
 <html lang="vi"> <!--Set the language-->
 
 <head>
-    <title>Products</title>
+    <title>Sản phẩm</title>
     <meta name="description" content="This webpage shows products list"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">

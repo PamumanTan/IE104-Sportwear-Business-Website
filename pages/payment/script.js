@@ -55,5 +55,5 @@ payButton.onclick = () => {
 // cart-container
 const cartContainer = document.querySelector(".cart-container");
 function clearProductstList() {
-    cartContainer.innerHTML = "h2>Giỏ hàng của bạn</h2><p>Không có sản phẩm nào trong giỏ hàng</p>"
+    cartContainer.innerHTML = "<h2>Giỏ hàng của bạn</h2><p>Không có sản phẩm nào trong giỏ hàng</p>"
 }

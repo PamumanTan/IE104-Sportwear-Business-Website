@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
     <link rel="stylesheet" href="../components/carousel-pro/style.css">
     <link rel="stylesheet" href="../components/marquee/style.css">
     <link rel="stylesheet" href="../components/navbar/style.css">
