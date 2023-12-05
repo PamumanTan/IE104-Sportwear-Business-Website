@@ -1,58 +1,64 @@
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     overflow-x: hidden;
 }
-:root{
+
+:root {
     --default-width: 1400px;
     --default-height: 900px;
 }
-nav{
+
+nav {
     width: 100vw;
     height: 60px;
     background-color: black;
 }
-.product-container{
+
+.product-container {
     display: flex;
     width: 100vw;
-    height: 90vh;
     flex-direction: row;
-    margin: 10vh 10vw 0 10vw;
+    margin: 10vh 10vw 200px 10vw;
     gap: 5vw;
 }
-.product-imgs{
+
+.product-imgs {
     width: 40vw;
     height: 40vw;
     overflow: hidden;
-    position: relative;
 }
-.product-imgs img{
+
+.product-imgs img {
     /* width: 250px; */
     /* width: 40vw;
     height: 40vw; */
     margin: auto;
     bottom: 0;
-    position: relative;
-
 }
-.product-details{
+
+.product-details {
     flex: 0.5;
 }
-.product-color-option{
+
+.product-color-option {
     display: flex;
     flex-direction: row;
 }
-.p-color{
+
+.p-color {
     margin: 5px;
     padding: 20px;
     border-radius: 50%;
     border: none;
     background-color: black;
 }
-.product-size-option{
+
+.product-size-option {
     display: flex;
     flex-direction: row;
 }
+
 /* Hide the default radio buttons */
 input[type="radio"] {
     display: none;
@@ -80,7 +86,8 @@ label.radio-button-color {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-label.radio-button-color :hover{
+
+label.radio-button-color :hover {
     transform: scale(1.2);
 }
 
@@ -95,7 +102,7 @@ label.radio-button-size span.label-text {
     vertical-align: middle;
 }
 
-.product-quantity-option{
+.product-quantity-option {
     display: flex;
     flex-direction: row;
     width: 120px;
@@ -105,7 +112,11 @@ label.radio-button-size span.label-text {
     align-items: center;
 }
 
-.product-quantity-option button{
+.product-quantity-btn {
+    cursor: pointer;
+}
+
+.product-quantity-option button {
     border: none;
     width: 40px;
     height: 50px;
@@ -113,17 +124,19 @@ label.radio-button-size span.label-text {
     background-color: white;
     transition: all 0.2s ease;
 }
-.product-quantity-option button:hover{
+
+.product-quantity-option button:hover {
     background-color: rgb(148, 148, 148);
 }
-.product-quantity-option input{
+
+.product-quantity-option input {
     border: none;
     width: 40px;
     height: 48px;
     text-align: center;
 }
 
-.add-to-cart{
+.add-to-cart {
     margin-top: 30px;
     width: 450px;
     height: 50px;
@@ -131,38 +144,44 @@ label.radio-button-size span.label-text {
     background-color: black;
 }
 
-.review-container{
+.review-container {
     display: flex;
     flex-direction: row;
     margin: 0 10vw 10vw 10vw;
     gap: 5vw;
 }
-.review-left{
+
+.review-left {
     min-width: 11rem;
     display: flex;
     flex-direction: column;
 }
+
 .review-left h2,
 .review-left h3 {
     padding: 0.75rem 0;
 }
-.review-right{
+
+.review-right {
     margin-top: 2vh;
     display: flex;
     flex-direction: column;
 }
-.review-right select{
+
+.review-right select {
     margin-left: auto;
     padding: 5px 15px;
     margin-bottom: 20px;
     outline: none;
 }
-#line{
+
+#line {
     width: 90px;
     height: 1px;
     background-color: black;
 }
-#reviews-counter-child{
+
+#reviews-counter-child {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -175,19 +194,21 @@ label.radio-button-size span.label-text {
     opacity: 0.7;
     font-weight: bolder;
 }
-#reviews-counter-child:hover{
+
+#reviews-counter-child:hover {
     opacity: 1;
     color: black;
 }
 
 /* Comment  */
-.cmt-container{
+.cmt-container {
     display: flex;
     flex-direction: column;
     width: 850px;
     padding: 0 10px;
 }
-.cmt-top{
+
+.cmt-top {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -195,30 +216,35 @@ label.radio-button-size span.label-text {
     height: 20px;
     padding: 10px 5px 10px 0;
 }
-.cmt-heading{
+
+.cmt-heading {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 30px;
 }
-.rating{
+
+.rating {
     display: flex;
     flex-direction: row;
 }
-#cmt-username{
+
+#cmt-username {
     /* padding-right: 3em; */
     font-size: 18px;
     font-weight: bold;
 }
-.upvote{
+
+.upvote {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 18px;
     padding-bottom: 10px;
 }
-.upvote a{
+
+.upvote a {
     text-decoration: none;
     color: black;
     padding: 0 2px;

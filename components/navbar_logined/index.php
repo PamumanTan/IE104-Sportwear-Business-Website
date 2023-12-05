@@ -1,13 +1,13 @@
 <div class="nav">
     <ul class="navList">
-        <li class="navListFirst">
+        <li class="navListFirst navListFirst--animation">
             <a href="/sportswear/pages">Sportswear</a>
         </li>
 
         <li class="navListMiddle">
             <div class="navNewProduct nav-subnav-item">
                 <a href="/sportswear/pages/product-list/">Sản phẩm mới</a>
-                <ol class="subnavNewProduct subnav-blur">
+                <ol class="subnavNewProduct subnav-blur sub-navbar--animation">
                     <!-- Nam -->
                     <li>
                         <ul>
@@ -82,19 +82,21 @@
 
             <div class="navMen subnav-blur nav-subnav-item">
                 <a href="/sportswear/pages/product-list/?object=1">Nam</a>
-                <ul class="subnavMen ">
-                    <li><a href="/sportswear/pages/product-list/?type=1">Tất cả sản phẩm</a></li>
-                    <li><a href="/sportswear/pages/product-list/?object=1&type=3">Giày</a></li>
-                    <li><a href="/sportswear/pages/product-list/?object=1&type=1">Áo</a></li>
-                    <li><a href="/sportswear/pages/product-list/?object=1&type=2">Quần</a></li>
-                    <li><a href="/sportswear/pages/product-list/?object=1&type=4">Tất</a></li>
-                </ul>
+                <div class="wrapSubnavMen clearfix">
+                    <ul class="subnavMen sub-navbar--animation">
+                        <li><a href="/sportswear/pages/product-list">Tất cả sản phẩm</a></li>
+                        <li><a href="/sportswear/pages/product-list/?object=1&type=3">Giày</a></li>
+                        <li><a href="/sportswear/pages/product-list/?object=1&type=1">Áo</a></li>
+                        <li><a href="/sportswear/pages/product-list/?object=1&type=2">Quần</a></li>
+                        <li><a href="/sportswear/pages/product-list/?object=1&type=4">Tất</a></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="navWomen subnav-blur nav-subnav-item">
                 <a href="/sportswear/pages/product-list/?object=2">Nữ</a>
-                <ul class="subnavWomen ">
-                    <li><a href="/sportswear/pages/product-list/?object=2">Tất cả sản phẩm</a></li>
+                <ul class="subnavWomen sub-navbar--animation">
+                    <li><a href="/sportswear/pages/product-list">Tất cả sản phẩm</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=2&type=3">Giày</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=2&type=1">Áo</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=2&type=2">Quần</a></li>
@@ -104,7 +106,7 @@
 
             <div class="navKids subnav-blur nav-subnav-item">
                 <a href="/sportswear/pages/product-list/?object=3">Trẻ em</a>
-                <ul class="subnavKids ">
+                <ul class="subnavKids sub-navbar--animation">
                     <li><a href="/sportswear/pages/product-list/?object=3">Tất cả sản phẩm</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=3&type=3">Giày</a></li>
                     <li><a href="/sportswear/pages/product-list/?object=3&type=1">Áo</a></li>
@@ -115,7 +117,7 @@
 
             <div class="navPromotion subnav-blur nav-subnav-item">
                 <a href="/sportswear/pages/product-list">Khuyến mãi</a>
-                <ol class="subnavPromotion">
+                <ol class="subnavPromotion sub-navbar--animation">
                     <!-- Nam -->
                     <li>
                         <ul>
@@ -210,10 +212,10 @@
                     </div>
                 </div>
             </div>
-            <?php 
+            <?php
             // get cart quantity
             // include '../../db/connection.php';
-            
+
             // $query = "select sum(quantity) as quantity from cart where user_id = " . $_SESSION['user_id'];
             ?>
             <a class="cartImg" href="/sportswear/pages/cart/">

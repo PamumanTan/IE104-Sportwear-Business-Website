@@ -35,6 +35,10 @@
     margin-bottom: 5px;
     cursor: pointer;
 }
+.cart-product-delete:hover {
+    opacity: 0.8;
+    color: red;
+}
 .underline{
     width: 1px;
 }

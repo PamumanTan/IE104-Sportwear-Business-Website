@@ -18,7 +18,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    padding: 0 100px;
+    padding: 0 100px 100px 100px;
 }
 
 .cart-container {
@@ -60,9 +60,9 @@ body {
     transition: all 0.2s ease;
 }
 
-.pay-button:hover {
+/* .pay-button:hover {
     opacity: 0.8;
-}
+} */
 
 .total-container .total-div,
 
@@ -110,4 +110,12 @@ body {
 
 #style-3::-webkit-scrollbar-thumb {
     background-color: #000000;
+}
+
+.direct-text p a {
+    text-decoration: underline;
+}
+
+.direct-text p a:hover {
+    color: green;
 }
