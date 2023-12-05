@@ -6,6 +6,7 @@
 
 <head>
     <title>Sản phẩm</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
     <meta name="description" content="This webpage shows the profile of user"> <!--Set the content-->
     <meta charset="utf-8"> <!--Set the charset to Unicode-->
     <link rel="stylesheet" href="./style.css">

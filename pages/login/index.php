@@ -23,12 +23,12 @@
                     <!-- style="display: grid; flex-direction: column; -->
                     <label for="phoneNumber">Số điện thoại</label>
                     <br>
-                    <input type="text" , id="phoneNumber" name='phonenumber' value="9998887777">
+                    <input type="text" , id="phoneNumber" name='phonenumber'>
                 </div>
                 <div class="secondRow">
                     <label for="password">Mật khẩu</label>
                     <br>
-                    <input type="password" , id="password" name='password' value="adminpass">
+                    <input type="password" , id="password" name='password'>
                 </div>
                 <div class="thirdRow">
                     <div>

@@ -226,15 +226,15 @@
         });
 
         document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail?object=1';
+            window.location.href = '../pages/product-list?object=1';
         });
 
         document.querySelectorAll('.homeWomenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail?object=2';
+            window.location.href = '../pages/product-list?object=2';
         });
 
         document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail?object=3';
+            window.location.href = '../pages/product-list?object=3';
         });
     </script>
 
