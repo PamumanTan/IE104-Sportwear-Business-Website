@@ -44,7 +44,7 @@
 
           <div class="product-container">
             <div class="product-imgs">
-              <img src="<?php echo $row['product_image'] ?>" alt="img1" />
+              <img src="<?php echo $row['product_image'] ?>" alt="Sản phẩm thể thao" />
             </div>
 
 
