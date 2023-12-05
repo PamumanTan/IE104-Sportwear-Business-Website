@@ -64,7 +64,6 @@
                         <!-- Generate data from database -->
                         <?php
                         include "../../helpers/dateFormat.php";
-                        include "../../helpers/changePrice.php";
                         $query = "SELECT * FROM orders WHERE user_id = " . $user['user_id'];
                         $result = execQuery($query);
                         if ($result->num_rows > 0) {

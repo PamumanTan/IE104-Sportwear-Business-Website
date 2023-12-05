@@ -294,10 +294,6 @@
         </svg>
     </div>
 
-
-    <!-- <h1 id="title">404 Page not found</h1> -->
-    <!-- <button id="newBtn" class="btn" disabled>&#8594; &nbsp;Back to Home</button> -->
-
 </body>
 
 </html>

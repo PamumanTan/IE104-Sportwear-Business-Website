@@ -104,14 +104,14 @@
                     <div class="line2 mt1"></div>
                     <div class="row mt2">
                         <div class="textCenter">
-                            <a href=""><img class="mb1" src="../../assets/images/guide/chat.png" alt=""></a>
+                            <a href=""><img class="mb1" src="../../assets/images/guide/chat.png" alt="Sản phẩm và đơm hàng"></a>
                             <p class="detailTitle2">SẢN PHẨM & ĐƠN HÀNG</p>
                             <p class="detailPNormal">Trò chuyện với chúng tôi</p>
                             <p class="detailPNormal">7 am - 11 pm</p>
                             <p class="detailPNormal">Các ngày trong tuần</p>
                         </div>
                         <div class="textCenter">
-                            <a href=""><img class="mb1" src="../../assets/images/guide/phone.png" alt=""></a>
+                            <a href=""><img class="mb1" src="../../assets/images/guide/phone.png" alt="Các vấn đề cần hỗi trợ"></a>
                             <p class="detailTitle2">CÁC VẤN ĐỀ CẦN HỖ TRỢ</p>
                             <p class="detailPNormal">19001098</p>
                             <a href="mailto:sportswear@gmail.com.vn" class="detailPNormal">sportswear@gmail.com.vn</a>
@@ -134,23 +134,6 @@
     <script src="../../resources/js/root.js"></script>
     <script src="../../components/navbar/script.js"></script>
     <script src="../../components/navbar_logined/script.js"></script>
-
-    <script>
-        const subNavBlurs = document.querySelectorAll('.subnav-blur');
-        const body = document.querySelector('body');
-        const guide = document.querySelector('.guide');
-        // navListEnd.onmouseover = function() {
-        //     guide.style.opacity = 0.2;
-        // }
-        subNavBlurs.forEach(subNavBlur => {
-            // subNavBlur.onmouseover = function() {
-            //     guide.style.opacity = 0.2;
-            // }
-            // subNavBlur.onmouseout = function() {
-            //     guide.style.opacity = 1;
-            // }
-        })
-    </script>
 </body>
 
 </html>

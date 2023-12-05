@@ -38,7 +38,7 @@
         <div class="profile-container">
             <div class="profile-left">
                 <div class="avatar">
-                    <img src="https://i.pinimg.com/564x/14/64/29/146429d7896694e3c361e0d3f957cedd.jpg" alt="Avatar">
+                    <img src="https://i.pinimg.com/564x/14/64/29/146429d7896694e3c361e0d3f957cedd.jpg" alt="User avatar">
                 </div>
                 <div class="bio">
                     <h2 id="name">Lionel Messi</h2>
