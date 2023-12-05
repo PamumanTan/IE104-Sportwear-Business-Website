@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-grid__row">
-            <div class="footer-grid__column-2-4">
+            <div class="footer-grid__column-3">
                 <h3 class="footer__heading">VỀ CÔNG TY</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
@@ -15,7 +15,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-grid__column-2-4">
+            <div class="footer-grid__column-3">
                 <h3 class="footer__heading">THÔNG TIN</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
@@ -35,7 +35,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-grid__column-2-4">
+            <div class="footer-grid__column-3">
                 <h3 class="footer__heading">HỖ TRỢ</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
@@ -49,7 +49,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-grid__column-2-4">
+            <div class="footer-grid__column-3">
                 <h3 class="footer__heading">LIÊN HỆ</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-grid__column-2-4">
+            <div class="footer-grid__column-3">
             </div>
         </div>
     </div>

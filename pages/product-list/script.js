@@ -40,10 +40,13 @@ const loadMoreProduct = () => {
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             if (this.responseText == 'no data') {
-                return;
+                document.querySelector('.show-product-list-more button').style.display = 'none';
             }
-            
+
             var result = JSON.parse(this.responseText);
+            if (result.length < 12) {
+                document.querySelector('.show-product-list-more button').style.display = 'none';
+            }
             for (let i = 0; i < result.length; i++) {
                 let product = document.createElement('div');
                 product.id = 'product-id-' + result[i]['id'];

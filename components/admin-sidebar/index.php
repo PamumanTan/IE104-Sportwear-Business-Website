@@ -26,7 +26,7 @@ function SideBar_Start()
             </header>
             <main class="admin-layout">
                 <div class="sidebar">
-                    <a href="/sportswear/pages/404" class="sidebar-item">
+                    <a href="/sportswear/pages/admin/order" class="sidebar-item">
                         <div class="sidebar-item-container" id="order">
                             <div class="sidebar-item-icon">
                                 <i class="fa-solid fa-cart-shopping"></i>
