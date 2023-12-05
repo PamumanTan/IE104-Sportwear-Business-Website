@@ -8,7 +8,7 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     /* background-color: aqua; */
-    padding-top: 30px;
+    padding-top: 80px;
 }
 .profile-container{
     display: flex;
