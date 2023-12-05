@@ -91,7 +91,7 @@
                  </div> -->
 
                 <?php include "../components/marquee-shirt/index.php" ?>
-                <button class="homeBannerBtn">XEM CHI TIẾT</button>
+                <button class="homeBannerBtn primary-button-hover" >XEM CHI TIẾT</button>
             </div>
             <div>
                 <img src="../assets/images/module-3/image-png" alt="">
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div>
-                <button class="homeMenBtn">XEM CHI TIẾT</button>
+                <button class="homeMenBtn primary-button-hover">XEM CHI TIẾT</button>
             </div>
         </div>
         <div class="homeWomen">
@@ -181,7 +181,7 @@
                 </div>
             </div>
             <div>
-                <button class="homeWomenBtn">XEM CHI TIẾT</button>
+                <button class="homeWomenBtn primary-button-hover">XEM CHI TIẾT</button>
             </div>
         </div>
         <div class="homeKids">
@@ -212,7 +212,7 @@
                 </div>
             </div>
             <div>
-                <button class="homeKidsBtn">XEM CHI TIẾT</button>
+                <button class="homeKidsBtn primary-button-hover">XEM CHI TIẾT</button>
             </div>
         </div>
 
@@ -222,19 +222,19 @@
 
     <script>
         document.querySelectorAll('.homeBannerBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list';
         });
 
         document.querySelectorAll('.homeMenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=1';
         });
 
         document.querySelectorAll('.homeWomenBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=2';
         });
 
         document.querySelectorAll('.homeKidsBtn').forEach(element => element.onclick = () => {
-            window.location.href = '../pages/product-detail';
+            window.location.href = '../pages/product-list?object=3';
         });
     </script>
 

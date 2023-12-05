@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This webpage shows register">
     <title>Đăng ký </title>
@@ -18,25 +19,29 @@
                 <p>Đã có tài khoản? <a href="../login/" class="loginText">Đăng nhập</a></p>
             </div>
             <div class="bodyForm">
-                <div class="firstRow">
-                    <!-- style="display: grid; flex-direction: column; -->
+                <!-- <div class="firstRow">
                     <div>
-                        <label for="surname">Họ</label>
+                        <label for="lastname">Họ</label>
                         <br>
-                        <input type="text" , id="surname">
+                        <input type="text" , id="lastname">
                     </div>
                     <div>
-                        <label for="name">Tên</label>
+                        <label for="firstname">Tên</label>
                         <br>
-                        <input type="text" , id="name">
+                        <input type="text" , id="firstname">
                     </div>
-                </div>
+                </div> -->
                 <div class="secondRow">
+                    <label for="username">Tên đăng nhập</label>
+                    <br>
+                    <input type="text" , id="username">
+                </div>
+                <div class="thirdRow">
                     <label for="phoneNumber">Số điện thoại</label>
                     <br>
                     <input type="text" , id="phoneNumber">
                 </div>
-                <div class="thirdRow">
+                <div class="fourthRow">
                     <div>
                         <label for="password">Mật khẩu</label>
                         <br>
@@ -49,7 +54,7 @@
                     </div>
                 </div>
                 <p style="margin: 16px 0px">Sử dụng 8 ký tự trở lên kết hợp chữ cái, chữ số và ký hiệu đặc biệt !</p>
-                <div class="fourthRow">
+                <div class="fifthRow">
                     <input type="checkbox" id="check">
                     <label for="check">Hiển thị mật khẩu</label>
                 </div>

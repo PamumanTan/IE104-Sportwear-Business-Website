@@ -223,6 +223,7 @@ body {
 }
 
 .homeBannerBtn {
+    margin-top: 2rem;
     width: 170px;
     height: 42px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);

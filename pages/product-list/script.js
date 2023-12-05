@@ -1,7 +1,11 @@
-const productPrices = document.querySelectorAll('.product-price');
-productPrices.forEach(productPrice => {
-    productPrice.textContent = formatPrice(parseInt(productPrice.textContent));
-})
+function formatPrices() {
+    console.log('format prices');
+    const productPrices = document.querySelectorAll('.product-price');
+    productPrices.forEach(productPrice => {
+        productPrice.textContent = formatPrice(parseInt(productPrice.textContent));
+    });
+}
+formatPrices();
 
 
 let page = 1;
@@ -38,21 +42,26 @@ const loadMoreProduct = () => {
             if (this.responseText == 'no data') {
                 return;
             }
+            
             var result = JSON.parse(this.responseText);
             for (let i = 0; i < result.length; i++) {
                 let product = document.createElement('div');
                 product.id = 'product-id-' + result[i]['id'];
                 product.classList.add('show-product');
+
                 let productImg = document.createElement('div');
                 productImg.classList.add('product-img');
+
                 let productImgInner = document.createElement('img');
                 productImgInner.classList.add('product-img-inner');
                 productImgInner.src = result[i]['product_image'];
                 productImgInner.alt = 'product-img';
                 productImg.appendChild(productImgInner);
+
                 let productName = document.createElement('div');
                 productName.classList.add('product-name');
                 productName.textContent = result[i]['product_name'];
+
                 let productPrice = document.createElement('div');
                 productPrice.classList.add('product-price');
                 productPrice.textContent = result[i]['product_price'];
@@ -61,6 +70,7 @@ const loadMoreProduct = () => {
                 product.appendChild(productPrice);
                 document.getElementById('show-product-list').appendChild(product);
             }
+            formatPrices();
         };
         page++;
     }

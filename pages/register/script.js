@@ -1,15 +1,16 @@
 document.querySelector('.registerButton').addEventListener('click', function(event) {
-    console.log("CLICK");
-    const surname = document.querySelector('#surname').value;
-    const name = document.querySelector('#name').value;
+    // const firstname = document.querySelector('#firstname').value;
+    // const lastname = document.querySelector('#lastname').value;
+    const username = document.querySelector('#username').value;
     const phonenumber = document.querySelector('#phoneNumber').value;
     const password = document.querySelector('#password').value;
     const verifyPassword = document.querySelector('#verify').value;
 
 
     var formdata = new FormData();
-    formdata.append("surname", surname);
-    formdata.append("name", name);
+    // formdata.append("firstname", firstname);
+    // formdata.append("lastname", lastname);
+    formdata.append("username", username);
     formdata.append("phonenumber", phonenumber);
     formdata.append("password", password);
     formdata.append("verify", verifyPassword);

@@ -1,14 +1,26 @@
 <?php
-// session_start();
+
 require '../helpers/jwt.php';
 require '../db/connection.php';
 
 if (isset($_POST['phonenumber']) && isset($_POST['password']) && $_POST['phonenumber'] != "" && $_POST['password'] != "") {
     
-    $query = "select * from users where phonenumber=" . $_POST['phonenumber'] . " and PASSWORD='" . $_POST['password'] . "'";
+    $query = "select * from users where phonenumber=" . $_POST['phonenumber'];
     $result = execQuery($query);
     if ($result) {
         $row = $result->fetch_assoc();
+
+        // Verify password hashed with bcrypt
+        if (!password_verify($_POST['password'], $row['password'])) {
+            $res = [
+                'message' => 'Sai tài khoản hoặc mật khẩu',
+                'error' => true
+            ];
+
+            echo json_encode($res);
+            return;
+        }
+
         $payload = [
             'id' => $row['id'],
             'is_admin' => $row['is_admin']
