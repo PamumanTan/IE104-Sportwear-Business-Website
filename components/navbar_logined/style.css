@@ -225,11 +225,24 @@ body {
     right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     background-color: #fff;
+    animation: rotateIn 0.25s;
+}
+
+@keyframes rotateIn {
+    from {
+        /* transform: rotateY(360deg); */
+        transform: translateX(100%);
+    }
+    to {
+        /* transform: rotateY(0deg); */
+        transform: translateX(0);
+    }
 }
 
 .modalImg {
     width: 200px;
     margin-bottom: 6px;
+    border-radius: 1rem;
 }
 
 .modalInfo {
