@@ -28,7 +28,8 @@ if (isset($_SERVER['REQUEST_METHOD']) && in_array($_SERVER['REQUEST_METHOD'], ['
     return;
 }
 
-function addProductToCart($user_id) {
+function addProductToCart($user_id)
+{
     // Get data from request body
     $data = json_decode(file_get_contents('php://input'), true);
 
@@ -53,10 +54,9 @@ function addProductToCart($user_id) {
 
             // plus the price of product to total money of order
             $query = "update orders 
-                    set total_money = total_money + " . $data['quantity'] . " * (select price from products where id = " . $product_id . ") 
+                    set total_money = total_money + " . $data['quantity'] . " * (select product_price from products where id = " . $product_id . ") 
                     where id = " . $row['order_id'];
             $result = execQuery($query);
-            
         } else {
             // check if any order is not payed
             $query = "select * from orders 
@@ -102,11 +102,12 @@ function addProductToCart($user_id) {
     }
 }
 
-function removeProductFromCart($user_id) {
+function removeProductFromCart($user_id)
+{
     // Get data from request body
     $data = json_decode(file_get_contents('php://input'), true);
-    
-    
+
+
     // 1. get order id
     $product_id = $data['product_id'];
     $query = "select * from order_details join orders 
@@ -114,9 +115,9 @@ function removeProductFromCart($user_id) {
             and orders.user_id = " . $user_id . " 
             and order_details.product_id = " . $product_id . " 
             and orders.payed = 0";
-    
+
     $result = execQuery($query);
-    
+
     if (!$result || $result->num_rows == 0) {
         echo json_encode([
             'message' => 'Product is not in cart',
@@ -124,11 +125,11 @@ function removeProductFromCart($user_id) {
         ]);
         return;
     }
-    
-    
+
+
     $row = $result->fetch_assoc();
     $order_id = $row['order_id'];
-    
+
     // find the order detail and minus the quantity of product to total money of order
     $query = "update orders 
             set total_money = total_money - " . $row['quantity'] . " * (select product_price from products where id = " . $product_id . ") 
@@ -142,7 +143,7 @@ function removeProductFromCart($user_id) {
             where order_id = " . $order_id . " and product_id = " . $product_id;
     $result = execQuery($query);
 
-    
+
     // 3. delete order if no order detail left
     $query = "select * from order_details 
     where order_id = " . $order_id;
@@ -151,16 +152,16 @@ function removeProductFromCart($user_id) {
         $query = "delete from orders where id = " . $order_id;
         $result = execQuery($query);
     }
-    
-    
+
+
     echo json_encode([
         'message' => 'Delete item from cart successfully',
         'error' => false
     ]);
-
 }
 
-function getAllProductsInCart($user_id) {
+function getAllProductsInCart($user_id)
+{
     // Get products from orders join order_details join products
     $query = "select products.id as product_id, product_image, product_name, product_price, product_size, order_details.quantity as order_quantity
             from products join order_details join orders
@@ -176,7 +177,6 @@ function getAllProductsInCart($user_id) {
             'error' => false,
             'data' => $rows
         ]);
-        
     } else {
         echo json_encode([
             'message' => 'Get all products in cart failed',

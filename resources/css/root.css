@@ -137,3 +137,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
     background-color: #000000;
 }
+
+.root-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 62px;
+}
+
+.content-main {
+    flex: 1;
+}
